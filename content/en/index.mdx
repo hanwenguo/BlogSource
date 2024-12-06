@@ -1,0 +1,20 @@
+import ItemList from "@components/ItemList.astro";
+import { getPostsInLanguage } from "@lib/posts.ts";
+import { LANGUAGES } from "@lib/languages";
+
+- me
+  - write code, formulas, and poems
+  - currently a computer science Ph.D. student
+    - studying type systems
+    - at the University of Utah
+    - advised by [Prof. Ben Greenman](https://users.cs.utah.edu/~blg/)
+    - [cv](/cv.pdf)
+  - find me at
+    - [guo@hanwen.io](mailto:guo@hanwen.io)
+    - [GitHub](https://github.com/hanwenguo/)
+- recent posts
+  <ItemList items={await getPostsInLanguage(LANGUAGES["en"])} language="en" />
+- this site
+  - Posts are licenced under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+  - All right reserved for poems
+  - Also available in [简体中文](/zh/)

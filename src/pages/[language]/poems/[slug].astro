@@ -1,0 +1,24 @@
+---
+import { render } from 'astro:content';
+
+import Poem from '@layouts/Poem.astro';
+
+import { getPoems, PoemClass } from '@lib/poems';
+import { LANGUAGES } from '@lib/languages';
+
+interface Props {
+    poem: PoemClass
+}
+
+export async function getStaticPaths() {
+    const poems = await getPoems();
+    return poems.map((poem) => ({
+        params: { language: "zh", slug: poem.slug },
+        props: { poem }
+    }));
+}
+
+const { poem } = Astro.props;
+const { Content } = await render(poem.collectionEntry);
+---
+<Poem poem={poem}><Content /></Poem>

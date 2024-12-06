@@ -1,0 +1,20 @@
+---
+import TocList from './TocList.astro';
+
+interface Props {
+    heading: {
+        depth: number;
+        slug: string;
+        text: string;
+        children: Props["heading"][];
+    }
+}
+
+const { heading } = Astro.props;
+---
+<li>
+    <a href={`#${heading.slug}`}>{heading.text}</a>
+    {heading.children && (
+        <TocList headings={heading.children} />
+    )}
+</li>

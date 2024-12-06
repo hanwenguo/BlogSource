@@ -1,0 +1,67 @@
+---
+import AkvesoiMono from '@assets/fonts/Akvesoi/AkvesoiMono.css?url'
+import nspStyle from '@assets/css/nsp.scss?url'
+import heti from '@assets/css/heti.css?url'
+
+import { SITE_TITLE } from '@lib/constants'
+
+interface Props {
+  title: string
+  enableMath?: boolean
+}
+
+const { title, enableMath } = Astro.props
+const locale = Astro.currentLocale
+---
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{title}</title>
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content={SITE_TITLE} />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <link rel="preload" href={AkvesoiMono} as="style" />
+  <link rel="stylesheet" href={AkvesoiMono} />
+
+  {enableMath && (
+    <script is:inline>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$','$$'], ['\\[', '\\]']],
+          processEscapes: true,
+          processEnvironments: true
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+      };
+
+      window.addEventListener('load', (event) => {
+          document.querySelectorAll("mjx-container").forEach(function(x){
+            x.parentElement.classList += 'has-jax'})
+        });
+    </script>
+    <script is:inline id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  )}
+
+  {locale === 'zh' && (
+    <link rel="preload" href={heti} />
+    <link rel="stylesheet" href={heti} />
+  )}
+
+  <link rel="preload" href={nspStyle} as="style" />
+  <link rel="stylesheet" lang="sass" href={nspStyle} />
+
+</head>

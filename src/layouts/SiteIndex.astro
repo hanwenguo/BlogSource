@@ -1,0 +1,12 @@
+---
+import Basic from "@layouts/Basic.astro"
+
+import { SITE_TITLE } from "@lib/constants"
+
+---
+<Basic title={SITE_TITLE}>
+    <header>
+        <h1 class="font-monospace">{SITE_TITLE}</h1>
+    </header>
+    <slot />
+</Basic>

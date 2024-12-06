@@ -1,0 +1,29 @@
+---
+import { render } from 'astro:content';
+
+import Post from '@layouts/Post.astro';
+
+import { getPosts, PostClass } from '@lib/posts';
+import { LANGUAGES } from '@lib/languages';
+
+interface Props {
+    post: PostClass
+}
+
+export async function getStaticPaths() {
+    const posts = await getPosts();
+    return Object.entries(LANGUAGES).flatMap(([_, language]) => {
+        const postsByLanguage = posts.filter((post) => post.language.is(language));
+        return postsByLanguage.map((post) => ({
+            params: { language: post.language.getCode(), slug: post.slug },
+            props: { post }
+        }));
+    })
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post.collectionEntry);
+---
+<Post post={post} headings={headings}>
+    <Content />
+</Post>

@@ -1,0 +1,7 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n"
+
+const locale = Astro.currentLocale!
+const root = getRelativeLocaleUrl(locale)
+---
+<a class="back-link font-monospace" href={root}>~hanwen >_</a>

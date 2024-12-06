@@ -1,0 +1,22 @@
+---
+import Basic from "@layouts/Basic.astro";
+import { LANGUAGES } from "@lib/languages";
+
+---
+<Basic title="404">
+    <h1>404</h1>
+    {Object.entries(LANGUAGES).map(([code, languageObject]) => (
+        <p>{languageObject.getTranslation("not_found")}</p>
+        <p>{languageObject.getTranslation("not_found_reason")}</p>
+        <p>
+            <a href={`/${code}/`}>
+                {languageObject.getTranslation("back_to_home")}
+            </a>
+        </p>
+    ))}
+</Basic>
+<style>
+    * {
+        text-align: center;
+    }
+</style>

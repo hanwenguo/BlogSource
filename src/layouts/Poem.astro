@@ -1,0 +1,34 @@
+---
+import type { MarkdownHeading } from "astro";
+
+import Basic from "./Basic.astro";
+import BackLink from "@components/BackLink.astro";
+import type { PoemClass } from "@lib/poems";
+import { LANGUAGES } from "@lib/languages";
+
+interface Props {
+    poem: PoemClass
+}
+
+const { poem } = Astro.props
+const frontmatter = poem.collectionEntry.data
+const date = frontmatter.date
+const timeZone = LANGUAGES.zh.getTimeZone();
+
+const formattedDate = date.toLocaleDateString(poem.language.getFullCode(), {
+    dateStyle: "long",
+    timeZone: timeZone
+});
+---
+<Basic title={frontmatter.title}>
+    <BackLink />
+    <article class="font-song">
+        <h1 class="title">{frontmatter.title}</h1>
+        <div class="post-meta">
+            <p><time datetime={formattedDate}>{formattedDate}</time></p>
+        </div>
+        <div class="heti heti--serif poem">
+            <slot />
+        </div>
+    </article>
+</Basic>

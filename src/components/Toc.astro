@@ -1,0 +1,45 @@
+---
+import type { MarkdownHeading } from "astro";
+import TocList from "./TocList.astro";
+
+interface Props {
+    headings: MarkdownHeading[]
+    maxDepth?: number
+}
+
+const { headings, maxDepth = 3 } = Astro.props
+
+interface TreeHeading extends MarkdownHeading {
+    children: TreeHeading[]
+}
+
+function buildToc(headings: MarkdownHeading[]): TreeHeading[] {
+    const tree: TreeHeading[] = [];
+    const stack: TreeHeading[] = [];
+
+    headings
+        .filter(h => h.depth <= maxDepth)
+        .forEach(h => {
+            const heading = { ...h, children: [] };
+            
+            while (stack.length > 0 && stack[stack.length - 1].depth >= heading.depth) {
+                stack.pop();
+            }
+
+            if (stack.length === 0) {
+                tree.push(heading);
+            } else {
+                stack[stack.length - 1].children.push(heading);
+            }
+            
+            stack.push(heading);
+        });
+
+    return tree;
+}
+
+const tocTree = buildToc(headings);
+---
+<nav class="toc">
+    <TocList headings={tocTree} />
+</nav>

@@ -1,0 +1,71 @@
+---
+import type { PostClass } from "@lib/posts";
+import { LANGUAGES } from "@lib/languages";
+import { Debug } from "astro:components";
+
+export interface Item {
+    title: string
+    path: string
+    languageCode: string
+    date?: Date
+}
+
+interface Props {
+    items: Item[]
+    language: string
+    itemsPagePathName?: string
+    maxItems?: number
+}
+
+const { items, language, itemsPagePathName, maxItems } = Astro.props
+const languageObject = LANGUAGES[language]
+const dateFormatter = new Intl.DateTimeFormat(language, {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    timeZone: languageObject.getTimeZone()
+})
+---
+<ul>
+    {maxItems ? 
+    items.slice(0, maxItems)
+    .map((item) => (
+        <li>
+            {
+                item.date && (
+                    <span>
+                    <time datetime={dateFormatter.format(item.date)}>
+                        {dateFormatter.format(item.date)}
+                    </time>
+                    </span>
+                )
+            }
+            <a href={item.path}>
+                {item.title}
+            </a>
+        </li>
+    )) : 
+    items.map((item) => (
+        <li>
+            {
+                item.date && (
+                    <span>
+                    <time datetime={dateFormatter.format(item.date)}>
+                        {dateFormatter.format(item.date)}
+                    </time>
+                    </span>
+                )
+            }
+            <a href={item.path}>
+                {item.title}
+            </a>
+        </li>
+    ))}
+    {maxItems && itemsPagePathName && items.length > maxItems && (
+        <li>
+            <a href={`/${Astro.currentLocale}/${itemsPagePathName}/`}>
+            {LANGUAGES[Astro.currentLocale!].getTranslation("show_more")}
+            </a>
+        </li>
+    )}
+</ul>

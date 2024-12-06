@@ -1,0 +1,64 @@
+---
+import type { MarkdownHeading } from "astro";
+
+import Basic from "./Basic.astro";
+import BackLink from "@components/BackLink.astro";
+import I18NList from "@components/I18nList.astro";
+import Toc from "@components/Toc.astro";
+import { getPosts, type PostClass } from "@lib/posts";
+import { LANGUAGES } from "@lib/languages";
+import { pathHasLocale } from "astro:i18n";
+
+interface Props {
+    post: PostClass
+    headings: MarkdownHeading[]
+}
+
+const { post, headings } = Astro.props
+const frontmatter = post.collectionEntry.data
+
+const slug = post.slug
+const posts = await getPosts()
+const currentPostInOtherLocales = posts.filter((p) => p.slug === slug && !p.language.is(post.language))
+
+const date = frontmatter.date
+const formattedDate = date.toLocaleDateString(post.language.getFullCode(), {
+    dateStyle: "long",
+    timeZone: post.language.getTimeZone()
+});
+---
+<Basic title={frontmatter.title} enableMath={frontmatter.enableMath}>
+    <BackLink />
+    <article class:list={post.language.is(LANGUAGES["zh"]) ? ["font-song"] : []}>
+    <h1>{frontmatter.title}</h1>
+    <div class="post-meta">
+        <p>
+            <time datetime={formattedDate}>
+                {formattedDate}
+            </time>
+        </p>
+        {(frontmatter.tags && frontmatter.tags.length > 0) && (
+            <p>
+                {frontmatter.tags.map(tag => (
+                    <a href={`/${Astro.currentLocale}/tags/${tag}/`} class="tag">
+                        #{tag}
+                    </a>
+                ))}
+            </p>
+        )}
+    <I18NList items={currentPostInOtherLocales} />
+    </div>
+
+    {(frontmatter.enableToc) && (
+        <Toc headings={headings} />
+    )}
+
+    {post.language.is(LANGUAGES["zh"]) ? (
+        <div class="heti heti--serif">
+            <slot />
+        </div>
+    ) : (
+        <slot />
+    )}
+    </article>
+</Basic>

@@ -1,0 +1,20 @@
+---
+import TocItem from "./TocItem.astro";
+
+interface Props {
+    headings: {
+        depth: number;
+        slug: string;
+        text: string;
+        children: Props["headings"];
+    }[]
+}
+
+const { headings } = Astro.props;
+---
+
+<ul>
+    {headings.map(heading => (
+        <TocItem heading={heading} />
+    ))}
+</ul>

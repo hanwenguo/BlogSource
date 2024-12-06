@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
+
+import SiteIndex from "@layouts/SiteIndex.astro";
+
+interface Props {
+    homepage: CollectionEntry<'home'>
+}
+
+export async function getStaticPaths() {
+    const homepages = await getCollection('home')
+    return homepages.map(homepage => {
+        const language = homepage.id.split('/')[0]
+        return {
+            params: { language },
+            props: { homepage }
+        }
+    })
+}
+
+const { homepage } = Astro.props
+const { Content } = await render(homepage)
+---
+<SiteIndex>
+    <Content />
+</SiteIndex>

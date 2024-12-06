@@ -1,0 +1,37 @@
+---
+import { collectivePostProperties, getPosts, PostClass, type CollectivePostProperties } from '@lib/posts';
+import { LANGUAGES } from '@lib/languages';
+import ItemsListPage from '@layouts/ItemsListPage.astro';
+
+interface Props {
+    posts: PostClass[]
+}
+
+export async function getStaticPaths() {
+    const posts = await getPosts();
+    return Object.entries(LANGUAGES).flatMap(([_, language]) => {
+        const postsByLanguage = posts.filter((post) => post.language.is(language));
+        return (Object.entries(collectivePostProperties)).flatMap(([property, eq]) => {
+            const propertyValues = [...new Set(postsByLanguage.flatMap(post => post[property as keyof CollectivePostProperties]))];
+            return propertyValues.map((value) => ({
+                params: { language: language.getCode(), collection: property, setName: value.toString() },
+                props: { 
+                    // @ts-ignore
+                    posts: postsByLanguage.filter(post => eq(value, post[property as keyof PostClass]))
+                }
+            }))
+        })
+    })
+}
+
+const { language, collection, setName } = Astro.params;
+const { posts } = Astro.props;
+
+const languageObject = LANGUAGES[language];
+---
+<ItemsListPage 
+  title={`${languageObject.getTranslation(collection)}/${setName}`}
+  items={posts}
+  upperLevelPagePath=`/${language}/${collection}/` 
+  upperLevelPageTitle={languageObject.getTranslation("view_all")}
+  language={language} />

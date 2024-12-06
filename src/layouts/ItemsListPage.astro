@@ -1,0 +1,46 @@
+---
+import Basic from "@layouts/Basic.astro";
+import BackLink from "@components/BackLink.astro";
+
+import ItemList, { type Item } from "@components/ItemList.astro";
+import I18NList from "@components/I18nList.astro";
+import { LANGUAGES } from "@lib/languages";
+
+interface Props {
+    title: string
+    items: Item[]
+    language: string
+    i18nVersions?: Item[]
+    upperLevelPagePath?: string
+    upperLevelPageTitle?: string
+    enableMath?: boolean
+}
+
+const { title, enableMath, items, upperLevelPagePath, upperLevelPageTitle, i18nVersions, language } = Astro.props
+const path = Astro.url.pathname
+const isPoem = path.includes("poems")
+const displayMeta = i18nVersions || upperLevelPagePath
+const languageObject = LANGUAGES[language]
+---
+<Basic title={title} enableMath={enableMath}>
+    <BackLink />
+    <article class:list={languageObject.is(LANGUAGES["zh"]) ? ["font-song"] : []}>
+    <h1>{title}</h1>
+    {displayMeta && (
+        <div class="post-meta">
+            {i18nVersions && i18nVersions.length > 0 && (
+                <I18NList items={i18nVersions} />
+            )}
+            {upperLevelPagePath && (
+                <a href={`${upperLevelPagePath}`}>{upperLevelPageTitle}</a>
+            )}
+        </div>
+    )}
+    {(isPoem ? 
+        <div class="heti heti--serif">
+            <ItemList items={items} language={language} />
+        </div> :
+        <ItemList items={items} language={language} />
+    )}
+    </article>
+</Basic>

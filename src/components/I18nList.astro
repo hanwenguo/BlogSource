@@ -1,0 +1,19 @@
+---
+import { LANGUAGES } from "@lib/languages"
+import type { Item } from "./ItemList.astro"
+
+interface Props {
+    items: Item[]
+}
+
+const { items } = Astro.props
+---
+{
+    items.length > 0 && items.map((item) => (
+        <div class="translations">
+            <a href={item.path} class="translation">
+                {LANGUAGES[item.languageCode].getDisplayName()}
+            </a>
+        </div>
+    ))
+}

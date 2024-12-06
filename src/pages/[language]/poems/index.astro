@@ -1,0 +1,12 @@
+---
+import { LANGUAGES } from '@lib/languages';
+import ItemsListPage from '@layouts/ItemsListPage.astro';
+import { getPoems } from '@lib/poems';
+
+export async function getStaticPaths() {
+    return [{ params: { language: 'zh' } }];
+}
+
+const poems = await getPoems();
+---
+<ItemsListPage title={LANGUAGES.zh.getTranslation("all_poems")} items={poems} language='zh'/>
