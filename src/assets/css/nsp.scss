@@ -227,6 +227,11 @@ details[open] summary {
   margin: 0;
 }
 
+.poem p + p::before {
+  content: "\A";
+  white-space: pre-wrap;
+}
+
 .poem .two-columns {
   display: flex;
   justify-content: space-between;
