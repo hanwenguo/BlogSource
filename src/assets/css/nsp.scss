@@ -95,6 +95,10 @@ body[a="light"] { @include light-appearance; }
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+}
+
 html { 
   height: 100%;
 
