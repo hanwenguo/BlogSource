@@ -10,7 +10,7 @@
   }
 
   details {
-    border: thin solid $--primary-text-color;
+    border: 2px solid $--primary-text-color;
   }
 
   details summary {
@@ -18,7 +18,7 @@
   }
 
   details[open] summary {
-    border-bottom: 1px solid $--primary-text-color;
+    border-bottom: 1.5px solid $--primary-text-color;
   }
 
   pre {
@@ -26,7 +26,8 @@
   }
 
   code:not(pre > code) {
-    background-color: $--primary-text-color;
+    background-color: $--secondary-text-color;
+    border-color: $--primary-text-color;
     color: $--bg-color;
   }
 
@@ -36,17 +37,17 @@
    }
 
   table, th, td {
-    border: thin solid $--primary-text-color;
+    border: 2px solid $--primary-text-color;
   }
 
   .toc {
-    border: thin solid $--primary-text-color;
+    border: 2px solid $--primary-text-color;
   }
 
   figcaption { color: $--secondary-text-color; }
 
   blockquote {
-    border: thin solid $--primary-text-color;
+    border: 2px solid $--primary-text-color;
   }
 }
 
@@ -85,7 +86,17 @@ body { @include light-appearance; }
 
 // -------------------------------------------- //
 
-html { height: 100%; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html { 
+  height: 100%;
+
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
 
 body {
   font-family: 'IBM Plex Serif', "Noto Serif SC", serif;
@@ -97,28 +108,55 @@ body {
   overflow-wrap: break-word;
 }
 
+:target {
+  scroll-margin-block: 5ex;
+}
+
 article {
   margin: 1.5rem 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 h1 {
   font-size: 2.25rem;
   margin: 0 0 0.25rem;
+  text-wrap: balance;
 }
 
 article.poem > h1 {
   font-size: 2.25rem;
   margin: 0 0 0.25rem !important;
+  line-height: 1.2;
 }
 
-h2, h3, h4, h5, h6 { margin: 1.5rem 0; }
+h2, h3, h4, h5, h6 { 
+  margin: 1.5rem 0;
+  line-height: 1.2;
+  text-wrap: balance;
+}
 
-p { margin: 1rem 0; }
+p { 
+  margin: 1rem 0;
+  text-wrap: pretty;
+}
+
+ol {
+  margin: 1rem 0;
+}
+
+ul:not(ul ul) {
+  margin: 1rem 0;
+}
 
 li { margin: 0.4rem 0; }
 
 a {
   text-decoration: none;
+  text-decoration-skip-ink: auto;
   &:hover { text-decoration: underline; }
 }
 
@@ -152,8 +190,10 @@ code {
 }
 
 code:not(pre > code) {
-  padding: 0.1em 0.2em;
-  font-size: 90%;
+  padding: 0rem 0.5rem;
+  font-size: 95%;
+  border: 1.5px solid;
+  border-radius: 0.3rem;
 }
 
 code.has-jax {
@@ -166,18 +206,24 @@ code.has-jax {
 blockquote {
   padding: 1rem;
 
+  margin: 1rem 2.5rem;
+
   p { margin: 0; }
+}
+
+img, picture, video, canvas {
+  display: block;
+  max-width: 100%;
 }
 
 img {
   max-width: 100%;
-  display: block;
   margin: 0 auto;
 }
 
 figcaption {
   text-align: center;
-  opacity: 0.5;
+  margin: 1rem 0;
 }
 
 details {
@@ -212,7 +258,7 @@ details[open] summary {
 }
 
 .w {
-  max-width: 40rem;
+  max-width: 45rem;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
