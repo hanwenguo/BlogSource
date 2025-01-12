@@ -11,6 +11,9 @@ importers:
       '@astrojs/mdx':
         specifier: ^4.0.5
         version: 4.0.5(astro@5.1.5(rollup@4.30.1)(sass-embedded@1.82.0)(sass@1.83.1)(typescript@5.7.2))
+      '@microflash/rehype-figure':
+        specifier: ^2.1.1
+        version: 2.1.1
       '@myriaddreamin/rehype-typst':
         specifier: ^0.5.4
         version: 0.5.4
@@ -471,6 +474,9 @@ packages:
 
   '@mdx-js/mdx@3.1.0':
     resolution: {integrity: sha512-/QxEhPAvGwbQmy1Px8F899L5Uc2KZ6JtXwlCgJmjSTBedwOZkByYcBG4GceIGPXRDsmfxhHazuS+hlOShRLeDw==}
+
+  '@microflash/rehype-figure@2.1.1':
+    resolution: {integrity: sha512-wI9M4Yf+uhcolXkhRZAwGwyxjMfkXlPk6l2dVlyyQWFxQU3vPRJZKKKphafEMISdGd271MUVRNlnayUbn/cU0A==}
 
   '@myriaddreamin/rehype-typst@0.5.4':
     resolution: {integrity: sha512-6NJ0Ddom+X1jTTO1qlwB7ArLuZBg18m+fTqd3HWpkxAUhHAoemd2oF3ATwBIM0uF9gzG9d523D4o7b+jXCaBUQ==}
@@ -1981,6 +1987,9 @@ packages:
   unist-util-remove-position@5.0.0:
     resolution: {integrity: sha512-Hp5Kh3wLxv0PHj9m2yZhhLt58KzPtEYKQQ4yxfYFEO7EvHwzyDYnduhHnY1mDxoqr7VUwVuHXk9RXKIiYS1N8Q==}
 
+  unist-util-remove@4.0.0:
+    resolution: {integrity: sha512-b4gokeGId57UVRX/eVKej5gXqGlc9+trkORhFJpu9raqZkZhU0zm8Doi05+HaiBsMEIJowL+2WtQ5ItjsngPXg==}
+
   unist-util-stringify-position@4.0.0:
     resolution: {integrity: sha512-0ASV06AAoKCDkS2+xw5RXJywruurpbC4JZSm7nr7MOt1ojAzvyyaO+UxZf18j8FCF6kmzCZKcAgN/yu2gm2XgQ==}
 
@@ -2503,6 +2512,13 @@ snapshots:
     transitivePeerDependencies:
       - acorn
       - supports-color
+
+  '@microflash/rehype-figure@2.1.1':
+    dependencies:
+      hast-util-whitespace: 3.0.0
+      hastscript: 9.0.0
+      unist-util-remove: 4.0.0
+      unist-util-visit: 5.0.0
 
   '@myriaddreamin/rehype-typst@0.5.4':
     dependencies:
@@ -4533,6 +4549,12 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
       unist-util-visit: 5.0.0
+
+  unist-util-remove@4.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.0
+      unist-util-visit-parents: 6.0.1
 
   unist-util-stringify-position@4.0.0:
     dependencies:

@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 
 import remarkMath from 'remark-math';
 import rehypeTypst from '@myriaddreamin/rehype-typst';
+import rehypyFigure from "@microflash/rehype-figure";
 
 import mdx from '@astrojs/mdx';
 
@@ -31,7 +32,7 @@ export default defineConfig({
       wrap: false
     },
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeTypst]
+    rehypePlugins: [rehypeTypst, rehypyFigure]
   },
 
   vite: {

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.5",
+    "@microflash/rehype-figure": "^2.1.1",
     "@myriaddreamin/rehype-typst": "^0.5.4",
     "astro": "^5.1.5",
     "remark-math": "^6.0.0"
