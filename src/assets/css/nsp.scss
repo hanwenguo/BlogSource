@@ -239,6 +239,50 @@ details[open] summary {
   padding-bottom: 0.5em;
 }
 
+.w aside {
+  position: absolute;
+  left: 100%;
+  text-align: left;
+  width: 16rem;
+  font-size: 16px;
+}
+
+.w aside.left {
+  left: revert;
+  right: 100%;
+  text-align: right;
+}
+
+@media screen and (max-width: 80rem) {
+  .w aside {
+    font-size: 14px;
+    position: relative;
+    margin: 1rem 0 1rem auto;
+    padding: 1rem .5rem;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    width: initial;
+    max-width: 85%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+  }
+
+  .w aside::after {
+    content: "aside";
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0.1rem;
+  }
+
+  .w aside.left {
+    margin: 1rem auto 1rem 0;
+    left: revert;
+    right: 0;
+  }
+}
+
 .back-link {
   display: block;
 }
@@ -261,6 +305,7 @@ details[open] summary {
   max-width: 45rem;
   margin: 0 auto;
   padding: 4rem 2rem;
+  position: relative;
 }
 
 .toc {
