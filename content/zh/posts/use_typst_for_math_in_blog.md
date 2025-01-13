@@ -57,6 +57,19 @@ export default defineConfig({
 上面的 CSS filter 把 SVG 图像的颜色更改为 `#ffffff`，这是这个博客中深色模式下的文本颜色。
 这段 CSS filter 是[这个 StackOverflow 回答](https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element#answer-53336754)中提到的[这个 Codepen 项目](https://codepen.io/sosuke/pen/Pjoqqp)生成的。
 
+### 修复行高问题
+
+另一个问题是 SVG 图像的行高与文本不一致。typst.ts 生成的 SVG 图像具有特定的高度，略大于博客中 `<p>` 元素的 `line-height`。这导致了带有数学公式的段落的行高大于没有数学公式的段落，看起来很丑。
+
+这个问题的难点在于这些 SVG 图像的 `height` 和 `width` 属性是由 typst.ts 设置的，并且 rehype-typst 没有提供修改渲染方式的配置选项，所以我必须找到一种不修改 SVG 图像本身的方法。
+
+最终的解决方案有点取巧：
+
+- 稍微增加 `<p>` 元素的 `line-height`（从 `1.5` 到 `1.6`）；
+- 手动将 SVG 图像的 `font-size` 设置为 `16px`，相比而言， `<body>` 的 `font-size` 是 `18px`。
+
+这样，SVG 图像不会太小，文本的行高（因此行间距）不会太大，而 SVG 图像的基线仍然与文本的底部对齐。
+
 ## 结语
 
 使用 Typst 来显示数学公式挺不错，但对我来说还有点不够。对我来说，由于 Typst 提供的标记语法、数学公式支持以及比 LaTeX 好写好懂的语言，Typst 对我来说更像是一个“better Markdown”，尽管这么说显得对旨在与 LaTeX 竞争的 Typst 有点不公平。目前 Typst 的 release 版本只能导出 SVG 和 PDF，但[基本的 HTML 导出支持](https://github.com/typst/typst/issues/5512)已经合并到了主分支中，所以我十分期待能用 Typst 来写博客的那一天早些到来。
