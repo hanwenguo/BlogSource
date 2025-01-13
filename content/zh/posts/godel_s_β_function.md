@@ -43,8 +43,6 @@ $$
 
 ### 裴蜀引理
 
-<aside>Some out-of-topic mumbles: In my high school years, I had been thinking that this lemma was brought out by an ancient Chinese mathematician, since the name is translated as '裴蜀', which seems really like a Chinese name.</aside>
-
 <aside>题外话：在我高中的时候，我一直以为这个引理是由一个古代中国数学家提出的，因为“裴蜀”看起来太像中国名字了。</aside>
 
 （这里展现的引理是原定理的一个弱版本。）
