@@ -259,22 +259,29 @@ p svg.typst-doc {
 }
 
 .w aside {
-  position: absolute;
-  left: 100%;
   text-align: left;
-  width: 16rem;
   font-size: 16px;
+  width: 16rem;
+  float: right;
+  clear: right;
+  margin-right: -18rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.w aside.left {
-  left: revert;
-  right: 100%;
+.w aside.aside-left {
   text-align: right;
+  float: left;
+  clear: left;
+  margin-right: 0;
+  margin-left: -18rem;
 }
 
 @media screen and (max-width: 80rem) {
   .w aside {
     font-size: 14px;
+    float: none;
+    clear: none;
     position: relative;
     margin: 1rem 0 1rem auto;
     padding: 1rem .5rem;
@@ -288,15 +295,17 @@ p svg.typst-doc {
   }
 
   .w aside::after {
-    content: "aside";
+    content: "side note";
     font-size: 10px;
     position: absolute;
     right: 0;
     bottom: 0.1rem;
   }
 
-  .w aside.left {
+  .w aside.aside-left {
     margin: 1rem auto 1rem 0;
+    float: none;
+    clear: none;
     left: revert;
     right: 0;
   }
