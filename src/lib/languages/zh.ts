@@ -13,6 +13,8 @@ const translationDict: Record<string, string | ((key: string) => string) | ((key
   latest_posts: '最近的文章',
   show_more: '以及更多',
   language: '语言',
+  links: '拾贝',
+  links_page_description: '这里有一些我在互联网上发现的有趣链接。',
 
   not_found: '您要查找的页面不存在。',
   not_found_reason: '可能是输入了错误的网址，或者页面已经被移动或删除了。',

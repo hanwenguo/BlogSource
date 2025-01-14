@@ -1,0 +1,118 @@
+---
+import Basic from "@layouts/Basic.astro";
+import BackLink from "@components/BackLink.astro";
+
+import ItemList, { type Item } from "@components/ItemList.astro";
+import I18NList from "@components/I18nList.astro";
+import { LANGUAGES } from "@lib/languages";
+
+interface Link {
+    title: string | { [K in keyof (typeof LANGUAGES)]: string }
+    path: string
+}
+
+interface Props {
+    links: Item[]
+}
+
+export async function getStaticPaths() {
+    const linksData: Link[] = [
+        {
+            title: "Damas-Hindley-Milner inference two ways",
+            path: "https://bernsteinbear.com/blog/type-inference/"
+        },
+        {
+            title: "Write your Own Virtual Machine",
+            path: "https://www.jmeiners.com/lc3-vm/"
+        },
+        {
+            title: "Counterexamples in Type Systems",
+            path: "https://counterexamples.org/intro.html"
+        },
+        {
+            title: "How to Design Programs, Second Edition",
+            path: "https://htdp.org/2024-11-6/Book/index.html"
+        },
+        {
+            title: "Parse, don’t validate",
+            path: "https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/"
+        },
+        {
+            title: "Functional programming self-affirmations",
+            path: "https://norikitech.com/posts/functional-affirmations/"
+        },
+        {
+            title: "Music Theory for the 21st-Century Classroom",
+            path: "https://musictheory.pugetsound.edu/mt21c/MusicTheory.html"
+        },
+        {
+            title: "the website of Gwern Branwen (listed here for its design)",
+            path: "https://gwern.net/index"
+        },
+        {
+            title: "TrunkVer",
+            path: "https://trunkver.org"
+        },
+        {
+            title: "Mathematical English (a brief summary)",
+            path: "https://webusers.imj-prg.fr/~jan.nekovar/co/en/en.pdf"
+        },
+        {
+            title: "The PGP Problem",
+            path: "https://latacora.micro.blog/2019/07/16/the-pgp-problem.html"
+        },
+        {
+            title: "Category Theory Illustrated",
+            path: "https://abuseofnotation.github.io/category-theory-illustrated/00_about/"
+        },
+        {
+            title: "jj init",
+            path: "https://v5.chriskrycho.com/essays/jj-init/"
+        },
+        {
+            title: "This Person Does Not Exist",
+            path: "https://thispersondoesnotexist.com"
+        },
+    ]
+    return Object.keys(LANGUAGES).map(language => {
+        return {
+            params: { language },
+            props: { links: linksData.map(link => {
+                return {
+                    title: typeof link.title === "string" ? link.title : link.title[language],
+                    path: link.path,
+                    languageCode: language
+                }
+            })}
+        }
+    })
+}
+
+const { links } = Astro.props
+const language = Astro.params.language
+const languageObject = LANGUAGES[language]
+const title = languageObject.getTranslation("links")
+
+const i18nVersions: Item[] = Object.entries(LANGUAGES)
+    .filter(([code, _]) => code !== language)
+    .map(([code, language]) => ({
+        title: language.getDisplayName(),
+        path: `/${code}/links/`,
+        languageCode: code,
+    }));
+
+const linksPageDescription = languageObject.getTranslation("links_page_description")
+---
+<Basic title={title}>
+    <BackLink />
+    <article class:list={languageObject.is(LANGUAGES["zh"]) ? ["font-song"] : []}>
+    <h1>{title}</h1>
+    <div class="post-meta">
+        {i18nVersions && i18nVersions.length > 0 && (
+            <I18NList items={i18nVersions} />
+        )}
+    </div>
+    <p>{linksPageDescription}</p>
+    <ItemList items={links} language={language} />
+    </article>
+</Basic>

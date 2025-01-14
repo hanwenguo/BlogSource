@@ -13,6 +13,8 @@ const translationDict: Record<string, string | ((key: string) => string) | ((key
   latest_posts: 'Latest posts',
   show_more: 'and more',
   language: 'Language',
+  links: 'Links',
+  links_page_description: 'Here are some interesting links I found on the internet.',
 
   not_found: 'The page you are looking for does not exist.',
   not_found_reason: 'It might be a typo, or the page has been moved or deleted.',
