@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content'
-import { type Language, LANGUAGES  } from '@lib/languages'
+import { type Language, LANGUAGES } from '@lib/languages'
 
 export class PoemClass {
     public readonly title: string
