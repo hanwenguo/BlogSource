@@ -1,41 +1,67 @@
-import { type Plugin, type ViteDevServer } from "vite";
+import { type HmrContext, type Plugin, type ResolvedConfig, type ViteDevServer } from "vite";
 import fs from "node:fs/promises";
 import { pathToFileURL } from "node:url";
-import { renderTypstFile } from "./renderer.js";
+// import { renderTypstFile } from "./renderer.js";
+import type { AstroTypstConfig } from "./prelude.js";
+import { renderTypstFileToHtml } from "./compiler.js";
 
-export type TypstComponent = {
-    name: "TypstComponent";
-    frontmatter: Record<string, any>;
-    file: string;
-    url?: string;
-    html: string;
+function isTypstFile(id: string) {
+    return /\.typ$/.test(id);
 }
 
-export default function (config: Record<string, any> = {}): Plugin {
+function debug(...args: any[]) {
+    if (process.env.DEBUG) {
+        debug(...args);
+    }
+}
+
+export default function (config: AstroTypstConfig = {}): Plugin {
     let server: ViteDevServer;
     const plugin: Plugin = {
         name: 'vite-plugin-typst',
+        enforce: 'pre',
+
+        load(id) {
+            if (!isTypstFile(id)) return;
+            debug(`[vite-plugin-astro-typ] Loading id: ${id}`);
+            // const { path, opts } = extractOpts(id);
+        },
+
         configureServer(_server) {
-            // _server.watcher.on('change', (event) => console.log({ event }));
             server = _server;
+            // listen for .typ file changes
+            server.watcher.on('change', async (filePath) => {
+                if (isTypstFile(filePath)) {
+                    const modules = server.moduleGraph.getModulesByFile(filePath);
+                    if (modules) {
+                        for (const mod of modules) {
+                            debug(`[vite-plugin-astro-typ] Invalidating module: ${mod.id}`);
+                            server.moduleGraph.invalidateModule(mod);
+                        }
+                    } else {
+                        debug(`[vite-plugin-astro-typ] No modules found for file: ${filePath}`);
+                        server.ws.send({
+                            type: 'full-reload',
+                            path: '*', // reload all files
+                        });
+                    }
+                }
+            });
         },
-        handleHotUpdate({ modules }) {
-            for (const mod of modules) {
-                server.moduleGraph.invalidateModule(mod);
-            }
-            // console.log(server.moduleGraph.fileToModulesMap)
-        },
-        async transform(_code: string, id: string) {
-            if (id.endsWith('.typ')) {
-                const { frontmatter, html } = await renderTypstFile(
-                    id,
-                    // TODO: getHeadings
-                    config.options
-                );
-                // const fileId = id.split('?')[0];
-                // const runtime = "astro/runtime/server/index.js";
-                return {
-                    code: `
+        async transform(code: string, id: string) {
+            if (!isTypstFile(id)) return;
+            // const { path, opts } = extractOpts(id);
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+
+            const { frontmatter, html } = await renderTypstFileToHtml(
+                id,
+                // TODO: getHeadings
+                config.options
+            );
+            // const fileId = id.split('?')[0];
+            // const runtime = "astro/runtime/server/index.js";
+            return {
+                code: `
 import { createComponent, render, renderComponent, unescapeHTML } from "astro/runtime/server/index.js";
 export const name = "TypstComponent";
 export const file = ${JSON.stringify(id)};
@@ -60,12 +86,9 @@ export const Content = createComponent((result, _props, slots) => {
 });
 export default Content;
 `,
-                    map: null,
-                }
+                map: null,
             }
         }
-        // async load(id, options) {
-        // }
     }
 
     return plugin;

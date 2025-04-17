@@ -1,11 +1,18 @@
 import type { AstroRenderer, AstroIntegration, ContentEntryType, HookParameters } from "astro";
 import vitePluginTypst from "./vite";
 import { fileURLToPath } from "node:url";
-import { renderTypstFile } from "./renderer";
+// import { renderTypstFile } from "./renderer";
+import { renderTypstFileToHtml } from "./compiler";
 import nodeResolve from "@rollup/plugin-node-resolve";
+import type { PluginOption } from "vite";
+import { createResolver, defineIntegration, watchDirectory } from "astro-integration-kit";
 
 const PACKAGE_NAME = 'astro-typst';
-const isDebug = false;
+/**
+ * Change this to `true` if you want to run the code.
+ * Change it to `false` before publishing.
+ */
+import { isDebug } from "./debug.js";
 
 function getRenderer(): AstroRenderer {
     const serverEntrypoint = (isDebug ? "" : "astro-typst/") + "dist/renderer/index.js";
@@ -22,6 +29,8 @@ type SetupHookParams = HookParameters<'astro:config:setup'> & {
 	addContentEntryType: (contentEntryType: ContentEntryType) => void;
 };
 
+const { resolve: resolver } = createResolver(import.meta.url);
+
 export default function typstIntegration(
     config = {
         options: {
@@ -34,6 +43,7 @@ export default function typstIntegration(
         hooks: {
             'astro:config:setup': (options) => {
                 const { addRenderer, addContentEntryType, addPageExtension, updateConfig } = (options as SetupHookParams);
+                watchDirectory(options, resolver());
                 addRenderer(getRenderer());
                 addPageExtension('.typ');
                 addContentEntryType({
@@ -41,7 +51,7 @@ export default function typstIntegration(
                     handlePropagation: false,
                     async getEntryInfo({ fileUrl, contents }) {
                         const mainFilePath = fileURLToPath(fileUrl);
-                        let { frontmatter } = await renderTypstFile(
+                        let { frontmatter } = await renderTypstFileToHtml(
                             mainFilePath,
                             config?.options
                         );
@@ -70,9 +80,20 @@ export default function typstIntegration(
                                 ],
                             }
                         },
-                        plugins: [nodeResolve(), vitePluginTypst(config)],
+                        plugins: [nodeResolve(), vitePluginTypst(config) as PluginOption],
                     },
                 });
+            },
+            "astro:config:done": (params) => {
+                params.injectTypes(
+                    {
+                        filename: "astro-i18n.d.ts",
+                        content: `declare module '*.typ' {
+    const component: () => any;
+    export default component;
+}`,
+                    }
+                )
             }
         }
     }
