@@ -1,5 +1,6 @@
 ---
 import Basic from "@layouts/Basic.astro"
+import myImage from "@assets/images/me-apr-2025-blackburg-va.jpeg"
 
 import { SITE_TITLE } from "@lib/constants"
 
@@ -8,5 +9,21 @@ import { SITE_TITLE } from "@lib/constants"
     <header>
         <h1 class="font-monospace">{SITE_TITLE}</h1>
     </header>
-    <slot />
+    <div style="position: relative">
+        <slot />
+        <div style="position: absolute; top: 0.5rem; right: 0;">
+            <img
+                src={myImage.src}
+                alt="A photo of me taken in April 2025 in Blacksburg, Virginia"
+                loading="lazy"
+                decoding="async"
+                style="
+                width: 14rem; 
+                height: auto; 
+                box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.2);
+                "
+            />
+            <figcaption style="margin: 0.5rem 0; font-size: 14px;">2025/04 @ Blacksburg, VA</figcaption>
+        </div>
+    </div>
 </Basic>
