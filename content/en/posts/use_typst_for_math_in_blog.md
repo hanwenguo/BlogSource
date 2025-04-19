@@ -20,7 +20,7 @@ There is also some disadvantages:
 - Different syntax from LaTeX (personally I consider this as an advantage, but it could be awkward to migrate previous posts);
 - Not so convenient to integrate with all kinds of site builders, but this is not a problem for me (see the next section).
 
-For some examples, you can see the math in [this post](/en/posts/godel_s_β_function/).
+For some examples, you can see the math in [this post](/en/posts/godel_s_β_function/). (Updated on 2025/04/19: That post is now rendered completely with Typst, so the math style is different from what the following approach would produce.)
 
 ## Integration
 

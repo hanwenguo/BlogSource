@@ -11,4 +11,4 @@ Last time I wrote about #link("/en/posts/use_typst_for_math_in_blog/")[using Typ
 If you are considering using Typst for your blog, here are some tips:
 - check #link("https://github.com/typst-doc-cn/news")[this repo]: it is a successful example of using Typst and some glue scripts only to generate a static site;
 - Hexo users: check out #link("https://github.com/Myriad-Dreamin/typst.ts")[typst.ts], which I think now provides HTML export in their Hexo plugin;
-- Astro users: maybe I will share my setup after I clean up the mess, and for now, the above-menioned repo and #link("https://github.com/OverflowCat/astro-typst")[astro-typst] may be helpful. (The latter now only supports embedding SVG, but is a good example of creating a simple Astro integration.)
+- Astro users: maybe I will share my setup after I clean up the mess, and for now, the above-menioned repo and #link("https://github.com/OverflowCat/astro-typst")[astro-typst] may be helpful. 

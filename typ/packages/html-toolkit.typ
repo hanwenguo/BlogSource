@@ -88,3 +88,5 @@
 
 /// Creates an embeded block typst frame.
 #let div-frame(content, attrs: (:)) = html.elem("div", html.frame(content), attrs: attrs)
+
+#let aside = html-elem.with(tag: "aside")
