@@ -16,7 +16,7 @@ const compileArgs: CompileArgs = {
         "x-target": "web",
         // ...(astroConfig.site ? { "x-url-base": astroConfig.site } : {}),
     },
-    // fontArgs: [{ fontPaths: ["./assets/fonts", "./assets/typst-fonts"] }],
+    fontArgs: [{ fontPaths: ["./build/fonts"] }],
 };
 
 /**
