@@ -17,7 +17,7 @@
 // )
 
 /// The base of all html templates.
-#let base-template(content) = {
+#let base-template(content, title: "", date: "", tags: (), lang: "en") = {
   // todo: remove it after the bug is fixed
   show raw.where(block: false): it => html.elem("code", it.text)
   // Renders the math equations with scrollable div.
@@ -26,10 +26,23 @@
   show math.equation.where(block: true): div-frame.with(attrs: ("style": "display: flex; justify-content: center; overflow-x: auto;"))
   /// The description of the document.
   // set document(description: description) if description != none
-  set text(size: 15pt)
+  set text(size: 15pt, lang: lang)
 
-  show: html-template
+  // [#metadata((
+  //   title: title,
+  //   date: date,
+  //   tags: tags,
+  // )) <frontmatter>]
+
+  html-template([
+    #metadata((
+      title: title,
+      date: date,
+      tags: tags,
+    )) <frontmatter>
+    #content
+  ])
 
   /// The HTML content.
-  content
+  // content
 }

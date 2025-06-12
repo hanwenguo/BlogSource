@@ -274,7 +274,8 @@ export async function renderTypstFileToHtml(
 ): Promise<{ frontmatter: Record<string, any>, html: string }> {
     const mainFileContent = await fs.readFile(mainFilePath, "utf-8");
     const compileOptions = {
-        mainFileContent: `${options.template}\n${mainFileContent}`,
+        // mainFileContent: `${options.template}\n${mainFileContent}`,
+        mainFileContent,
         inputs: {
             ...compileArgs.inputs,
             "x-target": `web`,

@@ -13,6 +13,7 @@ const PACKAGE_NAME = 'astro-typst';
  * Change it to `false` before publishing.
  */
 import { isDebug } from "./debug.js";
+import type { AstroTypstConfig } from "./prelude";
 
 function getRenderer(): AstroRenderer {
     const serverEntrypoint = (isDebug ? "" : "astro-typst/") + "dist/renderer/index.js";
@@ -32,11 +33,7 @@ type SetupHookParams = HookParameters<'astro:config:setup'> & {
 const { resolve: resolver } = createResolver(import.meta.url);
 
 export default function typstIntegration(
-    config = {
-        options: {
-            template: "",
-        }
-    },
+    config: AstroTypstConfig
 ): AstroIntegration {
     return {
         name: "typst",

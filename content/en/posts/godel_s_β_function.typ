@@ -1,8 +1,9 @@
-#metadata((
+#import "/typ/templates/template.typ": *
+#show: base-template.with(
   title: "Gödel's β Function",
   date: "2023-09-22T21:00:00+08:00",
   tags: ("math",),
-))<frontmatter>
+)
 
 Today in the _Introduction to Recursion Theory_ course I was told about Gödel's β Function, which makes it possible to encode a finite sequence into a single natural number.
 

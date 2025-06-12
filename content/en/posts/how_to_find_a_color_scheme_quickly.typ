@@ -1,9 +1,9 @@
-#metadata((
+#import "/typ/templates/template.typ": *
+#show: base-template.with(
   title: "How to Find a Color Scheme Quickly",
   date: "2025-04-19T12:52:00-06:00",
-  tags: ("blog", "design")
-))<frontmatter>
-#set text(lang: "en")
+  tags: ("blog", "design"),
+)
 
 There are always things in the world that require some level of visual design. Taking some things I've had to do recently as examples: creating slideshows, drawing charts for papers, making posters, and designing my homepage – having some design is always better than having none. In the design process, choosing fonts is relatively simple. After doing this a few times, you slowly build up a set of fonts that can be combined for various occasions. While layout has many details, as long as you follow some basic principles like alignment, white space, contrast, and unity, the result won't be poor. However, choosing a color scheme is often the hardest part for me.
 

@@ -1,8 +1,10 @@
-#metadata((
+#import "/typ/templates/template.typ": *
+#show: base-template.with(
   title: "哥德尔 β 函数",
   date: "2023-09-22T21:00:00+08:00",
   tags: ("数学",),
-))<frontmatter>
+  lang: "zh",
+)
 
 在今天的递归论导论课上，我了解到了哥德尔的 $β$ 函数，它可以将一个有限序列编码成一个自然数。
 

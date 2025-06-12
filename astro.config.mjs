@@ -29,7 +29,7 @@ export default defineConfig({
     mdx(),
     typst({
       options: {
-        template: '#import "/typ/templates/template.typ": *\n#show: base-template\n',
+      //   template: '#import "/typ/templates/template.typ": *\n#show: base-template\n',
       }
     })
   ],
