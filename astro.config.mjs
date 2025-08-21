@@ -7,7 +7,7 @@ import rehypeFigure from "@microflash/rehype-figure";
 
 import mdx from '@astrojs/mdx';
 
-import { typstIntegration as typst } from 'astro-typst';
+import { typst } from 'astro-typst';
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,8 +29,10 @@ export default defineConfig({
     mdx(),
     typst({
       options: {
+        remPx: 16,
       //   template: '#import "/typ/templates/template.typ": *\n#show: base-template\n',
-      }
+      },
+      target: "html"
     })
   ],
 

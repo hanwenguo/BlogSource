@@ -28,21 +28,21 @@
   // set document(description: description) if description != none
   set text(size: 15pt, lang: lang)
 
-  // [#metadata((
-  //   title: title,
-  //   date: date,
-  //   tags: tags,
-  // )) <frontmatter>]
+  [#metadata((
+    title: title,
+    date: date,
+    tags: tags,
+  )) <frontmatter>]
 
-  html-template([
-    #metadata((
-      title: title,
-      date: date,
-      tags: tags,
-    )) <frontmatter>
-    #content
-  ])
+  // html-template([
+  //   #metadata((
+  //     title: title,
+  //     date: date,
+  //     tags: tags,
+  //   )) <frontmatter>
+  //   #content
+  // ])
 
   /// The HTML content.
-  // content
+  content
 }
