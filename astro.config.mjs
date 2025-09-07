@@ -32,6 +32,9 @@ export default defineConfig({
         remPx: 16,
       //   template: '#import "/typ/templates/template.typ": *\n#show: base-template\n',
       },
+      fontArgs: [
+        { fontPaths: ['./typ/fonts']}
+      ],
       target: "html"
     })
   ],
