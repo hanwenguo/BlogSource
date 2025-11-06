@@ -46,10 +46,6 @@ export async function getStaticPaths() {
             path: "https://musictheory.pugetsound.edu/mt21c/MusicTheory.html"
         },
         {
-            title: "the website of Gwern Branwen (listed here for its design)",
-            path: "https://gwern.net/index"
-        },
-        {
             title: "TrunkVer",
             path: "https://trunkver.org"
         },
@@ -73,6 +69,14 @@ export async function getStaticPaths() {
             title: "This Person Does Not Exist",
             path: "https://thispersondoesnotexist.com"
         },
+        {
+            title: "The hardest working font in Manhattan",
+            path: "https://aresluna.org/the-hardest-working-font-in-manhattan/"
+        },
+        {
+            title: "If the Moon Were Only 1 Pixel",
+            path: "https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html"
+        }
     ]
     return Object.keys(LANGUAGES).map(language => {
         return {
