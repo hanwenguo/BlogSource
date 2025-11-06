@@ -8,9 +8,15 @@
     // [(323) 555 1435],
     [#link("mailto:guo@hanwen.io")],
     [#link("mailto:hanwen.guo@utah.edu")],
-    [#link("https://github.com/hanwenguo")[#sicon(slug: "github")]],
-    [#link("https://scholar.google.com/citations?user=H-96dO8AAAAJ")[#sicon(slug: "googlescholar")]],
-    [#link("https://orcid.org/0009-0000-7118-2145")[#sicon(slug: "orcid")]],
+    [#link("https://github.com/hanwenguo")[
+      #context if target() == "paged" { sicon(slug: "github") } else { text("GitHub") }
+    ]],
+    [#link("https://scholar.google.com/citations?user=H-96dO8AAAAJ")[
+      #context if target() == "paged" { sicon(slug: "googlescholar") } else { text("Google Scholar") }
+    ]],
+    [#link("https://orcid.org/0009-0000-7118-2145")[
+      #context if target() == "paged" { sicon(slug: "orcid") } else { text("ORCID") }
+    ]],
   ),
   // footer-text: [Page#sym.space],
   paper-size: "us-letter",
