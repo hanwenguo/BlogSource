@@ -43,7 +43,7 @@ Before the proof, we need to prove two preliminary propositions.
 
 == Bézout's Lemma
 
-#aside[Some out-of-topic mumbles: In my high school years, I had been thinking that this lemma was brought out by an ancient Chinese mathematician, since the name is translated as '裴蜀', which seems really like a Chinese name.]
+#html.aside[Some out-of-topic mumbles: In my high school years, I had been thinking that this lemma was brought out by an ancient Chinese mathematician, since the name is translated as '裴蜀', which seems really like a Chinese name.]
 
 (Note that this lemma is a weaken version of the original theorem.)
 

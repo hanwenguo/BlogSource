@@ -30,12 +30,13 @@ export default defineConfig({
     typst({
       options: {
         remPx: 16,
-      //   template: '#import "/typ/templates/template.typ": *\n#show: base-template\n',
       },
+      body: true,
       fontArgs: [
         { fontPaths: ['./typ/fonts']}
       ],
-      target: "html"
+      target: "html",
+      emitSvg: false
     })
   ],
 
@@ -49,15 +50,6 @@ export default defineConfig({
     },
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeTypst, rehypeFigure]
-  },
-
-  vite: {
-      build: {
-          assetsInlineLimit: 0,
-          rollupOptions: {
-            external: ["astro-typst"]
-          },
-      }
   },
 
   experimental: {
