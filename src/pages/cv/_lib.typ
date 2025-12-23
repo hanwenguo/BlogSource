@@ -111,25 +111,16 @@
     ..,
     body,
   ) = {
-    // html.article[
-    //   #html.h1(name)
-    //   #html.div(class: "post-meta")[
-    //     #for contact in contacts {
-    //       html.p(contact)
-    //     }
-    //   ]
-    //   #body
-    // ]
-    html.elem("article", {
-      html.elem("h1")[#name]
-      html.elem("div", html.elem("a", attrs: (href: "/cv.pdf"))[PDF Version])
-      html.elem("div", attrs: (class: "post-meta"))[
+    html.article[
+      #html.h1(name)
+      #html.div(html.a(href: "/cv.pdf")[PDF Version])
+      #html.div(class: "post-meta")[
         #for contact in contacts {
-          html.elem("p")[#contact]
+          html.p(contact)
         }
       ]
-      body
-    })
+      #body
+    ]
   }
 
   context if target() == "paged" {
@@ -153,12 +144,6 @@
     )
   }
 }
-
-// #let pesha = if sys.inputs.at("x-target", default: "paged") == "paged" {
-//   pesha-paged
-// } else {
-//   pesha-html
-// }
 
 #let tile(
   body,
@@ -193,43 +178,12 @@
     bottom-left: none,
     bottom-right: none,
   ) = {
-    // html.div(style: "display: grid; grid-template-columns: 12rem 1fr; gap: 1rem;")[
-    //   #html.div(top-right)
-    //   #html.div[
-    //     #top-left
-    //     #html.br()
-    //     #bottom-left
-    //     #html.br()
-    //     #bottom-right
-    //     #html.br()
-    //     #body
-    //   ]
-    // ]
-    // html.elem("div", attrs: (style: "display: grid; grid-template-columns: 12rem 1fr; gap: 1rem;"))[
-    //   #html.elem("div")[#top-right]
-    //   #html.elem("div")[
-    //     #top-left
-    //     #html.elem("br")[]
-    //     #bottom-left
-    //     #html.elem("br")[]
-    //     #bottom-right
-    //     #html.elem("br")[]
-    //     #body
-    //   ]
-    // ]
-    html.elem("div", attrs: (style: "display: flex; flex-direction: row; flex-wrap: wrap; margin: 1rem 0;"))[
-      #html.elem("div", attrs: (style: "flex: 1 1; min-width: 9rem;"))[#top-right]
-      #html.elem("div", attrs: (style: "flex: 2 1; min-width: 12rem;"))[
-        #top-left
-        #html.elem("br")[]
-        #if bottom-left != none [
-          #bottom-left
-          #html.elem("br")[]
-        ]
-        #if bottom-right != none [
-          #bottom-right
-          #html.elem("br")[]
-        ]
+    html.div(style: "display: flex; flex-direction: row; flex-wrap: wrap; margin: 1rem 0;")[
+      #html.div(style: "flex: 1 1; min-width: 9rem;")[#top-right]
+      #html.div(style: "flex: 2 1; min-width: 12rem;")[
+        #top-left \        
+        #if bottom-left != none [#bottom-left\ ]
+        #if bottom-right != none [#bottom-right\ ]
         #body
       ]
     ]
@@ -253,9 +207,6 @@
     )
   }
 }
-
-// #let tile = if sys.inputs.at("x-target", default: "paged") == "paged" { tile-paged } else { tile-html }
-// #let tile = context if target() == "paged" { tile-paged } else { tile-html }
 
 #let experience(
   body,
