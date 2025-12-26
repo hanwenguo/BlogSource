@@ -31,7 +31,8 @@ export default defineConfig({
       options: {
         remPx: 16,
       },
-      body: true,
+      // body: true,
+      htmlMode: "text",
       fontArgs: [
         { fontPaths: ['./typ/fonts']}
       ],
