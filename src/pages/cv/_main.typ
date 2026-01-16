@@ -23,7 +23,9 @@
 )
 
 = Research Interests
-Gradual Typing, Type Systems, Computer Education
+Programming Languages, Gradual Typing, Computer Education
+
+Or: How to make programming friendlier while preserving, and maybe even improving, guarantees?
 
 = Education
 #experience(
@@ -53,11 +55,11 @@ Gradual Typing, Type Systems, Computer Education
   doi: "https://doi.org/10.1145/3611643.3616283",
 )[Best Artifact Award]
 
-// = Service
-// #experience(
-//   place: [Artifact Evaluation Committee],
-//   title: [Programming 11.x],
-// )[]
+= Service
+#experience(
+  place: [Artifact Evaluation Committee],
+  title: [Programming 11.1],
+)[]
 
 = Honors & Awards
 #experience(
@@ -70,5 +72,12 @@ Gradual Typing, Type Systems, Computer Education
   place: "Programming Language",
   title: "Teaching Assistant",
   time: [Fall 2025],
+  location: "University of Utah",
+)[]
+
+#experience(
+  place: "Operating Systems",
+  title: "Teaching Assistant",
+  time: [Spring 2026],
   location: "University of Utah",
 )[]
