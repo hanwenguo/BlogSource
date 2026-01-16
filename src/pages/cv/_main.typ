@@ -23,9 +23,9 @@
 )
 
 = Research Interests
-Programming Languages, Gradual Typing, Computer Education
+Programming Languages, Gradual Typing, Type Systems
 
-Or: How to make programming friendlier while preserving, and maybe even improving, guarantees?
+Or: How to reduce the friction of adopting strong guarantees by, for example, gradualizing expressive type systems?
 
 = Education
 #experience(
