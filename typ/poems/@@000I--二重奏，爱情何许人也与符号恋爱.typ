@@ -1,0 +1,41 @@
+#import "/_template/poem-template.typ": template
+#show: template(
+  title:      [二重奏，爱情何许人也与符号恋爱],
+  date:       datetime(year: 2023, month: 01, day: 02, hour: 18, minute: 40, second: 19),
+  tags:       (),
+  identifier: "000I",
+)
+
+#show raw.where(lang: "poem"): it => html.p(it.text)
+
+#html.div(class: "poem")[
+#html.div(class: "two-column", style: "display: flex; justify-content: space-between")[
+```poem
+醒来时，记得草原起风的肚脐
+昨晚的太阳还柔软。转头，看缓坡上的你
+放牧白而柔软的兽，声音渐悄
+咸的叶子戳着我的脸。当你说话然后沉默
+咸的叶子扎根然后生长
+一场缓慢而坚定的摇晃。过去的日子过去
+橙色的火从远方升起时躺在地上
+在我们的草原上等待你放牧归来
+在回头时匍匐在河的另一边
+望着夜色，我们数我们的东西
+野生的房子、绿的眼睛、玻璃瓶
+```
+
+```poem
+影片的第一幕诞生于拿铁熹微的广场
+笑容稠而橙，我们说话的时候轻轻地
+融化。枕上彼此的骨，有细而绵软的声音
+所以沉入：包裹进软的玻璃，弧度似车灯
+眨眼时睫毛荡起光令脸颊发痒发烫
+指尖紧得浅黄。抬头。
+睡醒的时候就巡游：拨开门扉
+躲避金属，潜入人群并且秘密微笑
+在回头时匍匐在河的另一边
+面前是银色的流。我们握着彼此
+力在你小小的椭圆上凝聚
+```
+]
+]

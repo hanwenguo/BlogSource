@@ -1,0 +1,17 @@
+#import "/_template/poem-template.typ": template
+#show: template(
+  title:      [果汁记],
+  date:       datetime(year: 2022, month: 03, day: 03, hour: 18, minute: 52, second: 31),
+  tags:       (),
+  identifier: "000E",
+)
+
+```poem
+抱着淡绿色的天空，头发
+就开始缓慢地生长，触手约零至六摄氏度
+质地无虞。水果的心情是重要的
+生产预报称有七级复合原料预警；
+浓缩防护性命攸关——颜色是重要的。
+灰鸟应当为白色湖水的口感而睡眠
+摇摇之际，对草原百听不厌
+```

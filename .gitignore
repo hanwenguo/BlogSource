@@ -1,0 +1,5 @@
+.vscode/
+dist/
+
+id-filename.json
+.dir-locals.el

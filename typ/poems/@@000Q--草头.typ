@@ -1,0 +1,27 @@
+#import "/_template/poem-template.typ": template
+#show: template(
+  title:      [草头],
+  date:       datetime(year: 2025, month: 01, day: 14, hour: 01, minute: 25, second: 00),
+  tags:       (),
+  identifier: "000Q",
+)
+
+```poem
+冷漠的人前来赴宴
+谈笑时也不改变天气
+第二天只有走向壁炉
+伸手指摸索余灰
+
+穿着华服站在学校门前
+不害怕被保安赶走
+到孩子们全都不见了
+才发现自己也是他们一员
+
+撑着伞等待的时候
+身体只是在随便地颤抖
+要回到家打开冰箱
+再放进去身上的积雪
+
+曾经有那么一段日子
+我是雪地里矗立的草头
+```
