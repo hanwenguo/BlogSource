@@ -340,11 +340,14 @@ Or: How to reduce the friction and improve the ergonomics of adopting strong gua
 )[Best Artifact Award]
 ]
 
-= Service
+#ilt(
+  title: [Service],
+)[
 #experience(
   place: [Artifact Evaluation Committee],
   title: [Programming 11.1],
 )[]
+]
 
 #ilt(
   title: [Honors & Awards],
