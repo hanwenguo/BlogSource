@@ -30,7 +30,7 @@
     )
 
     // Configure text properties.
-    set text(size: 12pt, hyphenate: false, font: "Libertinus Serif")
+    set text(size: 11pt, hyphenate: false, font: "Libertinus Serif")
 
     // Text settings used across the template.
     let head-text = text.with(font: "Libertinus Sans", weight: "medium")
@@ -340,11 +340,11 @@ Or: How to reduce the friction and improve the ergonomics of adopting strong gua
 )[Best Artifact Award]
 ]
 
-// = Service
-// #experience(
-//   place: [Artifact Evaluation Committee],
-//   title: [Programming 11.1],
-// )[]
+= Service
+#experience(
+  place: [Artifact Evaluation Committee],
+  title: [Programming 11.1],
+)[]
 
 #ilt(
   title: [Honors & Awards],
