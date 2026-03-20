@@ -329,7 +329,7 @@ Or: How to reduce the friction and improve the ergonomics of adopting strong gua
   place: "Programming 10.2",
   authors: [Hanwen Guo, Ben Greenman],
   doi: "https://doi.org/10.22152/programming-journal.org/2025/10/17",
-)[]
+)[Editors' Choice Award]
 
 #publication(
   identifier: "peng-StatisticalTypeInferenceIncompletePrograms-2023",
@@ -341,20 +341,25 @@ Or: How to reduce the friction and improve the ergonomics of adopting strong gua
 ]
 
 #ilt(
-  title: [Service],
+  title: [Honors & Awards],
 )[
 #experience(
-  place: [Artifact Evaluation Committee],
-  title: [Programming 11.1],
+  place: "Editors' Choice Award",
+  time: [Programming 10.2 (2025)],
+)[]
+
+#experience(
+  place: "Best Artifact Award",
+  time: [ESEC/FSE 2023],
 )[]
 ]
 
 #ilt(
-  title: [Honors & Awards],
+  title: [Service],
 )[
 #experience(
-  place: "Best Artifact Award",
-  time: [ESEC/FSE 2023],
+  place: [Artifact Evaluation Committee],
+  time: [Programming 11.1],
 )[]
 ]
 
