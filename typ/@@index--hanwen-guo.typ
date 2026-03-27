@@ -29,6 +29,17 @@ Also see my #ln("wb:0000")[CV] for more details about my research and work exper
 - `guo AT hanwen DOT io` (personal email)
 - `hanwen DOT guo AT utah DOT edu` (university email for professional purposes)
 - #link("https://github.com/hanwenguo")[GitHub]
+- #html.span(
+    class: "link external",
+    html.elem(
+      "a",
+      attrs: (
+        href: "https://types.pl/@hanwen",
+        rel: "me",
+      ),
+      "Mastodon"
+    )
+  )
 ]
 
 #tr("wb:0005", disable-numbering: true, expanded: false)
