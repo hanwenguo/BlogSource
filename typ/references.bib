@@ -1,33 +1,2293 @@
 @article{guo-IfTBenchmarkTypeNarrowing-2025,
-  title = {If-{{T}}: {{A Benchmark}} for {{Type Narrowing}}},
-  shorttitle = {If-{{T}}},
-  author = {Guo, Hanwen and Greenman, Ben},
-  date = {2025-06-15},
+  title =        {If-{{T}}: {{A Benchmark}} for {{Type Narrowing}}},
+  shorttitle =   {If-{{T}}},
+  author =       {Guo, Hanwen and Greenman, Ben},
+  date =         {2025-06-15},
   journaltitle = {The Art, Science, and Engineering of Programming},
   shortjournal = {Programming},
-  volume = {10},
-  number = {2},
-  pages = {17:1-17:31},
-  publisher = {AOSA, Inc.},
-  issn = {2473-7321},
-  doi = {10.22152/programming-journal.org/2025/10/17},
-  url = {https://programming-journal.org/2025/10/17/},
-  urldate = {2025-09-07},
-  langid = {english}
+  volume =       10,
+  number =       2,
+  pages =        {17:1-17:31},
+  publisher =    {AOSA, Inc.},
+  issn =         {2473-7321},
+  doi =          {10.22152/programming-journal.org/2025/10/17},
+  url =          {https://programming-journal.org/2025/10/17/},
+  urldate =      {2025-09-07},
+  langid =       {english}
 }
 
 @inproceedings{peng-StatisticalTypeInferenceIncompletePrograms-2023,
-  title = {Statistical {{Type Inference}} for {{Incomplete Programs}}},
-  booktitle = {Proceedings of the 31st {{ACM Joint European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},
-  author = {Peng, Yaohui and Xie, Jing and Yang, Qiongling and Guo, Hanwen and Li, Qingan and Xue, Jingling and Yuan, Mengting},
-  date = {2023-11-30},
-  series = {{{ESEC}}/{{FSE}} 2023},
-  pages = {720--732},
-  publisher = {Association for Computing Machinery},
-  location = {New York, NY, USA},
-  doi = {10.1145/3611643.3616283},
-  url = {https://doi.org/10.1145/3611643.3616283},
-  urldate = {2025-09-06},
-  abstract = {We propose a novel two-stage approach, Stir, for inferring types in incomplete programs that may be ill-formed, where whole-program syntactic analysis often fails. In the first stage, Stir predicts a type tag for each token by using neural networks, and consequently, infers all the simple types in the program. In the second stage, Stir refines the complex types for the tokens with predicted complex type tags. Unlike existing machine-learning-based approaches, which solve type inference as a classification problem, Stir reduces it to a sequence-to-graph parsing problem. According to our experimental results, Stir achieves an accuracy of 97.37 \% for simple types. By representing complex types as directed graphs (type graphs), Stir achieves a type similarity score of 77.36 \% and 59.61 \% for complex types and zero-shot complex types, respectively.},
-  isbn = {979-8-4007-0327-0}
+  title =        {Statistical {{Type Inference}} for {{Incomplete Programs}}},
+  booktitle =    {Proceedings of the 31st {{ACM Joint European Software
+                  Engineering Conference}} and {{Symposium}} on the
+                  {{Foundations}} of {{Software Engineering}}},
+  author =       {Peng, Yaohui and Xie, Jing and Yang, Qiongling and Guo, Hanwen
+                  and Li, Qingan and Xue, Jingling and Yuan, Mengting},
+  date =         {2023-11-30},
+  series =       {{{ESEC}}/{{FSE}} 2023},
+  pages =        {720--732},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/3611643.3616283},
+  url =          {https://doi.org/10.1145/3611643.3616283},
+  urldate =      {2025-09-06},
+  abstract =     {We propose a novel two-stage approach, Stir, for inferring
+                  types in incomplete programs that may be ill-formed, where
+                  whole-program syntactic analysis often fails. In the first
+                  stage, Stir predicts a type tag for each token by using neural
+                  networks, and consequently, infers all the simple types in the
+                  program. In the second stage, Stir refines the complex types
+                  for the tokens with predicted complex type tags. Unlike
+                  existing machine-learning-based approaches, which solve type
+                  inference as a classification problem, Stir reduces it to a
+                  sequence-to-graph parsing problem. According to our
+                  experimental results, Stir achieves an accuracy of 97.37 \%
+                  for simple types. By representing complex types as directed
+                  graphs (type graphs), Stir achieves a type similarity score of
+                  77.36 \% and 59.61 \% for complex types and zero-shot complex
+                  types, respectively.},
+  isbn =         {979-8-4007-0327-0}
+}
+
+@inproceedings{acpp-Dynamictypingstaticallytyped-1989,
+  title =        {Dynamic Typing in a Statically-Typed Language},
+  booktitle =    {Proceedings of the 16th {{ACM SIGPLAN-SIGACT}} Symposium on
+                  {{Principles}} of Programming Languages},
+  author =       {Abadi, M. and Cardelli, L. and Pierce, B. and Plotkin, G.},
+  date =         {1989-01-03},
+  series =       {{{POPL}} '89},
+  pages =        {213--227},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/75277.75296},
+  url =          {https://dl.acm.org/doi/10.1145/75277.75296},
+  urldate =      {2026-03-24},
+  abstract =     {Statically-typed programming languages allow earlier error
+                  checking, better enforcement of disciplined programming
+                  styles, and generation of more efficient object code than
+                  languages where all type-consistency checks are performed at
+                  runtime. However, even in statically-type languages, there is
+                  often the need to deal with data whose type cannot be known at
+                  compile time. To handle such situations safely, we propose to
+                  add a type Dynamic whose values are pairs of a value v and a
+                  type tag T where v has the type denoted by T. Instances of
+                  Dynamic are built with an explicit tagging construct and
+                  inspected with a type-safe typecase construct.This paper is an
+                  exploration of the syntax, operational semantics, and
+                  denotational semantics of a simple language with the type
+                  Dynamic. We give examples of how dynamically-typed values
+                  might be used in programming. Then we discuss an operational
+                  semantics for our language and obtain a soundness theorem. We
+                  present two formulations of the denotational semantics of this
+                  language and relate them to the operational semantics.
+                  Finally, we consider the implications of polymorphism and some
+                  implementation issues.},
+  isbn =         {978-0-89791-294-5}
+}
+
+@inproceedings{af-TypedLambdaCalculus-2022,
+  title =        {A {{Typed Lambda Calculus}} with {{Gradual Intersection
+                  Types}}},
+  booktitle =    {Proceedings of the 24th {{International Symposium}} on
+                  {{Principles}} and {{Practice}} of {{Declarative
+                  Programming}}},
+  author =       {Ângelo, Pedro and Florido, Mário},
+  date =         {2022-09-20},
+  series =       {{{PPDP}} '22},
+  pages =        {1--13},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/3551357.3551382},
+  url =          {https://dl.acm.org/doi/10.1145/3551357.3551382},
+  urldate =      {2025-06-09},
+  abstract =     {Intersection types have the power to type expressions which
+                  are all of many different types. Gradual types combine type
+                  checking at both compile-time and run-time. Here we combine
+                  these two approaches in a new typed calculus that harness both
+                  of their strengths. We incorporate these two contributions in
+                  a single typed calculus and define an operational semantics
+                  with type cast annotations. We also prove several crucial
+                  properties of the type system, namely that types are preserved
+                  during compilation and evaluation, and that the refined
+                  criteria for gradual typing holds.},
+  isbn =         {978-1-4503-9703-2}
+}
+
+@article{afgt-Confinedgradualtyping-2014,
+  title =        {Confined Gradual Typing},
+  author =       {Allende, Esteban and Fabry, Johan and Garcia, Ronald and
+                  Tanter, Éric},
+  date =         {2014-10-15},
+  journaltitle = {SIGPLAN Not.},
+  volume =       49,
+  number =       10,
+  pages =        {251--270},
+  issn =         {0362-1340},
+  doi =          {10.1145/2714064.2660222},
+  url =          {https://dl.acm.org/doi/10.1145/2714064.2660222},
+  urldate =      {2026-03-24},
+  abstract =     {Gradual typing combines static and dynamic typing flexibly and
+                  safely in a single programming language. To do so, gradually
+                  typed languages implicitly insert casts where needed, to
+                  ensure at runtime that typing assumptions are not violated by
+                  untyped code. However, the implicit nature of cast insertion,
+                  especially on higher-order values, can jeopardize reliability
+                  and efficiency: higher-order casts can fail at any time, and
+                  are costly to execute. We propose Confined Gradual Typing,
+                  which extends gradual typing with two new type qualifiers that
+                  let programmers control the flow of values between the typed
+                  and the untyped worlds, and thereby trade some flexibility for
+                  more reliability and performance. We formally develop two
+                  variants of Confined Gradual Typing that capture different
+                  flexibility/guarantee tradeoffs. We report on the
+                  implementation of Confined Gradual Typing in Gradualtalk, a
+                  gradually-typed Smalltalk, which confirms the performance
+                  advantage of avoiding unwanted higher-order casts and the low
+                  overhead of the approach.}
+}
+
+@article{bcjg-AbstractingGradualTyping-2021,
+  title =        {Abstracting {{Gradual Typing Moving Forward}}: {{Precise}} and
+                  {{Space-Efficient}}},
+  shorttitle =   {Abstracting Gradual Typing Moving Forward},
+  author =       {Bañados Schwerter, Felipe and Clark, Alison M. and Jafery,
+                  Khurram A. and Garcia, Ronald},
+  date =         {2021-01-04},
+  journaltitle = {Proc. ACM Program. Lang.},
+  volume =       5,
+  pages =        {61:1--61:28},
+  doi =          {10.1145/3434342},
+  url =          {https://dl.acm.org/doi/10.1145/3434342},
+  urldate =      {2025-03-11},
+  abstract =     {Abstracting Gradual Typing (AGT) is a systematic approach to
+                  designing gradually-typed languages. Languages developed using
+                  AGT automatically satisfy the formal semantic criteria for
+                  gradual languages identified by Siek et al. Nonetheless,
+                  vanilla AGT semantics can still have important shortcomings.
+                  First, a gradual language's runtime checks should preserve the
+                  space-efficiency guarantees inherent to the underlying static
+                  and dynamic languages. To the contrary, the default
+                  operational semantics of AGT break proper tail calls. Second,
+                  a gradual language's runtime checks should enforce basic
+                  modular type-based invariants expected from the static type
+                  discipline. To the contrary, the default operational semantics
+                  of AGT may fail to enforce some invariants in surprising ways.
+                  We demonstrate this in the GTFL≲ language of Garcia et al.
+                  This paper addresses both problems at once by refining the
+                  theory underlying AGT's dynamic checks. Garcia et al. observe
+                  that AGT involves two abstractions of static types: one for
+                  the static semantics and one for the dynamic semantics. We
+                  recast the latter as an abstract interpretation of subtyping
+                  itself, while gradual types still abstract static types. Then
+                  we show how forward-completeness (Giacobazzi and Quintarelli)
+                  is key to supporting both space-efficient execution and
+                  reliable runtime type enforcement.},
+  issue =        {POPL}
+}
+
+@inproceedings{bgt-theorygradualeffect-2014,
+  title =        {A Theory of Gradual Effect Systems},
+  booktitle =    {Proceedings of the 19th {{ACM SIGPLAN}} International
+                  Conference on {{Functional}} Programming},
+  author =       {Bañados Schwerter, Felipe and Garcia, Ronald and Tanter, Éric},
+  date =         {2014-08-19},
+  series =       {{{ICFP}} '14},
+  pages =        {283--295},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/2628136.2628149},
+  url =          {https://dl.acm.org/doi/10.1145/2628136.2628149},
+  urldate =      {2026-03-25},
+  abstract =     {Effect systems have the potential to help software developers,
+                  but their practical adoption has been very limited. We
+                  conjecture that this limited adoption is due in part to the
+                  difficulty of transitioning from a system where effects are
+                  implicit and unrestricted to a system with a static effect
+                  discipline, which must settle for conservative checking in
+                  order to be decidable. To address this hindrance, we develop a
+                  theory of gradual effect checking, which makes it possible to
+                  incrementally annotate and statically check effects, while
+                  still rejecting statically inconsistent programs. We extend
+                  the generic type-and-effect framework of Marino and Millstein
+                  with a notion of unknown effects, which turns out to be
+                  significantly more subtle than unknown types in traditional
+                  gradual typing. We appeal to abstract interpretation to
+                  develop and validate the concepts of gradual effect checking.
+                  We also demonstrate how an effect system formulated in Marino
+                  and Millstein's framework can be automatically extended to
+                  support gradual checking.},
+  isbn =         {978-1-4503-2873-9}
+}
+
+@article{cc-Tamingtypeannotations-2020,
+  title =        {Taming Type Annotations in Gradual Typing},
+  author =       {Campora, John Peter and Chen, Sheng},
+  date =         {2020-11-13},
+  journaltitle = {Proc. ACM Program. Lang.},
+  volume =       4,
+  pages =        {191:1--191:30},
+  doi =          {10.1145/3428259},
+  url =          {https://dl.acm.org/doi/10.1145/3428259},
+  urldate =      {2026-03-31},
+  abstract =     {Gradual typing provides a methodology to integrate static and
+                  dynamic typing, harmonizing their often conflicting advantages
+                  in a single language. When a user wants to enjoy the
+                  advantages of static typing, most gradual languages require
+                  that they add type annotations. Many nontrivial tasks must be
+                  undertaken while adding type annotations, including
+                  understanding program behaviors and invariants. Unfortunately,
+                  if this is done incorrectly then the added type annotations
+                  can be wrong–leading to inconsistencies between the program
+                  and the type annotations. Gradual typing implementations
+                  detect such inconsistencies at runtime, raise cast errors, and
+                  generate messages. However, solely relying on such error
+                  messages for understanding and fixing inconsistencies and
+                  their resulting cast errors is often insufficient for multiple
+                  reasons. One reason is that while such messages cover
+                  inconsistencies in one execution path, fixing them often
+                  requires reconciling information from multiple paths. Another
+                  is that users may add many wrong type annotations that they
+                  later find difficult to identify and fix, when considering all
+                  added annotations. Recent studies provide evidence that type
+                  annotations added during program migration are often wrong and
+                  that many programmers prefer compile-time warnings about wrong
+                  annotations. Motivated by these results, we develop
+                  exploratory typing to help with the static detection,
+                  understanding, and fixing of inconsistencies. The key idea of
+                  exploratory typing is that it systematically removes dynamic
+                  types and explores alternative types for static type
+                  annotations that can remedy inconsistencies. To demonstrate
+                  the feasibility of exploratory typing, we have implemented it
+                  in PyHound, which targets programs written in Reticulated
+                  Python, a gradual variant of Python. We have evaluated PyHound
+                  on a set of Python programs, and the evaluation results
+                  demonstrate that our idea can effectively detect
+                  inconsistencies in 98\% of the tested programs and fix 93\% of
+                  inconsistencies, significantly outperforming pytype, a widely
+                  used Python tool for enforcing type annotations.},
+  issue =        {OOPSLA}
+}
+
+@article{ccew-Migratinggradualtypes-2017,
+  title =        {Migrating Gradual Types},
+  author =       {Campora, John Peter and Chen, Sheng and Erwig, Martin and
+                  Walkingshaw, Eric},
+  date =         {2017-12-27},
+  journaltitle = {Proc. ACM Program. Lang.},
+  volume =       2,
+  pages =        {15:1--15:29},
+  doi =          {10.1145/3158103},
+  url =          {https://dl.acm.org/doi/10.1145/3158103},
+  urldate =      {2026-03-31},
+  abstract =     {Gradual typing allows programs to enjoy the benefits of both
+                  static typing and dynamic typing. While it is often desirable
+                  to migrate a program from more dynamically-typed to more
+                  statically-typed or vice versa, gradual typing itself does not
+                  provide a way to facilitate this migration. This places the
+                  burden on programmers who have to manually add or remove type
+                  annotations. Besides the general challenge of adding type
+                  annotations to dynamically typed code, there are subtle
+                  interactions between these annotations in gradually typed code
+                  that exacerbate the situation. For example, to migrate a
+                  program to be as static as possible, in general, all possible
+                  combinations of adding or removing type annotations from
+                  parameters must be tried out and compared. In this paper, we
+                  address this problem by developing migrational typing, which
+                  efficiently types all possible ways of adding or removing type
+                  annotations from a gradually typed program. The typing result
+                  supports automatically migrating a program to be as static as
+                  possible, or introducing the least number of dynamic types
+                  necessary to remove a type error. The approach can be extended
+                  to support user-defined criteria about which annotations to
+                  modify. We have implemented migrational typing and evaluated
+                  it on large programs. The results show that migrational typing
+                  scales linearly with the size of the program and takes only
+                  2–4 times longer than plain gradual typing.},
+  issue =        {POPL}
+}
+
+@online{cd-GuardAnalysisSafe-2024,
+  title = {Guard {{Analysis}} and {{Safe Erasure Gradual Typing}}: A {{Type System}} for {{Elixir}}},
+  shorttitle = {Guard {{Analysis}} and {{Safe Erasure Gradual Typing}}},
+  author = {Castagna, Giuseppe and Duboc, Guillaume},
+  date = {2024-09-02},
+  eprint = {2408.14345},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2408.14345},
+  url = {http://arxiv.org/abs/2408.14345},
+  urldate = {2024-10-14},
+  abstract = {We define several techniques to extend gradual typing with semantic subtyping, specifically targeting dynamic languages. Focusing on the Elixir programming language, we provide the theoretical foundations for its type system. Our approach demonstrates how to achieve type soundness for gradual typing in existing dynamic languages without modifying their compilation, while still maintaining high precision. This is accomplished through the static detection of "strong functions", which leverage runtime checks inserted by the programmer or performed by the virtual machine, and through a fine-grained type analysis of pattern-matching expressions with guards.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Programming Languages}
+}
+
+@article{cl-GradualTypingUnion-2017,
+  title =        {Gradual {{Typing}} with {{Union}} and {{Intersection Types}}},
+  author =       {Castagna, Giuseppe and Lanvin, Victor},
+  date =         {2017-08-29},
+  journaltitle = {Proceedings of the ACM on Programming Languages},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume =       1,
+  pages =        {41:1--41:28},
+  doi =          {10.1145/3110285},
+  url =          {https://dl.acm.org/doi/10.1145/3110285},
+  urldate =      {2024-04-16},
+  abstract =     {We propose a type system for functional languages with gradual
+                  types and set-theoretic type connectives and prove its
+                  soundness. In particular, we show how to lift the definition
+                  of the domain and result type of an application from
+                  non-gradual types to gradual ones and likewise for the
+                  subtyping relation. We also show that deciding subtyping for
+                  gradual types can be reduced in linear time to deciding
+                  subtyping on non-gradual types and that the same holds true
+                  for all subtyping-related decision problems that must be
+                  solved for type inference. More generally, this work not only
+                  enriches gradual type systems with unions and intersections
+                  and with the type precision that arise from their use, but
+                  also proposes and advocates a new style of gradual types
+                  programming where union and intersection types are used by
+                  programmers to instruct the system to perform fewer dynamic
+                  checks.},
+  issue =        {ICFP},
+  langid =       {english},
+  keywords =     {Gradual typing,intersection types,negation types,set-theoretic
+                  types,union types}
+}
+
+@article{cln-PolymorphicTypeInference-2024,
+  title =        {Polymorphic {{Type Inference}} for {{Dynamic Languages}}},
+  author =       {Castagna, Giuseppe and Laurent, Mickaël and Nguyễn, Kim},
+  date =         {2024-01-05},
+  journaltitle = {Prototype: Polymorphic Type Inference for Dynamic Languages},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume =       8,
+  pages =        {40:1179--40:1210},
+  doi =          {10.1145/3632882},
+  url =          {https://dl.acm.org/doi/10.1145/3632882},
+  urldate =      {2024-10-14},
+  abstract =     {We present a type system that combines, in a controlled way,
+                  first-order polymorphism with intersection types, union types,
+                  and subtyping, and prove its safety. We then define a type
+                  reconstruction algorithm that is sound and terminating. This
+                  yields a system in which unannotated functions are given
+                  polymorphic types (thanks to Hindley-Milner) that can express
+                  the overloaded behavior of the functions they type (thanks to
+                  the intersection introduction rule) and that are deduced by
+                  applying advanced techniques of type narrowing (thanks to the
+                  union elimination rule). This makes the system a prime
+                  candidate to type dynamic languages.},
+  issue =        {POPL}
+}
+
+@article{clps-GradualTypingNew-2019,
+  title =        {Gradual {{Typing}}: {{A New Perspective}}},
+  shorttitle =   {Gradual Typing},
+  author =       {Castagna, Giuseppe and Lanvin, Victor and Petrucciani, Tommaso
+                  and Siek, Jeremy G.},
+  date =         {2019-01-02},
+  journaltitle = {Proc. ACM Program. Lang.},
+  shortjournal = {Proc, ACM Program, Lang,},
+  volume =       3,
+  pages =        {16:1--16:32},
+  doi =          {10.1145/3290329},
+  url =          {https://doi.org/10.1145/3290329},
+  urldate =      {2024-07-15},
+  abstract =     {We define a new, more semantic interpretation of gradual types
+                  and use it to ``gradualize'' two forms of polymorphism:
+                  subtyping polymorphism and implicit parametric polymorphism.
+                  In particular, we use the new interpretation to define three
+                  gradual type systems ---Hindley-Milner, with subtyping, and
+                  with union and intersection types--- in terms of two
+                  preorders, subtyping and materialization. We define these
+                  systems both declaratively ---by adding two subsumption-like
+                  rules--- which yields clearer, more intelligible, and
+                  streamlined definitions, and algorithmically by reusing
+                  existing techniques such as unification and tallying.},
+  issue =        {POPL},
+  langid =       {english}
+}
+
+@article{cs-Automaticallygeneratingdynamic-2017,
+  title =        {Automatically Generating the Dynamic Semantics of Gradually
+                  Typed Languages},
+  author =       {Cimini, Matteo and Siek, Jeremy G.},
+  date =         {2017-01-01},
+  journaltitle = {SIGPLAN Not.},
+  volume =       52,
+  number =       1,
+  pages =        {789--803},
+  issn =         {0362-1340},
+  doi =          {10.1145/3093333.3009863},
+  url =          {https://dl.acm.org/doi/10.1145/3093333.3009863},
+  urldate =      {2026-03-30},
+  abstract =     {Many language designers have adopted gradual typing. However,
+                  there remains open questions regarding how to gradualize
+                  languages. Cimini and Siek (2016) created a methodology and
+                  algorithm to automatically generate the type system of a
+                  gradually typed language from a fully static version of the
+                  language. In this paper, we address the next challenge of how
+                  to automatically generate the dynamic semantics of gradually
+                  typed languages. Such languages typically use an intermediate
+                  language with explicit casts. Our first result is a
+                  methodology for generating the syntax, type system, and
+                  dynamic semantics of the intermediate language with casts.
+                  Next, we present an algorithm that formalizes and automates
+                  the methodology, given a language definition as input. We show
+                  that our approach is general enough to automatically
+                  gradualize several languages, including features such as
+                  polymorphism, recursive types and exceptions. We prove that
+                  our algorithm produces languages that satisfy the key
+                  correctness criteria of gradual typing. Finally, we implement
+                  the algorithm, generating complete specifications of gradually
+                  typed languages in lambda-Prolog, including executable
+                  interpreters.}
+}
+
+@inproceedings{cs-gradualizermethodologyalgorithm-2016,
+  title =        {The Gradualizer: A Methodology and Algorithm for Generating
+                  Gradual Type Systems},
+  shorttitle =   {The Gradualizer},
+  booktitle =    {Proceedings of the 43rd {{Annual ACM SIGPLAN-SIGACT
+                  Symposium}} on {{Principles}} of {{Programming Languages}}},
+  author =       {Cimini, Matteo and Siek, Jeremy G.},
+  date =         {2016-01-11},
+  series =       {{{POPL}} '16},
+  pages =        {443--455},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/2837614.2837632},
+  url =          {https://dl.acm.org/doi/10.1145/2837614.2837632},
+  urldate =      {2026-03-25},
+  abstract =     {Many languages are beginning to integrate dynamic and static
+                  typing. Siek and Taha offered gradual typing as an approach to
+                  this integration that provides a coherent and full-span
+                  migration between the two disciplines. However, the literature
+                  lacks a general methodology for designing gradually typed
+                  languages. Our first contribution is to provide a methodology
+                  for deriving the gradual type system and the compilation to
+                  the cast calculus. Based on this methodology, we present the
+                  Gradualizer, an algorithm that generates a gradual type system
+                  from a well-formed type system and also generates a compiler
+                  to the cast calculus. Our algorithm handles a large class of
+                  type systems and generates systems that are correct with
+                  respect to the formal criteria of gradual typing. We also
+                  report on an implementation of the Gradualizer that takes a
+                  type system expressed in lambda-prolog and outputs its
+                  gradually typed version and a compiler to the cast calculus in
+                  lambda-prolog.},
+  isbn =         {978-1-4503-3549-2}
+}
+
+@inproceedings{csscmvl-GradualMetaprogramming-2025,
+  title =        {Gradual {{Metaprogramming}}},
+  booktitle =    {Proceedings of the 10th {{ACM SIGPLAN International Workshop}}
+                  on {{Type-Driven Development}}},
+  author =       {Chen, Tianyu and Shetty, Darshal and Siek, Jeremy G. and Chen,
+                  Chao-Hong and Ma, Weixi and Venet, Arnaud and Liu, Rocky},
+  date =         {2025-10-09},
+  series =       {{{TyDe}} '25},
+  pages =        {1--14},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/3759538.3759650},
+  url =          {https://dl.acm.org/doi/10.1145/3759538.3759650},
+  urldate =      {2026-03-30},
+  abstract =     {Data engineers increasingly use domain-specific languages
+                  (DSLs) to generate the code for data pipelines. Such DSLs are
+                  often embedded in Python. Unfortunately, there are challenges
+                  in debugging the generation of data pipelines: an error in a
+                  Python DSL script is often detected too late, after the
+                  execution of the script, and the source code location that
+                  triggers the error is hard to pinpoint. In this paper, we
+                  focus on the scenario where a DSL embedded in Python (so it is
+                  dynamically-typed) generates data pipeline description code
+                  that is statically-typed. We propose gradual metaprogramming
+                  to (1) provide a migration path toward statically typed DSLs,
+                  (2) immediately provide earlier detection of code generation
+                  type errors, and (3) report the source code location
+                  responsible for the type error. Gradual metaprogramming
+                  accomplishes this by type checking code fragments and
+                  incrementally performing runtime checks as they are spliced
+                  together. We define MetaGTLC, a metaprogramming calculus in
+                  which a gradually-typed metalanguage manipulates a
+                  statically-typed object language, and give semantics to it by
+                  translation to the cast calculus MetaCC. We prove that
+                  successful metaevaluation always generates a well-typed object
+                  program and mechanize the proof in Agda.},
+  isbn =         {979-8-4007-2163-2}
+}
+
+@article{dmzggrzsta-GradualC0Symbolic-2025,
+  title =        {Gradual {{C0}}: {{Symbolic Execution}} for {{Gradual
+                  Verification}}},
+  shorttitle =   {Gradual {{C0}}},
+  author =       {DiVincenzo, Jenna and McCormack, Ian and Zimmerman, Conrad and
+                  Gouni, Hemant and Gorenburg, Jacob and Ramos-Dávila, Jan-Paul
+                  and Zhang, Mona and Sunshine, Joshua and Tanter, Éric and
+                  Aldrich, Jonathan},
+  date =         {2025-01-10},
+  journaltitle = {ACM Trans. Program. Lang. Syst.},
+  volume =       46,
+  number =       4,
+  pages =        {14:1--14:57},
+  issn =         {0164-0925},
+  doi =          {10.1145/3704808},
+  url =          {https://dl.acm.org/doi/10.1145/3704808},
+  urldate =      {2026-03-22},
+  abstract =     {Current static verification techniques such as separation
+                  logic support a wide range of programs. However, such
+                  techniques only support complete and detailed specifications,
+                  which places an undue burden on users. To solve this problem,
+                  prior work proposed gradual verification, which handles
+                  complete, partial, or missing specifications by soundly
+                  combining static and dynamic checking. Gradual verification
+                  has also been extended to programs that manipulate recursive,
+                  mutable data structures on the heap. Unfortunately, this
+                  extension does not reward users with decreased dynamic
+                  checking as more specifications are written and more static
+                  guarantees are made. In fact, all properties are checked
+                  dynamically regardless of any static guarantees. Additionally,
+                  no full-fledged implementation of gradual verification exists
+                  so far, which prevents studying its performance and
+                  applicability in practice.We present Gradual C0, the first
+                  practicable gradual verifier for recursive heap data
+                  structures, which targets C0, a safe subset of C designed for
+                  education. Static verifiers supporting separation logic or
+                  implicit dynamic frames use symbolic execution for reasoning;
+                  so Gradual C0, which extends one such verifier, adopts
+                  symbolic execution at its core instead of the weakest liberal
+                  precondition approach used in prior work. Our approach
+                  addresses technical challenges related to symbolic execution
+                  with imprecise specifications, heap ownership, and branching
+                  in both program statements and specification formulas. We also
+                  deal with challenges related to minimizing insertion of
+                  dynamic checks and extensibility to other programming
+                  languages beyond C0. Finally, we provide the first empirical
+                  performance evaluation of a gradual verifier, and found that
+                  on average, Gradual C0 decreases run-time overhead between 7.1
+                  and 40.2\% compared to the fully dynamic approach used in
+                  prior work (for context, the worst cases for the approach by
+                  Wise et\&nbsp;al. [2020] range from 0.1 to 4.5 seconds
+                  depending on the benchmark). Further, the worst-case scenarios
+                  for performance are predictable and avoidable. This work paves
+                  the way towards evaluating gradual verification at scale.}
+}
+
+@article{dpp-Parametricityuniversaltype-2017,
+  title =        {Parametricity versus the Universal Type},
+  author =       {Devriese, Dominique and Patrignani, Marco and Piessens, Frank},
+  date =         {2017-12-27},
+  journaltitle = {Proc. ACM Program. Lang.},
+  volume =       2,
+  pages =        {38:1--38:23},
+  doi =          {10.1145/3158126},
+  url =          {https://dl.acm.org/doi/10.1145/3158126},
+  urldate =      {2026-03-24},
+  abstract =     {There has long been speculation in the scientific literature
+                  on how to dynamically enforce parametricity such as that
+                  yielded by System F. Almost 20 years ago, Sumii and Pierce
+                  proposed a formal compiler from System F into the
+                  cryptographic lambda calculus: an untyped lambda calculus
+                  extended with an idealised model of encryption. They
+                  conjectured that this compiler was fully abstract, i.e. that
+                  compiled terms are contextually equivalent if and only if the
+                  original terms were, a property that can be seen as a form of
+                  secure compilation. The conjecture has received attention in
+                  several other publications since then, but remains open to
+                  this day. More recently, several researchers have been looking
+                  at gradually-typed languages that extend System F. In this
+                  setting it is natural to wonder whether embedding System F
+                  into these gradually-typed languages preserves contextual
+                  equivalence and thus parametricity. In this paper, we answer
+                  both questions negatively. We provide a concrete
+                  counterexample: two System F terms whose contextual
+                  equivalence is not preserved by the Sumii-Pierce compiler, nor
+                  the embedding into the polymorphic blame calculus. This
+                  counterexample relies on the absence in System F of what we
+                  call a universal type, i.e., a type that all other types can
+                  be injected into and extracted from. As the languages in which
+                  System F is compiled have a universal type, the compilation
+                  cannot be fully abstract; this paper explains why. We believe
+                  this paper thus sheds light on recent results in the field of
+                  gradually typed languages and it provides a perspective for
+                  further research into secure compilation of polymorphic
+                  languages.},
+  issue =        {POPL}
+}
+
+@article{dpp-TwoParametricitiesThree-2022,
+  title =        {Two {{Parametricities Versus Three Universal Types}}},
+  author =       {Devriese, Dominique and Patrignani, Marco and Piessens, Frank},
+  date =         {2022-09-21},
+  journaltitle = {ACM Trans. Program. Lang. Syst.},
+  volume =       44,
+  number =       4,
+  pages =        {23:1--23:43},
+  issn =         {0164-0925},
+  doi =          {10.1145/3539657},
+  url =          {https://dl.acm.org/doi/10.1145/3539657},
+  urldate =      {2026-03-30},
+  abstract =     {The formal calculus System\&nbsp;F models the essence of
+                  polymorphism and abstract data types, features that exist in
+                  many programming languages. The calculus’ core property is
+                  parametricity: a theorem expressing the language’s
+                  abstractions and validating important principles like
+                  information hiding and modularity.When System\&nbsp;F is
+                  combined with features like recursive types, mutable state,
+                  continuations or exceptions, the formulation of parametricity
+                  needs to be adapted to follow suit, for example using
+                  techniques like step-indexing, Kripke world-indexing or
+                  biorthogonality. However, it is less clear how this
+                  formulation should change when System\&nbsp;F is combined with
+                  untyped languages, gradual types, dynamic sealing and runtime
+                  type analysis (typecase) alongside type generation. Extensions
+                  of System\&nbsp;F with these features have been proven to
+                  satisfy forms of parametricity (with Kripke worlds carrying
+                  semantic interpretations of types). However, the relative
+                  power of the modified formulations of parametricity with
+                  respect to others and the relative expressiveness of
+                  System\&nbsp;F with and without these extensions are
+                  unknown.In this paper, we explain that the aforementioned
+                  different settings have a common characteristic: they do not
+                  enforce or preserve the lexical scope of System\&nbsp;F’s type
+                  variables. Formally, this results in the existence of a
+                  universal type (note: this is not the same as a
+                  universally-quantified type). We explain why standard
+                  parametricity is incompatible with such a type and how type
+                  worlds resolve this. Building on these insights, we answer two
+                  open conjectures from the literature, negatively, and we point
+                  out a deficiency in current proposals for combining
+                  System\&nbsp;F with gradual types.}
+}
+
+@article{gc-PrincipalTypeSchemes-2015,
+  title =        {Principal {{Type Schemes}} for {{Gradual Programs}}},
+  author =       {Garcia, Ronald and Cimini, Matteo},
+  date =         {2015-01-14},
+  journaltitle = {SIGPLAN Not.},
+  volume =       50,
+  number =       1,
+  pages =        {303--315},
+  issn =         {0362-1340},
+  doi =          {10.1145/2775051.2676992},
+  url =          {https://dl.acm.org/doi/10.1145/2775051.2676992},
+  urldate =      {2026-03-26},
+  abstract =     {Gradual typing is a discipline for integrating dynamic
+                  checking into a static type system. Since its introduction in
+                  functional languages, it has been adapted to a variety of type
+                  systems, including object-oriented, security, and
+                  substructural. This work studies its application to implicitly
+                  typed languages based on type inference. Siek and Vachharajani
+                  designed a gradual type inference system and algorithm that
+                  infers gradual types but still rejects ill-typed static
+                  programs. However, the type system requires local reasoning
+                  about type substitutions, an imperative inference algorithm,
+                  and a subtle correctness statement.This paper introduces a new
+                  approach to gradual type inference, driven by the principle
+                  that gradual inference should only produce static types. We
+                  present a static implicitly typed language, its gradual
+                  counterpart, and a type inference procedure. The gradual
+                  system types the same programs as Siek and Vachharajani, but
+                  has a modular structure amenable to extension. The language
+                  admits let-polymorphism, and its dynamics are defined by
+                  translation to the Polymorphic Blame Calculus.The principal
+                  types produced by our initial type system mask the distinction
+                  between static parametric polymorphism and polymorphism that
+                  can be attributed to gradual typing. To expose this
+                  difference, we distinguish static type parameters from gradual
+                  type parameters and reinterpret gradual type consistency
+                  accordingly. The resulting extension enables programs to be
+                  interpreted using either the polymorphic or monomorphic Blame
+                  Calculi.}
+}
+
+@article{gct-AbstractingGradualTyping-2016,
+  title =        {Abstracting {{Gradual Typing}}},
+  author =       {Garcia, Ronald and Clark, Alison M. and Tanter, Éric},
+  date =         {2016-01-11},
+  journaltitle = {SIGPLAN Not.},
+  shortjournal = {SIGPLAN Not,},
+  volume =       51,
+  number =       1,
+  pages =        {429--442},
+  issn =         {0362-1340},
+  doi =          {10.1145/2914770.2837670},
+  url =          {https://doi.org/10.1145/2914770.2837670},
+  urldate =      {2024-07-15},
+  abstract =     {Language researchers and designers have extended a wide
+                  variety of type systems to support gradual typing, which
+                  enables languages to seamlessly combine dynamic and static
+                  checking. These efforts consistently demonstrate that
+                  designing a satisfactory gradual counterpart to a static type
+                  system is challenging, and this challenge only increases with
+                  the sophistication of the type system. Gradual type system
+                  designers need more formal tools to help them conceptualize,
+                  structure, and evaluate their designs. In this paper, we
+                  propose a new formal foundation for gradual typing, drawing on
+                  principles from abstract interpretation to give gradual types
+                  a semantics in terms of pre-existing static types. Abstracting
+                  Gradual Typing (AGT for short) yields a formal account of
+                  consistency---one of the cornerstones of the gradual typing
+                  approach---that subsumes existing notions of consistency,
+                  which were developed through intuition and ad hoc reasoning.
+                  Given a syntax-directed static typing judgment, the AGT
+                  approach induces a corresponding gradual typing judgment. Then
+                  the type safety proof for the underlying static discipline
+                  induces a dynamic semantics for gradual programs defined over
+                  source-language typing derivations. The AGT approach does not
+                  resort to an externally justified cast calculus: instead,
+                  run-time checks naturally arise by deducing evidence for
+                  consistent judgments during proof reduction. To illustrate the
+                  approach, we develop a novel gradually-typed counterpart for a
+                  language with record subtyping. Gradual languages designed
+                  with the AGT approach satisfy by construction the refined
+                  criteria for gradual typing set forth by Siek and colleagues.},
+  langid =       {english}
+}
+
+@inproceedings{gsk-TypingLocalControl-2011,
+  title =        {Typing {{Local Control}} and {{State Using Flow Analysis}}},
+  booktitle =    {Programming {{Languages}} and {{Systems}}},
+  author =       {Guha, Arjun and Saftoiu, Claudiu and Krishnamurthi, Shriram},
+  editor =       {Barthe, Gilles},
+  date =         2011,
+  pages =        {256--275},
+  publisher =    {Springer},
+  location =     {Berlin, Heidelberg},
+  doi =          {10.1007/978-3-642-19718-5_14},
+  abstract =     {Programs written in scripting languages employ idioms that
+                  confound conventional type systems. In this paper, we
+                  highlight one important set of related idioms: the use of
+                  local control and state to reason informally about types. To
+                  address these idioms, we formalize run-time tags and their
+                  relationship to types, and use these to present a novel
+                  strategy to integrate typing with flow analysis in a modular
+                  way. We demonstrate that in our separation of typing and flow
+                  analysis, each component remains conventional, their
+                  composition is simple, but the result can handle these idioms
+                  better than either one alone.},
+  isbn =         {978-3-642-19718-5},
+  langid =       {english},
+  keywords =     {Flow Analysis,Script Language,Type Inference,Type Scheme,Type
+                  System}
+}
+
+@online{gt-DerivingSimpleGradual-2015,
+  title = {Deriving a {{Simple Gradual Security Language}}},
+  author = {Garcia, Ronald and Tanter, Éric},
+  date = {2015-11-20},
+  eprint = {1511.01399},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.1511.01399},
+  url = {http://arxiv.org/abs/1511.01399},
+  urldate = {2026-03-30},
+  abstract = {Abstracting Gradual Typing (AGT) is an approach to systematically deriving gradual counterparts to static type disciplines. The approach consists of defining the semantics of gradual types by interpreting them as sets of static types, and then defining an optimal abstraction back to gradual types. These operations are used to lift the static discipline to the gradual setting. The runtime semantics of the gradual language then arises as reductions on gradual typing derivations. To demonstrate the flexibility of AGT, we gradualize \$λ\_\textbackslash text\{SEC\}\$, the prototypical security-typed language, with respect to only security labels rather than entire types, yielding a type system that ranges gradually from simply-typed to securely-typed. We establish noninterference for the gradual language, called \$λ\_\{\textbackslash widetilde\{\textbackslash text\{SEC\}\}\}\$, using Zdancewic's logical relation proof method. Whereas prior work presents gradual security cast languages, which require explicit security casts, this work yields the first gradual security source language, which requires no explicit casts.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Programming Languages}
+}
+
+@inproceedings{gt-GradualTypingif-2020,
+  title =        {Gradual {{Typing}} as If {{Types Mattered}}},
+  author =       {Garcia, Ronald and Tanter, Éric},
+  date =         2020,
+  langid =       {english}
+}
+
+@article{h-Dynamictypingsyntax-1994,
+  title =        {Dynamic Typing: Syntax and Proof Theory},
+  shorttitle =   {Dynamic Typing},
+  author =       {Henglein, Fritz},
+  date =         {1994-06-01},
+  journaltitle = {Science of Computer Programming},
+  shortjournal = {Science of Computer Programming},
+  volume =       22,
+  number =       3,
+  pages =        {197--230},
+  issn =         {0167-6423},
+  doi =          {10.1016/0167-6423(94)00004-2},
+  url =
+                  {https://www.sciencedirect.com/science/article/pii/0167642394000042},
+  urldate =      {2026-03-24},
+  abstract =     {We present the dynamically typed λ-calculus, an extension of
+                  the statically typed λ-calculus with a special type Dyn and
+                  explicit dynamic type coercions corresponding to run-time type
+                  tagging and type check-and-untag operations. Programs in
+                  run-time typed languages can be interpreted in the dynamically
+                  typed λ-calculus via a nondeterministic completion process
+                  that inserts explicit coercions and type declarations such
+                  that a well-typed term results. We characterize when two
+                  different completions of the same run-time typed program are
+                  coherent with an equational theory that is independent of an
+                  underlying λ-theory. This theory is refined by orienting some
+                  equations to define safety and minimality of completions.
+                  Intuitively, a safe completion is one that does not produce an
+                  error at run-time which another completion would have avoided,
+                  and a minimal completion is a safe completion that executes
+                  fewest tagging and check-and-untag operations amongst all safe
+                  completions. We show that every untyped λ-term has a safe
+                  completion at any type and that it is unique modulo a suitable
+                  congruence relation. Furthermore, we present a rewriting
+                  system for generating minimal completions. Assuming strong
+                  normalization of this rewriting system we show that every
+                  λI-term has a minimal completion at any type, which is
+                  furthermore unique modulo equality in the dynamically typed
+                  λ-calculus.}
+}
+
+@inproceedings{h-Globaltaggingoptimization-1992,
+  title =        {Global Tagging Optimization by Type Inference},
+  booktitle =    {Proceedings of the 1992 {{ACM}} Conference on {{LISP}} and
+                  Functional Programming},
+  author =       {Henglein, Fritz},
+  date =         {1992-01-01},
+  series =       {{{LFP}} '92},
+  pages =        {205--215},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/141471.141542},
+  url =          {https://dl.acm.org/doi/10.1145/141471.141542},
+  urldate =      {2026-03-24},
+  abstract =     {Tag handling accounts for a substantial amount of execution
+                  cost in latently typed languages such as Common LISP and
+                  Scheme, espicially on architectures that provide no special
+                  hardware support.},
+  isbn =         {978-0-89791-481-9}
+}
+
+@online{hjr-LetFunctionsSpeak-2026,
+  title = {Let {{Functions Speak}}: {{Lightweight Parametric Polymorphism}} via {{Domain}} and {{Range Types}}},
+  shorttitle = {Let {{Functions Speak}}},
+  author = {He, Siyuan and Jia, Songlin and Rompf, Tiark},
+  date = {2026-03-24},
+  eprint = {2603.23360},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2603.23360},
+  url = {http://arxiv.org/abs/2603.23360},
+  urldate = {2026-03-30},
+  abstract = {Dynamic languages such as Python and JavaScript widely use function decorators to extend behavior. In TypeScript, a common way to type such patterns uses Parameters{$<$}T{$>$} and ReturnType{$<$}T{$>$}. In practice, this idiom relies on a function-type bound for T that is expressed using the unsafe type any, which weakens static guarantees. At the core is a standard typing principle: application is justified only when the callee is exposed as an arrow type. We present F{$<$}:DR, a calculus that adds domain and range projection types, Dom(T) and Range(T), for arbitrary types T. These projections permit typing applications through abstract function types: an argument of type Dom(T) witnesses callability, and the result is typed as Range(T). This design complements, rather than replaces, standard arrow-based application, which remains admissible via subtyping in System F{$<$}:. We mechanize F{$<$}:DR in Rocq and prove semantic type soundness using logical relations with path selection, which delays projection interpretation until function structure is resolved. The same technique extends to additional projection types, illustrated for primitive pairs, i.e., product types.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Programming Languages}
+}
+
+@article{jtd-FullyAbstractStatic-2021,
+  title =        {Fully {{Abstract}} from {{Static}} to {{Gradual}}},
+  author =       {Jacobs, Koen and Timany, Amin and Devriese, Dominique},
+  date =         {2021-01-04},
+  journaltitle = {Artifact POPL21 - Fully Abstract from Static to Gradual},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume =       5,
+  pages =        {7:1--7:30},
+  doi =          {10.1145/3434288},
+  url =          {https://dl.acm.org/doi/10.1145/3434288},
+  urldate =      {2025-07-14},
+  abstract =     {What is a good gradual language? Siek et al. have previously
+                  proposed the refined criteria, a set of formal ideas that
+                  characterize a range of guarantees typically expected from a
+                  gradual language. While these go a long way, they are mostly
+                  focused on syntactic and type safety properties and fail to
+                  characterize how richer semantic properties and reasoning
+                  principles that hold in the static language, like
+                  non-interference or parametricity for instance, should be
+                  upheld in the gradualization. In this paper, we investigate
+                  and argue for a new criterion previously hinted at by Devriese
+                  et al.: the embedding from the static to the gradual language
+                  should be fully abstract. Rather than preserving an
+                  arbitrarily chosen interpretation of source language types,
+                  this criterion requires that all source language equivalences
+                  are preserved. We demonstrate that the criterion weeds out
+                  erroneous gradualizations that nevertheless satisfy the
+                  refined criteria. At the same time, we demonstrate that the
+                  criterion is realistic by reporting on a mechanized proof that
+                  the property holds for a standard example: GTLCµ, the natural
+                  gradualization of STLCµ, the simply typed lambda-calculus with
+                  equirecursive types. We argue thus that the criterion is
+                  useful for understanding, evaluating, and guiding the design
+                  of gradual languages, particularly those which are intended to
+                  preserve source language guarantees in a rich way.},
+  issue =        {POPL}
+}
+
+@thesis{k-AdvancedLogicalType-2019,
+  type = {phdthesis},
+  title = {Advanced {{Logical Type Systems}} for {{Untyped Languages}}},
+  author = {Kent, Andrew M},
+  date = {2019},
+  langid = {english}
+}
+
+@online{kas-EfficientGradualTyping-2018,
+  title = {Efficient {{Gradual Typing}}},
+  author = {Kuhlenschmidt, Andre and Almahallawi, Deyaaeldeen and Siek, Jeremy G.},
+  date = {2018-02-18},
+  eprint = {1802.06375},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.1802.06375},
+  url = {http://arxiv.org/abs/1802.06375},
+  urldate = {2025-07-14},
+  abstract = {Gradual typing combines static and dynamic typing in the same program. One would hope that the performance in a gradually typed language would range between that of a dynamically typed language and a statically typed language. Existing implementations of gradually typed languages have not achieved this goal due to overheads associated with runtime casts. Takikawa et al. (2016) report up to 100\$\textbackslash times\$ slowdowns for partially typed programs. In this paper we present a compiler, named Grift, for evaluating implementation techniques for gradual typing. We take a straightforward but surprisingly unexplored implementation approach for gradual typing, that is, ahead-of-time compilation to native assembly code with carefully chosen runtime representations and space-efficient coercions. Our experiments show that this approach achieves performance on par with OCaml on statically typed programs and performance between that of Gambit and Racket on untyped programs. On partially typed code, the geometric mean ranges from 0.42\$\textbackslash times\$ to 2.36\$\textbackslash times\$ that of (untyped) Racket across the benchmarks. We implement casts using the coercions of Siek, Thiemann, and Wadler (2015). This technique eliminates all catastrophic slowdowns without introducing significant overhead. Across the benchmarks, coercions range from 15\% slower (fft) to almost 2\$\textbackslash times\$ faster (matmult) than regular casts. We also implement the monotonic references of Siek et al. (2015). Monotonic references eliminate all overhead in statically typed code, and for partially typed code, they are faster than proxied references, sometimes up to 1.48\$\textbackslash times\$.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Programming Languages}
+}
+
+@inproceedings{km-InferenceEvolutionTypeScript-2017,
+  title =        {Inference and {{Evolution}} of {{TypeScript Declaration
+                  Files}}},
+  booktitle =    {Fundamental {{Approaches}} to {{Software Engineering}}},
+  author =       {Kristensen, Erik Krogh and Møller, Anders},
+  editor =       {Huisman, Marieke and Rubin, Julia},
+  date =         2017,
+  pages =        {99--115},
+  publisher =    {Springer},
+  location =     {Berlin, Heidelberg},
+  doi =          {10.1007/978-3-662-54494-5_6},
+  abstract =     {TypeScript is a typed extension of JavaScript that has become
+                  widely used. More than 2000 JavaScript libraries now have
+                  publicly available TypeScript declaration files, which allows
+                  the libraries to be used when programming TypeScript
+                  applications. Such declaration files are written manually,
+                  however, and they are often lagging behind the continuous
+                  development of the libraries, thereby hindering their
+                  usability. The existing tool tscheck is capable of detecting
+                  mismatches between the libraries and their declaration files,
+                  but it is less suitable when creating and evolving declaration
+                  files.},
+  isbn =         {978-3-662-54494-5},
+  langid =       {english},
+  keywords =     {Intentional Discrepancy,Pull Request,Return Type,Spurious
+                  Change,Type Declaration}
+}
+
+@article{ldyc-EfficientSelectionType-2026,
+  title =        {Efficient {{Selection}} of {{Type Annotations}} for
+                  {{Performance Improvement}} in {{Gradual Typing}}},
+  author =       {Li, Senxi and Dai, Feng and Yamazaki, Tetsuro and Chiba,
+                  Shigeru},
+  date =         {2026-02-15},
+  journaltitle = {The Art, Science, and Engineering of Programming},
+  shortjournal = {Programming},
+  volume =       11,
+  number =       1,
+  eprint =       {2603.05649},
+  eprinttype =   {arXiv},
+  eprintclass =  {cs},
+  pages =        3,
+  issn =         {2473-7321},
+  doi =          {10.22152/programming-journal.org/2026/11/3},
+  url =          {http://arxiv.org/abs/2603.05649},
+  urldate =      {2026-03-24},
+  abstract =     {Gradual typing has gained popularity as a design choice for
+                  integrating static and dynamic typing within a single
+                  language. Several practical languages have adopted gradual
+                  typing to offer programmers the flexibility to annotate their
+                  programs as needed. Meanwhile there is a key challenge of
+                  unexpected performance degradation in partially typed
+                  programs. The execution speed may significantly decrease when
+                  simply adding more type annotations. Prior studies have
+                  investigated strategies of selectively adding type annotations
+                  for better performance. However, they are restricted in
+                  substantial compilation time, which impedes the practical
+                  usage. This paper presents a new technique to select a subset
+                  of type annotations derived by type inference for improving
+                  the execution performance of gradually typed programs. The
+                  advantage of the proposal is shorter compilation time by
+                  employing a lightweight, amortized approach. It selects type
+                  annotations along the data flows, which is expected to avoid
+                  expensive runtime casts caused by a value repeatedly crossing
+                  the boundaries between untyped and typed code. We demonstrate
+                  the applicability of our proposal, and conduct experiments to
+                  validate its effectiveness of improving the execution time on
+                  Reticulated Python. Our implementation supports a Python
+                  subset to select type annotations derived by an implemented,
+                  external type inference engine. Experiment results show that
+                  our proposal outperforms a naive strategy of using all type
+                  annotations derived by type inference among the benchmark
+                  programs. In comparison with an existing approach, the
+                  proposal achieves comparable execution speed and shows
+                  advantage of maintaining a more stable compilation time of
+                  deriving and selecting type annotations. Our results
+                  empirically indicate that the proposed technique is practical
+                  within Reticulated Python for mitigating the performance
+                  bottleneck of gradually typed programs.},
+  keywords =     {Computer Science - Programming Languages}
+}
+
+@article{lm-DynamicsML-1993,
+  title =        {Dynamics in {{ML}}},
+  author =       {Leroy, Xavier and Mauny, Michel},
+  date =         {1993-10},
+  journaltitle = {Journal of Functional Programming},
+  volume =       3,
+  number =       4,
+  pages =        {431--463},
+  issn =         {1469-7653, 0956-7968},
+  doi =          {10.1017/S0956796800000848},
+  url =
+                  {https://www.cambridge.org/core/journals/journal-of-functional-programming/article/dynamics-in-ml/4732BA16D60F8E525E56938D4404047B},
+  urldate =      {2026-03-24},
+  abstract =     {Objects with dynamic types allow the integration of operations
+                  that essentially require runtime type-checking into
+                  statically-typed languages. This paper presents two extensions
+                  of the ML language with dynamics, based on our work on the
+                  CAML implementation of ML, and discusses their usefulness. The
+                  main novelty of this work is the combination of dynamics with
+                  polymorphism.},
+  langid =       {english}
+}
+
+@inproceedings{lt-GradualRefinementTypes-2017,
+  title =        {Gradual {{Refinement Types}}},
+  booktitle =    {Proceedings of the 44th {{ACM SIGPLAN Symposium}} on
+                  {{Principles}} of {{Programming Languages}}},
+  author =       {Lehmann, Nico and Tanter, Éric},
+  date =         {2017-01-01},
+  series =       {{{POPL}} '17},
+  pages =        {775--788},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/3009837.3009856},
+  url =          {https://dl.acm.org/doi/10.1145/3009837.3009856},
+  urldate =      {2025-02-26},
+  abstract =     {Refinement types are an effective language-based verification
+                  technique. However, as any expressive typing discipline, its
+                  strength is its weakness, imposing sometimes undesired
+                  rigidity. Guided by abstract interpretation, we extend the
+                  gradual typing agenda and develop the notion of gradual
+                  refinement types, allowing smooth evolution and
+                  interoperability between simple types and logically-refined
+                  types. In doing so, we address two challenges unexplored in
+                  the gradual typing literature: dealing with imprecise logical
+                  information, and with dependent function types. The first
+                  challenge leads to a crucial notion of locality for refinement
+                  formulas, and the second yields novel operators related to
+                  type- and term-level substitution, identifying new opportunity
+                  for runtime errors in gradual dependently-typed languages. The
+                  gradual language we present is type safe, type sound, and
+                  satisfies the refined criteria for gradually-typed languages
+                  of Siek et al. We also explain how to extend our approach to
+                  richer refinement logics, anticipating key challenges to
+                  consider.},
+  isbn =         {978-1-4503-4660-3}
+}
+
+@article{ltt-Gradualsystem-2022,
+  title =        {Gradual System {{F}}},
+  author =       {Labrada, Elizabeth and Toro, Matías and Tanter, Éric},
+  date =         {2022-10-28},
+  journaltitle = {Journal of the ACM},
+  shortjournal = {J. ACM},
+  volume =       69,
+  number =       5,
+  pages =        {38:1--38:78},
+  issn =         {0004-5411},
+  doi =          {10.1145/3555986},
+  url =          {https://dl.acm.org/doi/10.1145/3555986},
+  urldate =      {2024-06-24},
+  abstract =     {Bringing the benefits of gradual typing to a language with
+                  parametric polymorphism like System F, while preserving
+                  relational parametricity, has proven extremely challenging:
+                  first attempts were formulated a decade ago, and several
+                  designs have been recently proposed, with varying syntax,
+                  behavior, and properties. Starting from a detailed review of
+                  the challenges and tensions that affect the design of gradual
+                  parametric languages, this work presents an extensive account
+                  of the semantics and metatheory of GSF, a gradual counterpart
+                  of System F. In doing so, we also report on the extent to
+                  which the Abstracting Gradual Typing methodology can help us
+                  derive such a language. Among gradual parametric languages
+                  that follow the syntax of System F, GSF achieves a unique
+                  combination of properties. We clearly establish the benefits
+                  and limitations of the language, and discuss several
+                  extensions of GSF towards a practical programming language.},
+  langid =       {english},
+  keywords =     {Gradual typing,parametricity,polymorphism}
+}
+
+@article{mgt-GraduallyStructuredData-2021,
+  title =        {Gradually {{Structured Data}}},
+  author =       {Malewski, Stefan and Greenberg, Michael and Tanter, Éric},
+  date =         {2021-10-15},
+  journaltitle = {Gradually Structured Data: Typechecker and Interpreter},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume =       5,
+  pages =        {126:1--126:29},
+  doi =          {10.1145/3485503},
+  url =          {https://dl.acm.org/doi/10.1145/3485503},
+  urldate =      {2025-02-26},
+  abstract =     {Dynamically-typed languages offer easy interaction with ad hoc
+                  data such as JSON and S-expressions; statically-typed
+                  languages offer powerful tools for working with structured
+                  data, notably algebraic datatypes, which are a core feature of
+                  typed languages both functional and otherwise. Gradual typing
+                  aims to reconcile dynamic and static typing smoothly. The
+                  gradual typing literature has extensively focused on the
+                  computational aspect of types, such as type safety, effects,
+                  noninterference, or parametricity, but the application of
+                  graduality to data structuring mechanisms has been much less
+                  explored. While row polymorphism and set-theoretic types have
+                  been studied in the context of gradual typing, algebraic
+                  datatypes in particular have not, which is surprising
+                  considering their wide use in practice. We develop, formalize,
+                  and prototype a novel approach to gradually structured data
+                  with algebraic datatypes. Gradually structured data bridges
+                  the gap between traditional algebraic datatypes and flexible
+                  data management mechanisms such as tagged data in dynamic
+                  languages, or polymorphic variants in OCaml. We illustrate the
+                  key ideas of gradual algebraic datatypes through the evolution
+                  of a small server application from dynamic to progressively
+                  more static checking, formalize a core functional language
+                  with gradually structured data, and establish its metatheory,
+                  including the gradual guarantees.},
+  issue =        {OOPSLA}
+}
+
+@article{mltt-ReasonablyGradualType-2022,
+  title =        {A {{Reasonably Gradual Type Theory}}},
+  author =       {Maillard, Kenji and Lennon-Bertrand, Meven and Tabareau,
+                  Nicolas and Tanter, Éric},
+  date =         {2022-08-31},
+  journaltitle = {A Reasonably Gradual Type Theory – Artifact},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume =       6,
+  pages =        {124:931--124:959},
+  doi =          {10.1145/3547655},
+  url =          {https://dl.acm.org/doi/10.1145/3547655},
+  urldate =      {2025-02-26},
+  abstract =     {Gradualizing the Calculus of Inductive Constructions (CIC)
+                  involves dealing with subtle tensions between normalization,
+                  graduality, and conservativity with respect to CIC. Recently,
+                  GCIC has been proposed as a parametrized gradual type theory
+                  that admits three variants, each sacrificing one of these
+                  properties. For devising a gradual proof assistant based on
+                  CIC, normalization and conservativity with respect to CIC are
+                  key, but the tension with graduality needs to be addressed.
+                  Additionally, several challenges remain: (1) The presence of
+                  two wildcard terms at any type---the error and unknown
+                  terms---enables trivial proofs of any theorem, jeopardizing
+                  the use of a gradual type theory in a proof assistant; (2)
+                  Supporting general indexed inductive families, most
+                  prominently equality, is an open problem; (3) Theoretical
+                  accounts of gradual typing and graduality so far do not
+                  support handling type mismatches detected during reduction;
+                  (4) Precision and graduality are external notions not amenable
+                  to reasoning within a gradual type theory. All these issues
+                  manifest primally in CastCIC, the cast calculus used to define
+                  GCIC. In this work, we present an extension of CastCIC called
+                  GRIP. GRIP is a reasonably gradual type theory that addresses
+                  the issues above, featuring internal precision and general
+                  exception handling. By adopting a novel interpretation of the
+                  unknown term that carefully accounts for universe levels, GRIP
+                  satisfies graduality for a large and well-defined class of
+                  terms, in addition to being normalizing and a conservative
+                  extension of CIC. Internal precision supports reasoning about
+                  graduality within GRIP itself, for instance to characterize
+                  gradual exception-handling terms, and supports gradual subset
+                  types. We develop the metatheory of GRIP using a model
+                  formalized in Coq, and provide a prototype implementation of
+                  GRIP in Agda.},
+  issue =        {ICFP}
+}
+
+@article{mp-WhatDecidableGradual-2019,
+  title =        {What {{Is Decidable}} about {{Gradual Types}}?},
+  author =       {Migeed, Zeina and Palsberg, Jens},
+  date =         {2019-12-20},
+  journaltitle = {What Is Decidable about Gradual Types?},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume =       4,
+  pages =        {29:1--29:29},
+  doi =          {10.1145/3371097},
+  url =          {https://dl.acm.org/doi/10.1145/3371097},
+  urldate =      {2025-02-26},
+  abstract =     {Programmers can use gradual types to migrate programs to have
+                  more precise type annotations and thereby improve their
+                  readability, efficiency, and safety. Such migration requires
+                  an exploration of the migration space and can benefit from
+                  tool support, as shown in previous work. Our goal is to
+                  provide a foundation for better tool support by settling
+                  decidability questions about migration with gradual types. We
+                  present three algorithms and a hardness result for deciding
+                  key properties and we explain how they can be useful during an
+                  exploration. In particular, we show how to decide whether the
+                  migration space is finite, whether it has a top element, and
+                  whether it is a singleton. We also show that deciding whether
+                  it has a maximal element is NP-hard. Our implementation of our
+                  algorithms worked as expected on a suite of microbenchmarks.},
+  issue =        {POPL}
+}
+
+@article{msi-Dynamictypeinference-2019,
+  title =        {Dynamic Type Inference for Gradual {{Hindley}}–{{Milner}}
+                  Typing},
+  author =       {Miyazaki, Yusuke and Sekiyama, Taro and Igarashi, Atsushi},
+  date =         {2019-01-02},
+  journaltitle = {lambda-dti},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume =       3,
+  pages =        {18:1--18:29},
+  doi =          {10.1145/3290331},
+  url =          {https://dl.acm.org/doi/10.1145/3290331},
+  urldate =      {2026-03-24},
+  abstract =     {Garcia and Cimini study a type inference problem for the ITGL,
+                  an implicitly and gradually typed language with
+                  let-polymorphism, and develop a sound and complete inference
+                  algorithm for it. Soundness and completeness mean that, if the
+                  algorithm succeeds, the input term can be translated to a
+                  well-typed term of an explicitly typed blame calculus by cast
+                  insertion and vice versa. However, in general, there are many
+                  possible translations depending on how type variables that
+                  were left undecided by static type inference are instantiated
+                  with concrete static types. Worse, the translated terms may
+                  behave differently—some evaluate to values but others raise
+                  blame. In this paper, we propose and formalize a new blame
+                  calculus λBDTI that avoids such divergence as an intermediate
+                  language for the ITGL. A main idea is to allow a term to
+                  contain type variables (that have not been instantiated during
+                  static type inference) and defer instantiation of these type
+                  variables to run time. We introduce dynamic type inference
+                  (DTI) into the semantics of λBDTI so that type variables are
+                  instantiated along reduction. The DTI-based semantics not only
+                  avoids the divergence described above but also is sound and
+                  complete with respect to the semantics of fully instantiated
+                  terms in the following sense: if the evaluation of a term
+                  succeeds (i.e., terminates with a value) in the DTI-based
+                  semantics, then there is a fully instantiated version of the
+                  term that also succeeds in the explicitly typed blame calculus
+                  and vice versa. Finally, we prove the gradual guarantee, which
+                  is an important correctness criterion of a gradually typed
+                  language, for the ITGL.},
+  issue =        {POPL}
+}
+
+@article{nja-GradualityParametricityTogether-2019,
+  title =        {Graduality and {{Parametricity}}: {{Together Again}} for the
+                  {{First Time}}},
+  shorttitle =   {Graduality and Parametricity},
+  author =       {New, Max S. and Jamner, Dustin and Ahmed, Amal},
+  date =         {2019-12-20},
+  journaltitle = {Proc. ACM Program. Lang.},
+  volume =       4,
+  pages =        {46:1--46:32},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/3371114},
+  url =          {https://dl.acm.org/doi/10.1145/3371114},
+  urldate =      {2025-02-26},
+  abstract =     {Parametric polymorphism and gradual typing have proven to be a
+                  difficult combination, with no language yet produced that
+                  satisfies the fundamental theorems of each: parametricity and
+                  graduality. Notably, Toro, Labrada, and Tanter (POPL 2019)
+                  conjecture that for any gradual extension of System F that
+                  uses dynamic type generation, graduality and parametricity are
+                  ``simply incompatible''. However, we argue that it is not
+                  graduality and parametricity that are incompatible per se, but
+                  instead that combining the syntax of System F with dynamic
+                  type generation as in previous work necessitates type-directed
+                  computation, which we show has been a common source of
+                  graduality and parametricity violations in previous work. We
+                  then show that by modifying the syntax of universal and
+                  existential types to make the type name generation explicit,
+                  we remove the need for type-directed computation, and get a
+                  language that satisfies both graduality and parametricity
+                  theorems. The language has a simple runtime semantics, which
+                  can be explained by translation to a statically typed language
+                  where the dynamic type is interpreted as a dynamically
+                  extensible sum type. Far from being in conflict, we show that
+                  the parametricity theorem follows as a direct corollary of a
+                  relational interpretation of the graduality property.},
+  issue =        {POPL}
+}
+
+@article{o-Incorrectnesslogic-2019,
+  title =        {Incorrectness Logic},
+  author =       {O'Hearn, Peter W.},
+  date =         {2019-12-20},
+  journaltitle = {Proc. ACM Program. Lang.},
+  volume =       4,
+  pages =        {10:1--10:32},
+  doi =          {10.1145/3371078},
+  url =          {https://dl.acm.org/doi/10.1145/3371078},
+  urldate =      {2026-03-24},
+  abstract =     {Program correctness and incorrectness are two sides of the
+                  same coin. As a programmer, even if you would like to have
+                  correctness, you might find yourself spending most of your
+                  time reasoning about incorrectness. This includes informal
+                  reasoning that people do while looking at or thinking about
+                  their code, as well as that supported by automated testing and
+                  static analysis tools. This paper describes a simple logic for
+                  program incorrectness which is, in a sense, the other side of
+                  the coin to Hoare's logic of correctness.},
+  issue =        {POPL}
+}
+
+@article{pagg-SolverBasedGradualType-2021,
+  title =        {Solver-{{Based Gradual Type Migration}}},
+  author =       {Phipps-Costin, Luna and Anderson, Carolyn Jane and Greenberg,
+                  Michael and Guha, Arjun},
+  date =         {2021-10-15},
+  journaltitle = {TypeWhich},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume =       5,
+  pages =        {111:1--111:27},
+  doi =          {10.1145/3485488},
+  url =          {https://dl.acm.org/doi/10.1145/3485488},
+  urldate =      {2025-02-26},
+  abstract =     {Gradually typed languages allow programmers to mix statically
+                  and dynamically typed code, enabling them to incrementally
+                  reap the benefits of static typing as they add type
+                  annotations to their code. However, this type migration
+                  process is typically a manual effort with limited tool
+                  support. This paper examines the problem of automated type
+                  migration: given a dynamic program, infer additional or
+                  improved type annotations. Existing type migration algorithms
+                  prioritize different goals, such as maximizing type precision,
+                  maintaining compatibility with unmigrated code, and preserving
+                  the semantics of the original program. We argue that the type
+                  migration problem involves fundamental compromises: optimizing
+                  for a single goal often comes at the expense of others.
+                  Ideally, a type migration tool would flexibly accommodate a
+                  range of user priorities. We present TypeWhich, a new approach
+                  to automated type migration for the gradually-typed lambda
+                  calculus with some extensions. Unlike prior work, which relies
+                  on custom solvers, TypeWhich produces constraints for an
+                  off-the-shelf MaxSMT solver. This allows us to easily express
+                  objectives, such as minimizing the number of necessary
+                  syntactic coercions, and constraining the type of the
+                  migration to be compatible with unmigrated code. We present
+                  the first comprehensive evaluation of GTLC type migration
+                  algorithms, and compare TypeWhich to four other tools from the
+                  literature. Our evaluation uses prior benchmarks, and a new
+                  set of "challenge problems." Moreover, we design a new
+                  evaluation methodology that highlights the subtleties of
+                  gradual type migration. In addition, we apply TypeWhich to a
+                  suite of benchmarks for Grift, a programming language based on
+                  the GTLC. TypeWhich is able to reconstruct all human-written
+                  annotations on all but one program.},
+  issue =        {OOPSLA}
+}
+
+@online{pagg-SolverbasedGradualType-2021a,
+  title = {Solver-Based {{Gradual Type Migration}}},
+  author = {Phipps-Costin, Luna and Anderson, Carolyn Jane and Greenberg, Michael and Guha, Arjun},
+  date = {2021-09-10},
+  eprint = {2109.05049},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2109.05049},
+  url = {http://arxiv.org/abs/2109.05049},
+  urldate = {2026-03-31},
+  abstract = {Gradually typed languages allow programmers to mix statically and dynamically typed code, enabling them to incrementally reap the benefits of static typing as they add type annotations to their code. However, this type migration process is typically a manual effort with limited tool support. This paper examines the problem of \textbackslash emph\{automated type migration\}: given a dynamic program, infer additional or improved type annotations. Existing type migration algorithms prioritize different goals, such as maximizing type precision, maintaining compatibility with unmigrated code, and preserving the semantics of the original program. We argue that the type migration problem involves fundamental compromises: optimizing for a single goal often comes at the expense of others. Ideally, a type migration tool would flexibly accommodate a range of user priorities. We present TypeWhich, a new approach to automated type migration for the gradually-typed lambda calculus with some extensions. Unlike prior work, which relies on custom solvers, TypeWhich produces constraints for an off-the-shelf MaxSMT solver. This allows us to easily express objectives, such as minimizing the number of necessary syntactic coercions, and constraining the type of the migration to be compatible with unmigrated code. We present the first comprehensive evaluation of GTLC type migration algorithms, and compare TypeWhich to four other tools from the literature. Our evaluation uses prior benchmarks, and a new set of ``challenge problems.'' Moreover, we design a new evaluation methodology that highlights the subtleties of gradual type migration. In addition, we apply TypeWhich to a suite of benchmarks for Grift, a programming language based on the GTLC. TypeWhich is able to reconstruct all human-written annotations on all but one program.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Programming Languages}
+}
+
+@article{rat-VMalreadyknew-2017,
+  title =        {The {{VM}} Already Knew That: Leveraging Compile-Time
+                  Knowledge to Optimize Gradual Typing},
+  shorttitle =   {The {{VM}} Already Knew That},
+  author =       {Richards, Gregor and Arteca, Ellen and Turcotte, Alexi},
+  date =         {2017-10-12},
+  journaltitle = {Proc. ACM Program. Lang.},
+  volume =       1,
+  pages =        {55:1--55:27},
+  doi =          {10.1145/3133879},
+  url =          {https://dl.acm.org/doi/10.1145/3133879},
+  urldate =      {2026-03-24},
+  abstract =     {Programmers in dynamic languages wishing to constrain and
+                  understand the behavior of their programs may turn to
+                  gradually-typed languages, which allow types to be specified
+                  optionally and check values at the boundary between dynamic
+                  and static code. Unfortunately, the performance cost of these
+                  run-time checks can be severe, slowing down execution by at
+                  least 10x when checks are present. Modern virtual machines
+                  (VMs) for dynamic languages use speculative techniques to
+                  improve performance: If a particular value was seen once, it
+                  is likely that similar values will be seen in the future. They
+                  combine optimization-relevant properties of values into
+                  cacheable “shapes”, then use a single shape check to subsume
+                  checks for each property. Values with the same memory layout
+                  or the same field types have the same shape. This greatly
+                  reduces the amount of type checking that needs to be performed
+                  at run-time to execute dynamic code. While very valuable to
+                  the VM’s optimization, these checks do little to benefit the
+                  programmer aside from improving performance. We present in
+                  this paper a design for intrinsic object contracts, which
+                  makes the obligations of gradually-typed languages’ type
+                  checks an intrinsic part of object shapes, and thus can
+                  subsume run-time type checks into existing shape checks,
+                  eliminating redundant checks entirely. With an implementation
+                  on a VM for JavaScript used as a target for SafeTypeScript’s
+                  soundness guarantees, we demonstrate slowdown averaging 7\% in
+                  fully-typed code relative to unchecked code, and no more than
+                  45\% in pessimal configurations.},
+  issue =        {OOPSLA}
+}
+
+@inproceedings{rch-insoutsgradual-2012,
+  title =        {The Ins and Outs of Gradual Type Inference},
+  booktitle =    {Proceedings of the 39th Annual {{ACM SIGPLAN-SIGACT}}
+                  Symposium on {{Principles}} of Programming Languages},
+  author =       {Rastogi, Aseem and Chaudhuri, Avik and Hosmer, Basil},
+  date =         {2012-01-25},
+  series =       {{{POPL}} '12},
+  pages =        {481--494},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/2103656.2103714},
+  url =          {https://dl.acm.org/doi/10.1145/2103656.2103714},
+  urldate =      {2026-03-24},
+  abstract =     {Gradual typing lets programmers evolve their dynamically typed
+                  programs by gradually adding explicit type annotations, which
+                  confer benefits like improved performance and fewer run-time
+                  failures.However, we argue that such evolution often requires
+                  a giant leap, and that type inference can offer a crucial
+                  missing step. If omitted type annotations are interpreted as
+                  unknown types, rather than the dynamic type, then static types
+                  can often be inferred, thereby removing unnecessary
+                  assumptions of the dynamic type. The remaining assumptions of
+                  the dynamic type may then be removed by either reasoning
+                  outside the static type system, or restructuring the code.We
+                  present a type inference algorithm that can improve the
+                  performance of existing gradually typed programs without
+                  introducing any new run-time failures. To account for dynamic
+                  typing, types that flow in to an unknown type are treated in a
+                  fundamentally different manner than types that flow out.
+                  Furthermore, in the interests of backward-compatibility, an
+                  escape analysis is conducted to decide which types are safe to
+                  infer. We have implemented our algorithm for ActionScript, and
+                  evaluated it on the SunSpider and V8 benchmark suites. We
+                  demonstrate that our algorithm can improve the performance of
+                  unannotated programs as well as recover most of the type
+                  annotations in annotated programs.},
+  isbn =         {978-1-4503-1083-3}
+}
+
+@inproceedings{rhxo-UnionTypesDisjoint-2022,
+  title =        {Union {{Types}} with {{Disjoint Switches}}},
+  booktitle =
+                  {{{DROPS-IDN}}/v2/Document/10.4230/{{LIPIcs}}.{{ECOOP}}.2022.25},
+  author =       {Rehman, Baber and Huang, Xuejing and Xie, Ningning and
+                  Oliveira, Bruno C. d S.},
+  date =         2022,
+  publisher =    {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},
+  doi =          {10.4230/LIPIcs.ECOOP.2022.25},
+  url =
+                  {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2022.25},
+  urldate =      {2024-05-07},
+  abstract =     {Union types are nowadays a common feature in many modern
+                  programming languages. This paper investigates a formulation
+                  of union types with an elimination construct that enables case
+                  analysis (or switches) on types. The interesting aspect of
+                  this construct is that each clause must operate on disjoint
+                  types. By using disjoint switches, it is possible to ensure
+                  exhaustiveness (i.e. all possible cases are handled), and that
+                  none of the cases overlap. In turn, this means that the order
+                  of the cases does not matter and that reordering the cases has
+                  no impact on the semantics, helping with program understanding
+                  and refactoring. While implemented in the Ceylon language,
+                  disjoint switches have not been formally studied in the
+                  research literature, although a related notion of disjointness
+                  has been studied in the context of disjoint intersection
+                  types. We study union types with disjoint switches formally
+                  and in a language independent way. We first present a
+                  simplified calculus, called the union calculus (λ\_u), which
+                  includes disjoint switches and prove several results,
+                  including type soundness and determinism. The notion of
+                  disjointness in λ\_u is in essence the dual notion of
+                  disjointness for intersection types. We then present a more
+                  feature-rich formulation of λ\_u, which includes intersection
+                  types, distributive subtyping and a simple form of nominal
+                  types. This extension reveals new challenges. Those challenges
+                  require us to depart from the dual notion of disjointness for
+                  intersection types, and use a more general formulation of
+                  disjointness instead. Among other applications, we show that
+                  disjoint switches provide an alternative to certain forms of
+                  overloading, and that they enable a simple approach to
+                  nullable (or optional) types. All the results about λ\_u and
+                  its extensions have been formalized in the Coq theorem
+                  prover.},
+  eventtitle =   {36th {{European Conference}} on {{Object-Oriented
+                  Programming}} ({{ECOOP}} 2022)},
+  langid =       {english}
+}
+
+@online{ritt-CompilingGradualTypes-2025,
+  title = {Compiling {{Gradual Types}} with {{Evidence}}},
+  author = {Romero, José Luis and Isla, Cristóbal and Toro, Matías and Tanter, Éric},
+  date = {2025-12-27},
+  eprint = {2512.22684},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2512.22684},
+  url = {http://arxiv.org/abs/2512.22684},
+  urldate = {2026-01-13},
+  abstract = {Efficiently supporting sound gradual typing in a language with structural types is challenging. To date, the Grift compiler is the only close-to-the-metal implementation of gradual typing in this setting, exploiting coercions for runtime checks, and further extended with monotonic references for efficient access to statically-typed data structures. On the language design and semantics side, the Abstracting Gradual Typing (AGT) methodology has proven fruitful to elucidate existing designs and to innovate by deriving gradualizations of a wide variety of typing disciplines and language features. Grounded in abstract interpretation, the Curry-Howard inspired runtime semantics of AGT is based on the notion of evidence for consistent judgments that evolve during reduction, monitoring the plausibility of well-typedness. While expressive and versatile, it is unclear whether such evidence-based semantics are a viable route to realize an efficient implementation of gradual typing. In this work, we explore this question by designing, implementing, and evaluating an evidence-based compiler, called GrEv. We explain how to bridge the gap between the formal semantics and the GrEv compiler implementation, and identify novel monotonic semantics. We empirically evaluate the performance of GrEv on the Grift benchmark suite. The results show that an evidence-based compiler can be competitive with, and even faster than, a coercion-based compiler, exhibiting more stability across configurations on the static-to-dynamic spectrum. In addition to enriching the space of gradual typing compilers, this work opens a direct door to exploring efficient implementations of the many advanced gradual typing disciplines formally derived with AGT in the literature.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Programming Languages}
+}
+
+@inproceedings{rsfbv-SafeEfficientGradual-2015,
+  title =        {Safe \& {{Efficient Gradual Typing}} for {{TypeScript}}},
+  booktitle =    {Proceedings of the 42nd {{Annual ACM SIGPLAN-SIGACT
+                  Symposium}} on {{Principles}} of {{Programming Languages}}},
+  author =       {Rastogi, Aseem and Swamy, Nikhil and Fournet, Cédric and
+                  Bierman, Gavin and Vekris, Panagiotis},
+  date =         {2015-01-14},
+  series =       {{{POPL}} '15},
+  pages =        {167--180},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/2676726.2676971},
+  url =          {https://dl.acm.org/doi/10.1145/2676726.2676971},
+  urldate =      {2024-06-13},
+  abstract =     {Current proposals for adding gradual typing to JavaScript,
+                  such as Closure, TypeScript and Dart, forgo soundness to deal
+                  with issues of scale, code reuse, and popular programming
+                  patterns. We show how to address these issues in practice
+                  while retaining soundness. We design and implement a new
+                  gradual type system, prototyped for expediency as a 'Safe'
+                  compilation mode for TypeScript. Our compiler achieves
+                  soundness by enforcing stricter static checks and embedding
+                  residual runtime checks in compiled code. It emits plain
+                  JavaScript that runs on stock virtual machines. Our main
+                  theorem is a simulation that ensures that the checks
+                  introduced by Safe TypeScript (1) catch any dynamic type
+                  error, and (2) do not alter the semantics of type-safe
+                  TypeScript code. Safe TypeScript is carefully designed to
+                  minimize the performance overhead of runtime checks. At its
+                  core, we rely on two new ideas: differential subtyping, a new
+                  form of coercive subtyping that computes the minimum amount of
+                  runtime type information that must be added to each object;
+                  and an erasure modality, which we use to safely and
+                  selectively erase type information. This allows us to scale
+                  our design to full-fledged TypeScript, including arrays, maps,
+                  classes, inheritance, overloading, and generic types. We
+                  validate the usability and performance of Safe TypeScript
+                  empirically by type-checking and compiling around 120,000
+                  lines of existing TypeScript source code. Although runtime
+                  checks can be expensive, the end-to-end overhead is small for
+                  code bases that already have type annotations. For instance,
+                  we bootstrap the Safe TypeScript compiler (90,000 lines
+                  including the base TypeScript compiler): we measure a 15\%
+                  runtime overhead for type safety, and also uncover programming
+                  errors as type safety violations. We conclude that, at least
+                  during development and testing, subjecting
+                  JavaScript/TypeScript programs to safe gradual typing adds
+                  significant value to source type annotations at a modest
+                  cost.},
+  isbn =         {978-1-4503-3300-9},
+  langid =       {english},
+  keywords =     {gradual typing,javascript,type safety,typescript}
+}
+
+@inproceedings{s-MetatheoryGradualTyping-2023,
+  title =        {The {{Metatheory}} of {{Gradual Typing}}: {{State}} of the
+                  {{Art}} and {{Challenges}}},
+  shorttitle =   {The {{Metatheory}} of {{Gradual Typing}}},
+  booktitle =    {10th {{Conference}} on {{Algebra}} and {{Coalgebra}} in
+                  {{Computer Science}} ({{CALCO}} 2023)},
+  author =       {Siek, Jeremy G.},
+  editor =       {Baldan, Paolo and family=Paiva, given=Valeria, prefix=de,
+                  useprefix=true},
+  date =         2023,
+  series =       {Leibniz {{International Proceedings}} in {{Informatics}}
+                  ({{LIPIcs}})},
+  volume =       270,
+  pages =        {4:1--4:1},
+  publisher =    {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},
+  location =     {Dagstuhl, Germany},
+  issn =         {1868-8969},
+  doi =          {10.4230/LIPIcs.CALCO.2023.4},
+  url =
+                  {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CALCO.2023.4},
+  urldate =      {2025-11-03},
+  isbn =         {978-3-95977-287-7},
+  keywords =     {gradual guarantee,gradual typing,logical relation,mechanized
+                  metatheory,noninterference,simulation,type safety}
+}
+
+@thesis{sa-GradualTypingGeneric-2014,
+  title = {Gradual {{Typing}} for {{Generic Type-and-Effect}} Systems},
+  author = {Schwerter, Bañados and Andrés, Felipe},
+  date = {2014},
+  institution = {Universidad de Chile},
+  url = {https://repositorio.uchile.cl/handle/2250/116891},
+  urldate = {2025-07-14},
+  abstract = {Repositorio académico de la Universidad de Chile. Tesis, artículos y libros publicados en formato digital con distintos niveles de acceso},
+  langid = {english},
+  annotation = {Accepted: 2014-09-23T14:39:11Z}
+}
+
+@inproceedings{sc-GradualOwnershipTypes-2012,
+  title =        {Gradual {{Ownership Types}}},
+  booktitle =    {Programming {{Languages}} and {{Systems}}},
+  author =       {Sergey, Ilya and Clarke, Dave},
+  editor =       {Seidl, Helmut},
+  date =         2012,
+  pages =        {579--599},
+  publisher =    {Springer},
+  location =     {Berlin, Heidelberg},
+  doi =          {10.1007/978-3-642-28869-2_29},
+  abstract =     {Gradual Ownership Types are a framework allowing programs to
+                  be partially annotated with ownership types, while providing
+                  the same encapsulation guarantees. The formalism provides a
+                  static guarantee of the desired encapsulation property for
+                  fully annotated programs, and dynamic guarantees for partially
+                  annotated programs via dynamic checks inserted by the
+                  compiler. This enables a smooth migration from
+                  ownership-unaware to ownership-typed code.},
+  isbn =         {978-3-642-28869-2},
+  langid =       {english},
+  keywords =     {Annotate Program,Dynamic Type,Ownership Information,Ownership
+                  Type,Type Safety}
+}
+
+@inproceedings{snz-PuttingGradualTypes-2021,
+  title =        {Putting {{Gradual Types}} to {{Work}}},
+  booktitle =    {Practical {{Aspects}} of {{Declarative Languages}}},
+  author =       {Shivkumar, Bhargav and Naudon, Enrique and Ziarek, Lukasz},
+  editor =       {Morales, José F. and Orchard, Dominic},
+  date =         2021,
+  pages =        {54--70},
+  publisher =    {Springer International Publishing},
+  location =     {Cham},
+  doi =          {10.1007/978-3-030-67438-0_4},
+  abstract =     {In this paper, we describe our experience incorporating
+                  gradual types in a statically typed functional language with
+                  Hindley-Milner style type inference. Where most gradually
+                  typed systems aim to improve static checking in a dynamically
+                  typed language, we approach it from the opposite perspective
+                  and promote dynamic checking in a statically typed language.
+                  Our approach provides a glimpse into how languages like SML
+                  and OCaml might handle gradual typing. We discuss our
+                  implementation and challenges faced—specifically how gradual
+                  typing rules apply to our representation of composite and
+                  recursive types. We review the various implementations that
+                  add dynamic typing to a statically typed language in order to
+                  highlight the different ways of mixing static and dynamic
+                  typing and examine possible inspirations while maintaining the
+                  gradual nature of our type system. This paper also discusses
+                  our motivation for adding gradual types to our language, and
+                  the practical benefits of doing so in our industrial setting.},
+  isbn =         {978-3-030-67438-0},
+  langid =       {english},
+  keywords =     {Functional programming,Gradual typing,Type inference}
+}
+
+@inproceedings{st-GradualTypingObjects-2007,
+  title =        {Gradual {{Typing}} for {{Objects}}},
+  booktitle =    {{{ECOOP}} 2007 – {{Object-Oriented Programming}}},
+  author =       {Siek, Jeremy and Taha, Walid},
+  editor =       {Ernst, Erik},
+  date =         2007,
+  pages =        {2--27},
+  publisher =    {Springer},
+  location =     {Berlin, Heidelberg},
+  doi =          {10.1007/978-3-540-73589-2_2},
+  abstract =     {Static and dynamic type systems have well-known strengths and
+                  weaknesses. In previous work we developed a gradual type
+                  system for a functional calculus named \$\textbackslash
+                  lambda\textasciicircum?\_\textbackslash to\$. Gradual typing
+                  provides the benefits of both static and dynamic checking in a
+                  single language by allowing the programmer to control whether
+                  a portion of the program is type checked at compile-time or
+                  run-time by adding or removing type annotations on variables.
+                  Several object-oriented scripting languages are preparing to
+                  add static checking. To support that work this paper develops
+                  \$\textbackslash
+                  mathbf\{Ob\}\textasciicircum\{?\}\_\{{$<$}:\}\$, a gradual
+                  type system for object-based languages, extending the
+                  Ob{$<$}\,: calculus of Abadi and Cardelli. Our primary
+                  contribution is to show that gradual typing and subtyping are
+                  orthogonal and can be combined in a principled fashion. We
+                  also develop a small-step semantics, provide a machine-checked
+                  proof of type safety, and improve the space efficiency of
+                  higher-order casts.},
+  isbn =         {978-3-540-73589-2},
+  langid =       {english},
+  keywords =     {Dynamic Typing,Method Invocation,Operational Semantic,Type
+                  Annotation,Typing Derivation}
+}
+
+@inproceedings{sv-GraduallyTypingStrategies-2020,
+  title =        {Gradually {{Typing Strategies}}},
+  booktitle =    {Proceedings of the 13th {{ACM SIGPLAN International
+                  Conference}} on {{Software Language Engineering}}},
+  author =       {Smits, Jeff and Visser, Eelco},
+  date =         {2020-11-15},
+  series =       {{{SLE}} 2020},
+  pages =        {1--15},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/3426425.3426928},
+  url =          {https://dl.acm.org/doi/10.1145/3426425.3426928},
+  urldate =      {2025-07-14},
+  abstract =     {The Stratego language supports program transformation by means
+                  of term rewriting with programmable rewriting strategies.
+                  Stratego's traversal primitives support concise definition of
+                  generic tree traversals. Stratego is a dynamically typed
+                  language because its features cannot be captured fully by a
+                  static type system. While dynamic typing makes for a flexible
+                  programming model, it also leads to unintended type errors,
+                  code that is harder to maintain, and missed opportunities for
+                  optimization. In this paper, we introduce a gradual type
+                  system for Stratego that combines the flexibility of
+                  dynamically typed generic programming, where needed, with the
+                  safety of statically declared and enforced types, where
+                  possible. To make sure that statically typed code cannot go
+                  wrong, all access to statically typed code from dynamically
+                  typed code is protected by dynamic type checks (casts). The
+                  type system is backwards compatible such that types can be
+                  introduced incrementally to existing Stratego programs. We
+                  formally define a type system for Core Gradual Stratego,
+                  discuss its implementation in a new type checker for Stratego,
+                  and present an evaluation of its impact on Stratego programs.},
+  isbn =         {978-1-4503-8176-5}
+}
+
+@inproceedings{sv-GradualTypingUnificationbased-2008,
+  title =        {Gradual {{Typing}} with {{Unification-based Inference}}},
+  booktitle =    {Proceedings of the 2008 Symposium on {{Dynamic}} Languages},
+  author =       {Siek, Jeremy G. and Vachharajani, Manish},
+  date =         {2008-07-08},
+  series =       {{{DLS}} '08},
+  pages =        {1--12},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/1408681.1408688},
+  url =          {https://doi.org/10.1145/1408681.1408688},
+  urldate =      {2024-07-14},
+  abstract =     {Static and dynamic type systems have well-known strengths and
+                  weaknesses. Gradual typing provides the benefits of both in a
+                  single language by giving the programmer control over which
+                  portions of the program are statically checked based on the
+                  presence or absence of type annotations. This paper studies
+                  the combination of gradual typing and unification-based type
+                  inference with the goal of developing a system that helps
+                  programmers increase the amount of static checking in their
+                  program. The key question in combining gradual typing and type
+                  inference is how should the dynamic type of a gradual system
+                  interact with the type variables of a type inference system.
+                  This paper explores the design space and shows why three
+                  straightforward approaches fail to meet our design goals. This
+                  paper presents a new type system based on the idea that a
+                  solution for a type variable should be as informative as any
+                  type that constrains the variable. The paper also develops an
+                  efficient inference algorithm and proves it sound and complete
+                  with respect to the type system.},
+  isbn =         {978-1-60558-270-2},
+  langid =       {english}
+}
+
+@inproceedings{svcb-RefinedCriteriaGradual-2015,
+  title =        {Refined {{Criteria}} for {{Gradual Typing}}},
+  booktitle =
+                  {{{DROPS-IDN}}/v2/Document/10.4230/{{LIPIcs}}.{{SNAPL}}.2015.274},
+  author =       {Siek, Jeremy G. and Vitousek, Michael M. and Cimini, Matteo
+                  and Boyland, John Tang},
+  date =         2015,
+  publisher =    {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},
+  doi =          {10.4230/LIPIcs.SNAPL.2015.274},
+  url =
+                  {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SNAPL.2015.274},
+  urldate =      {2024-07-21},
+  abstract =     {Siek and Taha [2006] coined the term gradual typing to
+                  describe a theory for integrating static and dynamic typing
+                  within a single language that 1) puts the programmer in
+                  control of which regions of code are statically or dynamically
+                  typed and 2) enables the gradual evolution of code between the
+                  two typing disciplines. Since 2006, the term gradual typing
+                  has become quite popular but its meaning has become diluted to
+                  encompass anything related to the integration of static and
+                  dynamic typing. This dilution is partly the fault of the
+                  original paper, which provided an incomplete formal
+                  characterization of what it means to be gradually typed. In
+                  this paper we draw a crisp line in the sand that includes a
+                  new formal property, named the gradual guarantee, that relates
+                  the behavior of programs that differ only with respect to
+                  their type annotations. We argue that the gradual guarantee
+                  provides important guidance for designers of gradually typed
+                  languages. We survey the gradual typing literature, critiquing
+                  designs in light of the gradual guarantee. We also report on a
+                  mechanized proof that the gradual guarantee holds for the
+                  Gradually Typed Lambda Calculus.},
+  eventtitle =   {1st {{Summit}} on {{Advances}} in {{Programming Languages}}
+                  ({{SNAPL}} 2015)},
+  langid =       {english},
+  keywords =     {dynamic languages,gradual typing,semantics,type systems}
+}
+
+@thesis{t-AbstractingGradualTyping-2019,
+  title = {Abstracting {{Gradual Typing}}: {{Metatheory}} and {{Applications}}},
+  shorttitle = {Abstracting Gradual Typing},
+  author = {Toro Ipinza, Matías},
+  date = {2019},
+  institution = {Universidad de Chile},
+  url = {https://repositorio.uchile.cl/handle/2250/170935},
+  urldate = {2025-07-14},
+  abstract = {Repositorio académico de la Universidad de Chile. Tesis, artículos y libros publicados en formato digital con distintos niveles de acceso},
+  langid = {english},
+  annotation = {Accepted: 2019-09-25T18:22:46Z}
+}
+
+@inproceedings{t-Quasistatictyping-1989,
+  title =        {Quasi-Static Typing},
+  booktitle =    {Proceedings of the 17th {{ACM SIGPLAN-SIGACT}} Symposium on
+                  {{Principles}} of Programming Languages},
+  author =       {Thatte, Satish},
+  date =         {1989-12-01},
+  series =       {{{POPL}} '90},
+  pages =        {367--381},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/96709.96747},
+  url =          {https://dl.acm.org/doi/10.1145/96709.96747},
+  urldate =      {2026-03-24},
+  abstract =     {We present a new approach to dynamic typing in a static
+                  framework. Our main innovation is the use of structural
+                  subtyping for dynamic types based on the idea that possible
+                  dynamic typing as a property should be inherited by objects of
+                  all types. Two properties of our system set it apart from
+                  existing systems which combine static and dynamic typing: all
+                  tagging and checking takes place via implicit coercions, and
+                  the semantics of dynamic typing is representation independent.
+                  The latter property leads to a significant increase in
+                  expressive power—for instance it allows us to define a general
+                  call-by-value fixpoint operator.The resulting system—which we
+                  call quasi-static typing—is a seamless merger of static and
+                  dynamic typing. The system divides programs into three
+                  categories: well-typed, ill-typed and ambivalent programs.
+                  Ill-typed programs contain expressions that are guaranteed to
+                  go wrong. Run-time checking is limited to doubtful function
+                  applications in ambivalent programs. Conceptually,
+                  quasi-static typing takes place in an unusual two-phase
+                  process—a first phase infers types and coercions and a second
+                  plausibility checking phase identifies ill-typed programs. The
+                  typing rules allow minimal typing judgements and plausibility
+                  checking can be characterized as simplification via a
+                  canonical set of rewrite rules. The two phase process can
+                  therefore be implemented with a one pass algorithm.},
+  isbn =         {978-0-89791-343-0}
+}
+
+@inproceedings{tf-Interlanguagemigrationscripts-2006,
+  title =        {Interlanguage Migration: From Scripts to Programs},
+  shorttitle =   {Interlanguage Migration},
+  booktitle =    {Companion to the 21st {{ACM SIGPLAN}} Symposium on
+                  {{Object-oriented}} Programming Systems, Languages, and
+                  Applications},
+  author =       {Tobin-Hochstadt, Sam and Felleisen, Matthias},
+  date =         {2006-10-22},
+  series =       {{{OOPSLA}} '06},
+  pages =        {964--974},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/1176617.1176755},
+  url =          {https://dl.acm.org/doi/10.1145/1176617.1176755},
+  urldate =      {2026-03-24},
+  abstract =     {As scripts grow into full-fledged applications, programmers
+                  should want to port portions of their programs from scripting
+                  languages to languages with sound and rich type systems. This
+                  form of interlanguage migration ensures type-safety and
+                  provides minimal guarantees for reuse in other applications,
+                  too.In this paper, we present a framework for expressing this
+                  form of interlanguage migration. Given a program that consists
+                  of modules in the untyped lambda calculus, we prove that
+                  rewriting one of them in a simply typed lambda calculus
+                  produces an equivalent program and adds the expected amount of
+                  type safety, i.e., code in typed modules can't go wrong. To
+                  ensure these guarantees, the migration process infers
+                  constraints from the statically typed module and imposes them
+                  on the dynamically typed modules in the form of behavioral
+                  contracts.},
+  isbn =         {978-1-59593-491-8}
+}
+
+@inproceedings{tfdfftf-PracticalGradualTyping-2015,
+  title =        {Towards {{Practical Gradual Typing}}},
+  booktitle =    {29th {{European Conference}} on {{Object-Oriented
+                  Programming}} ({{ECOOP}} 2015)},
+  author =       {Takikawa, Asumu and Feltey, Daniel and Dean, Earl and Flatt,
+                  Matthew and Findler, Robert Bruce and Tobin-Hochstadt, Sam and
+                  Felleisen, Matthias},
+  editor =       {Boyland, John Tang},
+  date =         2015,
+  series =       {Leibniz {{International Proceedings}} in {{Informatics}}
+                  ({{LIPIcs}})},
+  volume =       37,
+  pages =        {4--27},
+  publisher =    {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},
+  location =     {Dagstuhl, Germany},
+  issn =         {1868-8969},
+  doi =          {10.4230/LIPIcs.ECOOP.2015.4},
+  url =
+                  {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2015.4},
+  urldate =      {2025-07-14},
+  isbn =         {978-3-939897-86-6},
+  keywords =     {Gradual typing,object-oriented programming,performance
+                  evaluation}
+}
+
+@inproceedings{tfffgksst-MigratoryTypingTen-2017,
+  title =        {Migratory {{Typing}}: {{Ten Years Later}}},
+  shorttitle =   {Migratory {{Typing}}},
+  booktitle =
+                  {{{DROPS-IDN}}/v2/Document/10.4230/{{LIPIcs}}.{{SNAPL}}.2017.17},
+  author =       {Tobin-Hochstadt, Sam and Felleisen, Matthias and Findler,
+                  Robert and Flatt, Matthew and Greenman, Ben and Kent, Andrew
+                  M. and St-Amour, Vincent and Strickland, T. Stephen and
+                  Takikawa, Asumu},
+  date =         2017,
+  publisher =    {Schloss Dagstuhl – Leibniz-Zentrum für Informatik},
+  doi =          {10.4230/LIPIcs.SNAPL.2017.17},
+  url =
+                  {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SNAPL.2017.17},
+  urldate =      {2024-09-24},
+  abstract =     {In this day and age, many developers work on large, untyped
+                  code repositories. Even if they are the creators of the code,
+                  they notice that they have to figure out the equivalent of
+                  method signatures every time they work on old code. This step
+                  is time consuming and error prone. Ten years ago, the two lead
+                  authors outlined a linguistic solution to this problem.
+                  Specifically they proposed the creation of typed twins for
+                  untyped programming languages so that developers could migrate
+                  scripts from the untyped world to a typed one in an
+                  incremental manner. Their programmatic paper also spelled out
+                  three guiding design principles concerning the acceptance of
+                  grown idioms, the soundness of mixed-typed programs, and the
+                  units of migration. This paper revisits this idea of a
+                  migratory type system as implemented for Racket. It explains
+                  how the design principles have been used to produce the Typed
+                  Racket twin and presents an assessment of the project's
+                  status, highlighting successes and failures.},
+  eventtitle =   {2nd {{Summit}} on {{Advances}} in {{Programming Languages}}
+                  ({{SNAPL}} 2017)},
+  langid =       {english}
+}
+
+@inproceedings{tfgnvf-SoundGradualTyping-2016,
+  title =        {Is {{Sound Gradual Typing Dead}}?},
+  booktitle =    {Proceedings of the 43rd {{Annual ACM SIGPLAN-SIGACT
+                  Symposium}} on {{Principles}} of {{Programming Languages}}},
+  author =       {Takikawa, Asumu and Feltey, Daniel and Greenman, Ben and New,
+                  Max S. and Vitek, Jan and Felleisen, Matthias},
+  date =         {2016-01-11},
+  series =       {{{POPL}} '16},
+  pages =        {456--468},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/2837614.2837630},
+  url =          {https://dl.acm.org/doi/10.1145/2837614.2837630},
+  urldate =      {2025-07-14},
+  abstract =     {Programmers have come to embrace dynamically-typed languages
+                  for prototyping and delivering large and complex systems. When
+                  it comes to maintaining and evolving these systems, the lack
+                  of explicit static typing becomes a bottleneck. In response,
+                  researchers have explored the idea of gradually-typed
+                  programming languages which allow the incremental addition of
+                  type annotations to software written in one of these untyped
+                  languages. Some of these new, hybrid languages insert run-time
+                  checks at the boundary between typed and untyped code to
+                  establish type soundness for the overall system. With sound
+                  gradual typing, programmers can rely on the language
+                  implementation to provide meaningful error messages when type
+                  invariants are violated. While most research on sound gradual
+                  typing remains theoretical, the few emerging implementations
+                  suffer from performance overheads due to these checks. None of
+                  the publications on this topic comes with a comprehensive
+                  performance evaluation. Worse, a few report disastrous
+                  numbers. In response, this paper proposes a method for
+                  evaluating the performance of gradually-typed programming
+                  languages. The method hinges on exploring the space of partial
+                  conversions from untyped to typed. For each benchmark, the
+                  performance of the different versions is reported in a
+                  synthetic metric that associates runtime overhead to
+                  conversion effort. The paper reports on the results of
+                  applying the method to Typed Racket, a mature implementation
+                  of sound gradual typing, using a suite of real-world programs
+                  of various sizes and complexities. Based on these results the
+                  paper concludes that, given the current state of
+                  implementation technologies, sound gradual typing faces
+                  significant challenges. Conversely, it raises the question of
+                  how implementations could reduce the overheads associated with
+                  soundness and how tools could be used to steer programmers
+                  clear from pathological cases.},
+  isbn =         {978-1-4503-3549-2}
+}
+
+@inproceedings{tfs-TypedConfusedStudying-2024,
+  title =        {Typed and {{Confused}}: {{Studying}} the {{Unexpected
+                  Dangers}} of {{Gradual Typing}}},
+  shorttitle =   {Typed and {{Confused}}},
+  booktitle =    {Proceedings of the 39th {{IEEE}}/{{ACM International
+                  Conference}} on {{Automated Software Engineering}}},
+  author =       {Troppmann, Dominic and Fass, Aurore and Staicu,
+                  Cristian-Alexandru},
+  date =         {2024-10-27},
+  series =       {{{ASE}} '24},
+  pages =        {1858--1870},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/3691620.3695549},
+  url =          {https://dl.acm.org/doi/10.1145/3691620.3695549},
+  urldate =      {2025-07-14},
+  abstract =     {In recent years, scripting languages such as JavaScript and
+                  Python have gained a lot of traction due to their flexibility,
+                  which allows developers to write concise code in a short
+                  amount of time. However, this flexibility is achieved via
+                  weak, dynamic typing, which fails to catch subtle bugs that
+                  would be prevented by a compiler, in static typing.
+                  Gradual-type systems like TypeScript emerged as a solution
+                  that combines the best of both worlds, allowing developers to
+                  annotate parts of their code with optional type hints.
+                  Nonetheless, most practical deployments of such systems are
+                  unsound, limiting themselves to static checks and not
+                  performing residual runtime checks that help enforce type
+                  hints uniformly. This is a missed automation opportunity that
+                  offloads the burden on developers, who still need to perform
+                  explicit type checks at transition points between untyped and
+                  typed code so that values at runtime obey the type hints.
+                  Failure to do so can result in subtle type inconsistency bugs,
+                  and when user input is involved, it can render input
+                  validation mechanisms ineffective, resulting in type confusion
+                  problems. In this work, we study the relation between gradual
+                  typing and type confusion. Our main hypothesis is that the
+                  type hints in the code can mislead developers into thinking
+                  they are enforced consistently by the compiler, resulting in a
+                  lack of explicit runtime checks that ensure type safety. We
+                  perform a large empirical study with 30,000 open-source
+                  repositories to statically analyze if and how they use gradual
+                  typing and to what extent this influences the presence of
+                  explicit type checks. We find that many projects feature
+                  gradually typed code, but usually only in small portions of
+                  their code base. This implies the presence of many points in
+                  the code base where developers must add explicit type checks,
+                  i.e., at the transition points between unannotated and
+                  annotated code. Our results further indicate that gradual
+                  typing may have a deteriorating effect when parameters are
+                  annotated with primitive types. Finally, we manually analyze a
+                  small portion of the studied repositories and show that
+                  attackers can remotely cause type confusion and violate the
+                  type hints added by developers. We hope that our results help
+                  raise awareness about the limits of current gradual-type
+                  systems and their unwanted effect on input validation.},
+  isbn =         {979-8-4007-1248-7}
+}
+
+@inproceedings{tgpk-behaviorgradualtypes-2018,
+  title =        {The Behavior of Gradual Types: A User Study},
+  shorttitle =   {The Behavior of Gradual Types},
+  booktitle =    {Proceedings of the 14th {{ACM SIGPLAN International
+                  Symposium}} on {{Dynamic Languages}}},
+  author =       {Tunnell Wilson, Preston and Greenman, Ben and Pombrio, Justin
+                  and Krishnamurthi, Shriram},
+  date =         {2018-10-24},
+  series =       {{{DLS}} 2018},
+  pages =        {1--12},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/3276945.3276947},
+  url =          {https://dl.acm.org/doi/10.1145/3276945.3276947},
+  urldate =      {2026-03-30},
+  abstract =     {There are several different gradual typing semantics,
+                  reflecting different trade-offs between performance and type
+                  soundness guarantees. Notably absent, however, are any data on
+                  which of these semantics developers actually prefer. We begin
+                  to rectify this shortcoming by surveying professional
+                  developers, computer science students, and Mechanical Turk
+                  workers on their preferences between three gradual typing
+                  semantics. These semantics reflect important points in the
+                  design space, corresponding to the behaviors of Typed Racket,
+                  TypeScript, and Reticulated Python. Our most important finding
+                  is that our respondents prefer a runtime semantics that fully
+                  enforces statically declared types.},
+  isbn =         {978-1-4503-6030-2}
+}
+
+@inproceedings{tsdtf-Gradualtypingfirstclass-2012,
+  title =        {Gradual Typing for First-Class Classes},
+  booktitle =    {Proceedings of the {{ACM}} International Conference on
+                  {{Object}} Oriented Programming Systems Languages and
+                  Applications},
+  author =       {Takikawa, Asumu and Strickland, T. Stephen and Dimoulas,
+                  Christos and Tobin-Hochstadt, Sam and Felleisen, Matthias},
+  date =         {2012-10-19},
+  series =       {{{OOPSLA}} '12},
+  pages =        {793--810},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/2384616.2384674},
+  url =          {https://dl.acm.org/doi/10.1145/2384616.2384674},
+  urldate =      {2026-03-24},
+  abstract =     {Dynamic type-checking and object-oriented programming often go
+                  hand-in-hand; scripting languages such as Python, Ruby, and
+                  JavaScript all embrace object-oriented (OO) programming. When
+                  scripts written in such languages grow and evolve into large
+                  programs, the lack of a static type discipline reduces
+                  maintainability. A programmer may thus wish to migrate parts
+                  of such scripts to a sister language with a static type
+                  system. Unfortunately, existing type systems neither support
+                  the flexible OO composition mechanisms found in scripting
+                  languages nor accommodate sound interoperation with untyped
+                  code. In this paper, we present the design of a gradual typing
+                  system that supports sound interaction between statically- and
+                  dynamically-typed units of class-based code. The type system
+                  uses row polymorphism for classes and thus supports
+                  mixin-based OO composition. To protect migration of mixins
+                  from typed to untyped components, the system employs a novel
+                  form of contracts that partially seal classes. The design
+                  comes with a theorem that guarantees the soundness of the type
+                  system even in the presence of untyped components.},
+  isbn =         {978-1-4503-1561-6}
+}
+
+@incollection{tt-GradualInterpretationUnion-2017,
+  title =        {A {{Gradual Interpretation}} of {{Union Types}}},
+  booktitle =    {Static {{Analysis}}},
+  author =       {Toro, Matías and Tanter, Éric},
+  editor =       {Ranzato, Francesco},
+  date =         2017,
+  volume =       10422,
+  pages =        {382--404},
+  publisher =    {Springer International Publishing},
+  location =     {Cham},
+  doi =          {10.1007/978-3-319-66706-5_19},
+  url =          {http://link.springer.com/10.1007/978-3-319-66706-5_19},
+  urldate =      {2025-02-26},
+  abstract =     {Union types allow to capture the possibility of a term to be
+                  of several possibly unrelated types. Traditional static
+                  approaches to union types are untagged and tagged unions,
+                  which present dual advantages in their use. Inspired by recent
+                  work on using abstract interpretation to understand gradual
+                  typing, we present a novel design for union types, called
+                  gradual union types. Gradual union types combine the
+                  advantages of tagged and untagged union types, backed by
+                  dynamic checks. Seen as a gradual typing discipline, gradual
+                  union types are restricted imprecise types that denote a
+                  finite number of static types. We apply the Abstracting
+                  Gradual Typing (AGT) methodology of Garcia et al. to derive
+                  the static and dynamic semantics of a language that supports
+                  both gradual unions and the traditional, totally-unknown type.
+                  We uncover that gradual unions interact with the unknown type
+                  in a way that mandates a stratified approach to AGT, relying
+                  on a composition of two distinct abstract interpretations in
+                  order to retain optimality. Thanks to the abstract
+                  interpretation framework, the resulting language is type safe
+                  and satisfies the refined criteria for gradual languages. We
+                  also show how to compile such a language to a threesome cast
+                  calculus, and prove that the compilation preserves the
+                  semantics and properties of the language.},
+  isbn =         {978-3-319-66705-8 978-3-319-66706-5},
+  langid =       {english}
+}
+
+@article{vtv-GradualLiquidType-2018,
+  title =        {Gradual {{Liquid Type Inference}}},
+  author =       {Vazou, Niki and Tanter, Éric and Van Horn, David},
+  date =         {2018-10-24},
+  journaltitle = {Proc. ACM Program. Lang.},
+  volume =       2,
+  pages =        {132:1--132:25},
+  doi =          {10.1145/3276502},
+  url =          {https://dl.acm.org/doi/10.1145/3276502},
+  urldate =      {2025-02-26},
+  abstract =     {Refinement types allow for lightweight program verification by
+                  enriching types with logical predicates. Liquid typing
+                  provides a decidable refinement inference mechanism that is
+                  convenient but subject to two major issues: (1) inference is
+                  global and requires top-level annotations, making it
+                  unsuitable for inference of modular code components and
+                  prohibiting its applicability to library code, and (2)
+                  inference failure results in obscure error messages. These
+                  difficulties seriously hamper the migration of existing code
+                  to use refinements. This paper shows that gradual liquid type
+                  inference–a novel combination of liquid inference and gradual
+                  refinement types–addresses both issues. Gradual refinement
+                  types, which support imprecise predicates that are
+                  optimistically interpreted, can be used in argument positions
+                  to constrain liquid inference so that the global inference
+                  process effectively infers modular specifications usable for
+                  library components. Dually, when gradual refinements appear as
+                  the result of inference, they signal an inconsistency in the
+                  use of static refinements. Because liquid refinements are
+                  drawn from a finite set of predicates, in gradual liquid type
+                  inference we can enumerate the textitsafe concretizations of
+                  each imprecise refinement, i.e., the static refinements that
+                  justify why a program is gradually well-typed. This
+                  enumeration is useful for static liquid type error
+                  explanation, since the safe concretizations exhibit all the
+                  potential inconsistencies that lead to static type errors. We
+                  develop the theory of gradual liquid type inference and
+                  explore its pragmatics in the setting of Liquid Haskell. To
+                  demonstrate the utility of our approach, we develop an
+                  interactive tool, GuiLT, for gradual liquid type inference in
+                  Liquid Haskell that both infers modular types and explores
+                  safe concretizations of gradual refinements. We report on the
+                  use of GuiLT for error reporting and discuss a case study on
+                  the migration of three commonly-used Haskell list manipulation
+                  libraries into Liquid Haskell.},
+  issue =        {OOPSLA}
+}
+
+@inproceedings{yk-StagedGradualTyping-2025,
+  title =        {Staged {{Gradual Typing}}},
+  booktitle =    {Proceedings of the 24th {{ACM SIGPLAN International
+                  Conference}} on {{Generative Programming}}: {{Concepts}} and
+                  {{Experiences}}},
+  author =       {Yaguchi, Hiroto and Kameyama, Yukiyoshi},
+  date =         {2025-06-27},
+  series =       {{{GPCE}} '25},
+  pages =        {94--104},
+  publisher =    {Association for Computing Machinery},
+  location =     {New York, NY, USA},
+  doi =          {10.1145/3742876.3742880},
+  url =          {https://dl.acm.org/doi/10.1145/3742876.3742880},
+  urldate =      {2025-08-24},
+  abstract =     {Staging dynamically typed programming languages safely is a
+                  challenge, as the programming-language support for staged
+                  computation typically relies on static type systems. To solve
+                  this problem, we propose a staged gradual type system that
+                  seamlessly integrates static and dynamic typing with staged
+                  computation. Our system combines the basic gradual type system
+                  and the let-polymorphic staged type system for run-time code
+                  generation safely. We discuss the design and issues in
+                  developing the calculus, and present a type system and
+                  operational semantics via a translation to a cast calculus
+                  where dynamic type checking is made explicit. We also show
+                  several applications, such as lightweight stage polymorphism.},
+  isbn =         {979-8-4007-1995-0}
+}
+
+@article{zda-SoundGradualVerification-2024,
+  title =        {Sound {{Gradual Verification}} with {{Symbolic Execution}}},
+  author =       {Zimmerman, Conrad and DiVincenzo, Jenna and Aldrich, Jonathan},
+  date =         {2024-01-05},
+  journaltitle = {Proc. ACM Program. Lang.},
+  volume =       8,
+  pages =        {85:2547--85:2576},
+  doi =          {10.1145/3632927},
+  url =          {https://dl.acm.org/doi/10.1145/3632927},
+  urldate =      {2026-03-22},
+  abstract =     {Gradual verification, which supports explicitly partial
+                  specifications and verifies them with a combination of static
+                  and dynamic checks, makes verification more incremental and
+                  provides earlier feedback to developers. While an abstract,
+                  weakest precondition-based approach to gradual verification
+                  was previously proven sound, the approach did not provide
+                  sufficient guidance for implementation and optimization of the
+                  required run-time checks. More recently, gradual verification
+                  was implemented using symbolic execution techniques, but the
+                  soundness of the approach (as with related static checkers
+                  based on implicit dynamic frames) was an open question. This
+                  paper puts practical gradual verification on a sound footing
+                  with a formalization of symbolic execution, optimized run-time
+                  check generation, and run time execution. We prove our
+                  approach is sound; our proof also covers a core subset of the
+                  Viper tool, for which we are aware of no previous soundness
+                  result. Our formalization enabled us to find a soundness bug
+                  in an implemented gradual verification tool and describe the
+                  fix necessary to make it sound.},
+  issue =        {POPL}
 }
