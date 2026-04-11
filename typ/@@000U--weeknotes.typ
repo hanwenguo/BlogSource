@@ -6,4 +6,4 @@
   identifier: "000U",
 )
 
-#tr("wb:2026-W15")
+#tr("wb:2026-W15", expanded: false, disable-numbering: true)
