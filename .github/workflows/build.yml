@@ -21,6 +21,13 @@ jobs:
         with:
           typst-version: ^0.14.2
 
+      - name: Install Fonts
+        run: |
+          curl -LO https://github.com/alerque/libertinus/releases/download/v7.051/Libertinus-7.051.tar.zst
+          tar -I zstd -xf Libertinus-7.051.tar.zst
+          mkdir -p ~/.local/share/fonts/Libertinus
+          mv Libertinus-7.051/static/OTF/*.otf ~/.local/share/fonts/
+
       - name: Build notes
         run: |
           cargo install --locked --git https://github.com/hanwenguo/weibian.git
