@@ -47,16 +47,14 @@ Suppose we have $Gamma vdash_g e : tau | C$. For any type $sigma$ and substituti
   title: "Minimal adequate solution",
   level: 3
 )[
-Let $S'$ be any substitution, $Gamma$ a typing context. If $exists tau. space S'; Gamma vdash_g e : tau$ (i.e. $e$ is gradually well-typed under $S'$) and $forall alpha. forall sigma in LBe(alpha). space sigma cl S'(alpha)$ (i.e. $S'$ satisfies the constraint-informativeness preservation), then $forall alpha. space S(alpha) cl S'(alpha)$, i.e. the inferred substitution $S$ does not overly generalize.
-
-If we define $LBe(alpha) =^"def" {sigma | C_e vdash sigma cl alpha}$, then $S(alpha) = union.sq.big LBe(alpha)$.
+  Let $S'$ be any substitution, $Gamma$ a typing context. If $exists tau. space S'; Gamma vdash_g e : tau$ (i.e. $e$ is gradually well-typed under $S'$) and forall $sigma$, $S vDash C$ and $C vdash sigma cl alpha$ implies $S'(sigma) cl S'(alpha)$ (i.e. $S'$ satisfies the constraint-informativeness preservation), then $S(alpha) cl S'(alpha)$, i.e. the inferred substitution $S$ is not overly specific.
 ]
 
 #inline-tree(
   title: "No spurious dynamicity",
   level: 3
 )[
-This rule is implied by the previous rules, but it is worth stating explicitly: $S(alpha) = ? arrow.double union.sq.big LBe(alpha) = ?$. That is, if $?$ is the only type that is less or equally informative than $alpha$ according to the constraints, then the inferred type for $alpha$ must be $?$.
+This rule is implied by the previous rules, but it is worth stating explicitly. Define $LBe(alpha) =^"def" {sigma | C_e vdash sigma cl alpha}$, then the rule says $S(alpha) = ? arrow.double union.sq.big LBe(alpha) = ?$. That is, if $?$ is the only type that is less or equally informative than $alpha$ according to the constraints, then the inferred type for $alpha$ must be $?$.
 ]
 
 Some thoughts:
@@ -67,7 +65,7 @@ Some thoughts:
 
 My feeling is that the problems described in section 1.3 and section 1.4 of this paper are somehow not as severe as they might initially appear. The problem is basically that some programs left you so-called undecided type variables, which can be instantiated to any type; these undecided type variables are usually introduced due to the presence of the $?$ type, which hides useful information from other parts of the program. This brings two problems:
 
-1. If you fill in the undecided type variables with some concrete types, the program will reduce to a value, while some other choices of types will lead to divergence. 
+1. If you fill in the undecided type variables with some concrete types, the program will reduce to a value, while some other choices of types will lead to divergence.
 2. Even if you fill in the undecided type variables with the $?$ type, that would allow the program even if there are no static types that make the program execution successful.
 
 Actually, both of the problems seems to be the inherent problems of gradual typing — if you hide too much information using $?$ types, the inference will not be able to give useful results. (Maybe that is why the authors choose a "dynamic inference" approach.) For the first problem, I don't think there are good solutions (maybe see papers by Castagna et al. recently for how they intersect the dynamic type with the static types to get more precise inference results) other than the approach of the second problem. For the second problem, I think the core of the erroneous example by the authors is that the static type system of their language is not strong enough: add union types and the problem will be solved for their example. Plus, I think the point of using dynamic types is, sometimes, to allow some programs that are not statically well-typed but are still "safe".
