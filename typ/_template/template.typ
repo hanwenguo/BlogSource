@@ -56,7 +56,7 @@
   let parsed-names = attrs.at("parsed-names")
   _guard-and-render-metadata("author", (it) => {
     _meta-item(html.address(class: "author", {
-      it.map((a) => { 
+      it.map((a) => {
         let main-name-part = a.given + " " + a.family
         if a.at("prefix", default: "") != "" {
           main-name-part = a.prefix + " " + main-name-part
@@ -201,7 +201,7 @@
       identifier: identifier,
       title: title,
       ..attrs
-    ) 
+    )
     body
   })
 }
@@ -241,7 +241,7 @@
 
 #let template-html(
   identifier: "",
-  title: "", 
+  title: "",
   ..attrs,
 ) = (doc) => {
   show math.equation: set text(font: site.config.math-fonts)
@@ -271,11 +271,11 @@
   show raw.where(block: true): it => {
     {
       set raw(theme: "/_template/modus_operandi.tmTheme")
-      html.div(class: "color-light", it)
+      html.div(class: "color-light codeblock", it)
     }
     {
       set raw(theme: "/_template/modus_vivendi.tmTheme")
-      html.div(class: "color-dark", it)
+      html.div(class: "color-dark codeblock", it)
     }
   }
 
@@ -291,7 +291,7 @@
   )
 
   show footnote: it => html.aside(it.body)
-  
+
   html.html({
     _head(
       identifier: identifier,
