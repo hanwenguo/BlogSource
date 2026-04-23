@@ -44,23 +44,29 @@ class Dog():
 
   As a hint, we could try to extract some rules from previous literature (notice that the direction of the order relation $subset.eq.sq$ in the literature is the reverse of our $<=$):
 
-  #tr("wb:000V", expanded: false, disable-numbering: true)
+  #tr("wb:000V", expanded: false, disable-numbering: true, demote-headings: 2)
 
-  The first rule is more connected to the #ln("wb:svcb-RefinedCriteriaGradual-2015")[Refined Criteria for Gradual Typing]: it simply says that if there are no static types in $T$, then we should raise a type error. It implies that $T$ has some minimal element(s), i.e. elements that no other elements are smaller than them (different from the least element). Of course, $T$ might also contain minimal elements that are not static types.
-
-  The second rule is more like filtering what is "valid": from the constraints we know that there is a set $Sigma subset.eq S$ such that for all $t in T$ and for all $sigma in Sigma$, $sigma$ is less precise than $t$. For our specific inference problem to be meaningful, a reasonable requirement is that all $sigma in Sigma$ should be consistent to each other, which implies that for each $sigma_1, sigma_2 in Sigma$ there exist some $t in T$ such that $t <= sigma_1$ and $t <= sigma_2$; otherwise we won't have a reasonable element to choose as the principal one. A stronger requirement would be that there exist a lower bound of all $sigma in Sigma$ with regard to $<=$. That implies that a greatest lower bound $sigma_sans("glb")$ of $Sigma$ exists, and it is an upper bound of what we might choose as the principal type. From the perspective of types, all the $sigma$s means some information we already know about the type to infer, and their greatest lower bound is the combination of these informations. For example, we may have $Sigma = {"?" -> (sans("Int") -> "?"), "?" -> ("?" -> sans("Int"))}$, and $sigma_sans("glb") = "?" -> (sans("Int") -> sans("Int"))$.
-
-  #let t_bot = $accent(t, breve)$
-
-  The third rule makes more sense of "principal". It implies that if the greatest lower bound of $T$ does not exist or is not in $T$ (i.e. $T$ does not have a least element), then the principal element we choose should be greater than or equal to the least upper bound $accent(t, breve)$ of the minimal elements of $T$. This $accent(t, breve)$ sets a lower bound of what we might choose as the principal type. Notice that the minimal elements of $T$ at least contains some static types (implied by rule 1), and any pair of static types are non-comparable, and any static type is also a minimal element in $chevron.l S, <= chevron.r$, so if the greatest lower bound of $T$ exists and is in $T$, then that element must be the sole static type in $T$. If that is the case, intuitively this static type should just be the principal type we infer.
+  The first rule is more connected to the #ln("wb:svcb-RefinedCriteriaGradual-2015")[Refined Criteria for Gradual Typing]: it simply says that if there are no static types in $T$, then we should raise a type error. It implies that $T$ has some minimal element(s), i.e. elements that no other elements are smaller than them (different from the least element), and they are all static types since minimal elements that are not static types cannot be in $T$ according to rule 1.
 
   #let t_top = $sigma_sans("glb")$
 
-  The third rule and second rule combined together gives us another requirement: $accent(t, breve)$ (which is not necessarily in $T$) should be less than or equal to $sigma_sans("glb")$ (which is also not necessarily in $T$). Otherwise we have no reasonable $t$ to choose as the principal one. It is also clear that when the two are equal and they are in $T$, they are the principal element to choose.
+  The second rule is more like filtering what is "valid": from the constraints we know that there is a set $Sigma subset.eq S$ such that for all $t in T$ and for all $sigma in Sigma$, $sigma$ is less precise than $t$. For our specific inference problem to be meaningful, a reasonable requirement is that there exist a lower bound of all $sigma in Sigma$ with regard to $<=$; otherwise we won't have a reasonable element to choose as the principal one. That implies that a greatest lower bound #t_top of $Sigma$ exists, and it is an upper bound of what we might choose as the principal type. From the perspective of types, all the $sigma$s means some information we already know about the type to infer, and their greatest lower bound is the combination of these informations. For example, we may have $Sigma = {"?" -> (sans("Int") -> "?"), "?" -> ("?" -> sans("Int"))}$, and $#t_top = "?" -> (sans("Int") -> sans("Int"))$.
 
-  #t_top, #t_bot and all the elements of $T$ between them (if they exist) together form a lattice; more precisely, a sub-lattice of $chevron.l S, <= chevron.r$. The questions remaining are:
-  1. Are #t_top and #t_bot in $T$? My guess is that a good type inference algorithm would let so.
-  2. If this sub-lattice is not a singleton, how should we choose the principal type out of it?
+  #let t_bot = $accent(t, breve)$
+
+  The third rule makes more sense of "principal." It implies that if the greatest lower bound of $T$ does not exist or is not in $T$ (i.e. $T$ does not have a least element), then the principal element we choose should be greater than or equal to the least upper bound #t_bot of the minimal elements of $T$. This #t_bot sets a lower bound of what we might choose as the principal type. Notice that the minimal elements of $T$ at least contains some static types (implied by rule 1), and any pair of static types are non-comparable, and any static type is also a minimal element in $chevron.l S, <= chevron.r$, so if the greatest lower bound of $T$ exists and is in $T$, then that element must be the sole static type in $T$. If that is the case, intuitively this static type should just be the principal type we infer.
+
+  The third rule and second rule combined together gives us another requirement: #t_bot should be less than or equal to #t_top. Otherwise we have no reasonable $t$ to choose as the principal one. It is also clear that when the two are equal and they are in $T$, they are the principal element to choose.
+
+  Are #t_top and #t_bot in $T$? To answer this, we first ask: in what cases would a type be not in $T$? Since our notion of "valid" means "not raising type error when plugged in", then not in $T$, i.e. not valid, should mean it would raise a type error when plugged in, which in turn means that all the materialization of it (thus all static ones) would raise a type error. So, "valid" in turn means some of its materialization (thus some static ones) would fit. This interpretation immediately tells us that $#t_top in T$ and $#t_bot in T$.
+
+  Since $#t_top in T$ and $#t_bot in T$, let $T' subset.eq T$ be the set of all elements in $T$ that is between them, $chevron.l T, <= chevron.r$  form a lattice; more precisely, a sub-lattice of $chevron.l S, <= chevron.r$. The next question is: how should we choose the principal type out of it?
+
+  If $T'$ is a singleton, the answer is very simple. In what cases would $T'$ not be a singleton? That would be the cases where there are materialization of #t_top other than #t_bot that would raise a type error when plugged in. What should we choose as the principal type in that case?
+
+  The answer is still not clear to me, but I doubt that it would be more like a design choice. If you want to be more tolerant and allow more things to be consistent, you choose $#t_top$; if you want to be more precise, you choose $#t_bot$.
+
+  From the view of abstract interpretation, every gradual type $tau$ can be concretized to a set of static types $gamma(tau)$, and every set of static types ${t, ...}$ can be abstracted to a gradual type $alpha({t, ...})$. Obviously, $#t_top = alpha(union.big_(space.thin t in T) gamma(t))$, and $#t_bot = alpha(inter.big_(space.thin t in T) gamma(t))$.
 
   Also note that this concept of being principal could be somehow orthogonal to other concepts of principal type, such as the subtyping or parametric polymorphism ones we mentioned above. If that is the case, the type inference algorithm need to consider all of them and maybe make some considerations if they are not compatible.
 ]
