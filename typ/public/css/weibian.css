@@ -93,12 +93,19 @@ a {
 }
 
 :is(h5, h6, p) {
-  margin-block-start: 0;
   margin-block-end: 1lh;
 
   &:has(+ .math-display) {
     margin-block-end: var(--space-sm);
   }
+}
+
+:is(h5, h6) {
+  margin-block-start: 0;
+}
+
+p {
+  margin-block-start: var(--space-sm);
 }
 
 /* Details heading sizes */
