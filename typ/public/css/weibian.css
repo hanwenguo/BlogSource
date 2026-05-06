@@ -278,6 +278,7 @@ figcaption {
 @media (width > 1000px) {
   body {
     margin-block-start: var(--space-xl);
+    margin-block-end: var(--space-xl);
   }
 
   #grid-wrapper {

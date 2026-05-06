@@ -16,7 +16,7 @@
   )[2026/01 @ Charleston, SC]
 ]
 
-I am a Ph.D. student at the #link("https://www-old.cs.utah.edu/plt/")[University of Utah], advised by #link("https://users.cs.utah.edu/~blg/")[Prof. Ben Greenman]. Before that, I received my B.Eng. in Computer Science at #link("https://www.whu.edu.cn")[Wuhan University]. 
+I am a Ph.D. student at the #link("https://www-old.cs.utah.edu/plt/")[University of Utah], advised by #link("https://users.cs.utah.edu/~blg/")[Prof. Ben Greenman]. Before that, I received my B.Eng. in Computer Science at #link("https://www.whu.edu.cn")[Wuhan University].
 
 I study programming languages and type systems, with a focus on gradual typing and similar theories that help reduce the friction and improve the ergonomics of adopting strong guarantees.
 
@@ -47,4 +47,4 @@ Also see my #ln("wb:0000")[CV] for more details about my research and work exper
 
 This website is built using #link("https://hanwenguo.github.io/weibian/")[Weibian]. Except for the poems, all content is licensed under #link("https://creativecommons.org/licenses/by-nc-sa/4.0/")[CC BY-NC-SA 4.0].
 
-// TODO: Blog posts, interesting links, etc.
+// TODO: interesting links
