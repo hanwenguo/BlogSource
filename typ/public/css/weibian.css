@@ -204,7 +204,9 @@ code {
 }
 
 math {
-  font-size: 1.12em;
+  font-family: "Libertinus Math";
+  font-weight: 400;
+  font-style: normal;
 }
 
 mrow:hover {
