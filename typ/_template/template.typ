@@ -246,26 +246,26 @@
 ) = (doc) => {
   show math.equation: set text(font: site.config.math-fonts)
 
-  // show math.equation.where(block: false): it => {
-  //   {
-  //     set text(site.config.foreground-color.at(0))
-  //     html.span(class: "math-inline color-light", html.frame(it))
-  //   }
-  //   {
-  //     set text(site.config.foreground-color.at(1))
-  //     html.span(class: "math-inline color-dark", html.frame(it))
-  //   }
-  // }
-  // show math.equation.where(block: true): it => {
-  //   {
-  //     set text(site.config.foreground-color.at(0))
-  //     html.div(class: "math-display color-light", html.frame(it))
-  //   }
-  //   {
-  //     set text(site.config.foreground-color.at(1))
-  //     html.div(class: "math-display color-dark", html.frame(it))
-  //   }
-  // }
+  show math.equation.where(block: false): it => {
+    {
+      set text(site.config.foreground-color.at(0))
+      html.span(class: "math-inline color-light", html.frame(it))
+    }
+    {
+      set text(site.config.foreground-color.at(1))
+      html.span(class: "math-inline color-dark", html.frame(it))
+    }
+  }
+  show math.equation.where(block: true): it => {
+    {
+      set text(site.config.foreground-color.at(0))
+      html.div(class: "math-display color-light", html.frame(it))
+    }
+    {
+      set text(site.config.foreground-color.at(1))
+      html.div(class: "math-display color-dark", html.frame(it))
+    }
+  }
 
   // https://github.com/miikanissi/modus-themes.nvim/tree/master/extras/bat
   show raw.where(block: true): it => {
