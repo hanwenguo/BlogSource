@@ -204,12 +204,12 @@ code {
 }
 
 math {
-  font-size: 1.12em;
+  font-family: "Libertinus Math", math;
 }
 
-mrow:hover {
-  background-color: var(--color-accent-hover);
-}
+/* mrow:hover { */
+/*   background-color: var(--color-accent-hover); */
+/* } */
 
 .math-display {
   margin-block: var(--space-md);
@@ -247,6 +247,7 @@ mrow:hover {
 img {
   object-fit: cover;
   max-inline-size: 100%;
+  block-size: auto;
 }
 
 figure {

@@ -17,9 +17,10 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Setup Typst
-        uses: typst-community/setup-typst@v4
+        uses: typst-community/setup-typst@v5
         with:
-          typst-version: ^0.14.2
+          typst-version: 0.15.0-rc.1
+          allow-prereleases: true
 
       - name: Install Fonts
         run: |
