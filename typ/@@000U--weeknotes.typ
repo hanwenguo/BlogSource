@@ -6,6 +6,7 @@
   identifier: "000U",
 )
 
+#tr("wb:2026-W23", expanded: false, disable-numbering: true)
 #tr("wb:2026-W21", expanded: false, disable-numbering: true)
 #tr("wb:2026-W19", expanded: false, disable-numbering: true)
 #tr("wb:2026-W17", expanded: false, disable-numbering: true)
