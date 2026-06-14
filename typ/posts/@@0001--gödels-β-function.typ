@@ -54,7 +54,7 @@ Before the proof, we need to prove two preliminary propositions.
 
 (Note that this lemma is a weaken version of the original theorem.)
 
-If $m, n in omega$ and they are coprime, then $a m + b n = 1$ for some **integers** $a$ and $b$.
+If $m, n in omega$ and they are coprime, then $a m + b n = 1$ for some *integers* $a$ and $b$.
 
 Proof: Let $S = lr({ a m + b n divides a m + b n in omega })$, i.e. the set of all positive (integral) linear composition of $m$ and $n$. Thus there must be a minimum value $p in S$ for this non-empty set (the non-emptiness is trivial). What this proof wants to show is that $p = 1$. We prove this by contradiction. Assume that $p != 1$. Take $q in S$, let $r = "rem"(q, p)$, we have $0 <= r < p$. And $"rem"(q, p) in S$ since $p$ and $q$ are both (integral) linear composition of $m$ and $n$, so $"rem"(q, p)$ must be $0$, otherwise it contradicts with the minimality of $p$. Then we have $p divides q$ for all $q in S$. Note that $m in S$ and $n in S$, so $p$ is a common divisor of $m$ and $n$, which leads to the contradiction toward the coprimality of $m$ and $n$ if $p != 1$.
 ]

@@ -126,25 +126,32 @@
     )(body)
   }
 
-  context if target() == "html" {
-    pesha-html(
-      name: name,
-      contacts: contacts,
-      profile-picture: profile-picture,
-      body,
-    )
-  } else {
-    pesha-paged(
-      name: name,
-      address: address,
-      contacts: contacts,
-      profile-picture: profile-picture,
-      paper-size: paper-size,
-      footer-text: footer-text,
-      page-numbering-format: page-numbering-format,
-      body,
-    )
-  }
+  pesha-html(
+    name: name,
+    contacts: contacts,
+    profile-picture: profile-picture,
+    body,
+  )
+
+  // context if target() == "html" {
+  //   pesha-html(
+  //     name: name,
+  //     contacts: contacts,
+  //     profile-picture: profile-picture,
+  //     body,
+  //   )
+  // } else {
+  //   pesha-paged(
+  //     name: name,
+  //     address: address,
+  //     contacts: contacts,
+  //     profile-picture: profile-picture,
+  //     paper-size: paper-size,
+  //     footer-text: footer-text,
+  //     page-numbering-format: page-numbering-format,
+  //     body,
+  //   )
+  // }
 }
 
 #let tile(
@@ -183,7 +190,7 @@
     html.div(style: "display: flex; flex-direction: row; flex-wrap: wrap; margin: 1rem 0;")[
       #html.div(style: "flex: 1 1; min-width: 9rem;")[#top-right]
       #html.div(style: "flex: 2 1; min-width: 12rem;")[
-        #top-left \        
+        #top-left \
         #if bottom-left != none [#bottom-left\ ]
         #if bottom-right != none [#bottom-right\ ]
         #body
@@ -248,7 +255,7 @@
       body
     )
   } else {
-    tr("wb:" + identifier, show-metadata: true, expanded: false, disable-numbering: true, demote-headings: 2)
+    tr("wb:" + identifier, show-metadata: true, expanded: false, disable-numbering: true)
   }
 }
 

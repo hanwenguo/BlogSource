@@ -1,13 +1,13 @@
 name: Build GitHub Pages
 
-on: 
+on:
   push:
     branches:
       - master
   workflow_dispatch:
 
-jobs: 
-  build: 
+jobs:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +31,7 @@ jobs:
 
       - name: Build notes
         run: |
-          cargo install --locked --git https://github.com/hanwenguo/weibian.git
+          cargo install --locked --git https://github.com/hanwenguo/weibian.git --branch dev
           wb compile
 
       - name: Deploy
@@ -41,4 +41,3 @@ jobs:
           external_repository: hanwenguo/hanwenguo.github.io
           publish_dir: ./dist
           commit_message: ${{ github.event.head_commit.message }}
-          
