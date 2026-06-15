@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Libertinus Math;
+    src: local('Libertinus Math'), local('LibertinusMath'),
+         url('/fonts/LibertinusMath-Regular.woff2'),
+         url('/fonts/LibertinusMath-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}

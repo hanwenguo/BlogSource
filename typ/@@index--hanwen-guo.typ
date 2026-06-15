@@ -8,12 +8,12 @@
 
 #html.aside[
   #image(
-    "/public/images/me-jan-2026-charleston-sc.jpeg",
-    alt: "A photo of me in Charleston, SC, taken in January 2026.",
+    "/public/images/me-apr-2026-blacksburg-va.jpeg",
+    alt: "A photo of me in Blacksburg, Virginia, taken in April 2026.",
   )
   #html.figcaption(
     style: "margin: 0.5rem 0; font-size: 14px; text-align: center; color: #989898;",
-  )[2026/01 @ Charleston, SC]
+  )[2026/04 \@ Blacksburg, VA]
 ]
 
 I am a Ph.D. student at the #link("https://www-old.cs.utah.edu/plt/")[University of Utah], advised by #link("https://users.cs.utah.edu/~blg/")[Prof. Ben Greenman]. Before that, I received my B.Eng. in Computer Science at #link("https://www.whu.edu.cn")[Wuhan University].
