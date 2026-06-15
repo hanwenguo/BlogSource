@@ -29,6 +29,9 @@ jobs:
           mkdir -p ~/.local/share/fonts/Libertinus
           mv Libertinus-7.051/static/OTF/*.otf ~/.local/share/fonts/
 
+      - name: Cache Rust
+        uses: Swatinem/rust-cache@v2
+
       - name: Build notes
         run: |
           cargo install --locked --git https://github.com/hanwenguo/weibian.git --branch dev
