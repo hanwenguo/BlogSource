@@ -40,8 +40,11 @@
     --color-mark: light-dark(#dae5ec, #2f3849); /* bg-hl-line */
 
     /* Typography */
-    --font-body: "Libertinus Sans", sans-serif;
+    --font-body-sans: "Libertinus Sans", sans-serif;
+    --font-body-serif: serif;
+    --font-body: var(--font-body-sans);
     --font-heading: "Libertinus Serif Display", "Libertinus Serif", serif;
+    --font-math: "Liberrinus Math", math;
     --font-size-base: 1.125rem;
     --font-size-sm: 1rem;
     --font-size-xs: 0.875rem;
@@ -133,7 +136,7 @@ pre {
 }
 
 math {
-    font-family: "Libertinus Math", math;
+    font-family: var(--font-math);
 }
 
 .math-display {
@@ -952,16 +955,16 @@ section:lang(zh) {
         Baskerville, "Times New Roman", "Liberation Serif", STFangsong,
         FangSong, FangSong_GB2312, "CWTEX\-F", serif;
 
-    font-family: "Libertinus Sans", var(--font-hei);
+    font-family: var(--font-body), var(--font-hei);
 
     .poem {
-        font-family: "Libertinus Serif", var(--font-song);
+        font-family: var(--font-body-serif), var(--font-song);
         p {
             white-space: pre;
         }
     }
 
     :is(h1, h2, h3, h4, h5, h6) {
-        font-family: "Libertinus Serif Display", var(--font-song);
+        font-family: var(--font-heading), var(--font-song);
     }
 }
