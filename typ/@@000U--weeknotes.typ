@@ -3,7 +3,8 @@
   title:      [Weeknotes],
   date:       datetime(year: 2026, month: 04, day: 10, hour: 19, minute: 53, second: 55),
   tags:       (),
-  identifier: "000U",
+  identifier: "weeknotes",
+  show-metadata: false,
 )
 
 #tr("wb:2026-W24", expanded: false, disable-numbering: true)

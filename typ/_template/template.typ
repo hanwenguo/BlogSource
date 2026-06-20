@@ -126,6 +126,26 @@
       _meta-item(name)
       _common-metadata-for-bibliography-entry(..attrs)
     },
+    "Incollection": (..attrs) => {
+      let fields = attrs.at("fields")
+      _common-metadata-for-bibliography-entry(..attrs)
+      _guard-and-render-metadata("booktitle", it => {
+        _meta-item(it)
+      })(fields)
+      _guard-and-render-metadata("pages", it => {
+        _meta-item(it)
+      })(fields)
+    },
+    "Thesis": (..attrs) => {
+      let fields = attrs.at("fields")
+      _common-metadata-for-bibliography-entry(..attrs)
+      _guard-and-render-metadata("institution", it => {
+        _meta-item(it)
+      })(fields)
+      _guard-and-render-metadata("url", it => {
+        _meta-item(link(it)[URL])
+      })(fields)
+    }
   )
     + site.metadata-taxon-map-html
 )
