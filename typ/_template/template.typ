@@ -124,6 +124,9 @@
         name = name + "." + fields.at("number")
       }
       _meta-item(name)
+      _guard-and-render-metadata("issue", it => {
+        _meta-item(it)
+      })(fields)
       _common-metadata-for-bibliography-entry(..attrs)
     },
     "Incollection": (..attrs) => {

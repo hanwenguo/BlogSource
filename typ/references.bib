@@ -335,3 +335,55 @@
   issue = {2021UNIP7159},
   keywords = {Gradual typing,Programming languages,Semantic subtyping,Semantics,Sémantique,Set-Theoretic types,Typage,Type systems,Types ensemblistes,Types graduels}
 }
+
+@article{clnl-typecasesunioneliminationoccurrence-2022,
+  title = {On Type-Cases, Union Elimination, and Occurrence Typing},
+  author = {Castagna, Giuseppe and Laurent, Mickaël and Nguyễn, Kim and Lutze, Matthew},
+  date = {2022-01-12},
+  journaltitle = {Prototype Typechecker for the Article 'On Type-Cases, Union Elimination, and Occurrence Typing'},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume = {6},
+  pages = {13:1--13:31},
+  doi = {10.1145/3498674},
+  url = {https://dl.acm.org/doi/10.1145/3498674},
+  urldate = {2026-04-23},
+  abstract = {We extend classic union and intersection type systems with a
+                  type-case construction and show that the combination of the
+                  union elimination rule of the former and the typing rules for
+                  type-cases of our extension encompasses occurrence typing. To
+                  apply this system in practice, we define a canonical form for
+                  the expressions of our extension, called MSC-form. We show
+                  that an expression of the extension is typable if and only if
+                  its MSC-form is, and reduce the problem of typing the latter
+                  to the one of reconstructing annotations for that term. We
+                  provide a sound algorithm that performs this reconstruction
+                  and a proof-of-concept implementation.},
+  issue = {POPL}
+}
+
+@article{clps-GradualTypingNew-2019,
+  title = {Gradual {{Typing}}: {{A New Perspective}}},
+  shorttitle = {Gradual Typing},
+  author = {Castagna, Giuseppe and Lanvin, Victor and Petrucciani, Tommaso and Siek, Jeremy G.},
+  date = {2019-01-02},
+  journaltitle = {Proc. ACM Program. Lang.},
+  shortjournal = {Proc, ACM Program, Lang,},
+  volume = {3},
+  pages = {16:1--16:32},
+  doi = {10.1145/3290329},
+  url = {https://doi.org/10.1145/3290329},
+  urldate = {2024-07-15},
+  abstract = {We define a new, more semantic interpretation of gradual types and
+                  use it to "gradualize" two forms of polymorphism: subtyping
+                  polymorphism and implicit parametric polymorphism. In
+                  particular, we use the new interpretation to define three
+                  gradual type systems --- Hindley-Milner, with subtyping, and
+                  with union and intersection types --- in terms of two
+                  preorders, subtyping and materialization. We define these
+                  systems both declaratively --- by adding two subsumption-like
+                  rules --- which yields clearer, more intelligible, and
+                  streamlined definitions, and algorithmically by reusing
+                  existing techniques such as unification and tallying.},
+  issue = {POPL},
+  langid = {english}
+}
