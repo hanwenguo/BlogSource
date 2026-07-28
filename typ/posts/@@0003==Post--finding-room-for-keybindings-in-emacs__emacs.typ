@@ -9,7 +9,7 @@
 
 There are so many commands that I want to bind to keys in Emacs, but the keyboard is crowded already. In the #link("https://www.gnu.org/software/emacs/manual/html_node/elisp/Key-Binding-Conventions.html")[Key Binding Conventions section in the GNU Emacs Lisp Reference Manual], it says that `C-c` followed by a letter as well as `F5` through `F9` are reserved for users. However, I, just like any sane Emacs user would do, tries to put groups of related commands under prefixes, which means that such a commmand needs at least three keystrokes to invoke (the `C-c`, the letter prefix, and the keybinding in the prefix). This is anti-productive.
 
-Luckily, there are some keybindings in Emacs that are not that useful for me (and maybe others as well), so I can repurpose them for my own use. The following are some of such keybindings. Note that many of these are useless for me because they are more relevant to terminal Emacs, while I almost always use Emacs in a graphical environment, so YMMV. 
+Luckily, there are some keybindings in Emacs that are not that useful for me (and maybe others as well), so I can repurpose them for my own use. The following are some of such keybindings. Note that many of these are useless for me because they are more relevant to terminal Emacs, while I almost always use Emacs in a graphical environment, so YMMV.
 
 - `C-z`: By default, this is bound to `suspend-frame`, which could be replaced by the window manager's own shortcut for minimizing windows on most systems. It may still be useful on terminal Emacs though.
 - `C-t`: This is bound to `transpose-chars`, which turns `a|bc` into `ba|c` (where `|` is the cursor). Does anyone really use this? I never do. (But I do find other transpose commands useful.)
