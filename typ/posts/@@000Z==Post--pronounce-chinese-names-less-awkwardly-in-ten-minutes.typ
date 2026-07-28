@@ -11,7 +11,7 @@ Some Chinese names can be hard to pronounce for English speakers, especially tho
 
 The goal of this post is not to teach you the _right_ or _perfect_ pronunciation. That takes some dedicated time and effort. So, it will not talk about the standard pronunciation for most phonemes nor the tone. Rather, it tries to get you close enough that when you call out a Chinese name for an order or class attendance, they know you are calling them.
 
-Note that, if you want to learn the right pronunciation rather than loose imitations from the very beginning (so that you do not need to correct yourself if you then decide to learn Chinese seriously), #link("https://en.wikipedia.org/wiki/Pinyin")[the Wikipedia article] and online videos can be more helpful.
+Note that, if you want to learn the right pronunciation rather than rough approximations from the very beginning (so that you do not need to correct yourself if you then decide to learn Chinese seriously), #link("https://en.wikipedia.org/wiki/Pinyin")[the Wikipedia article] and online videos can be more helpful.
 
 #inline-tree(
   identifier: none,
@@ -19,11 +19,11 @@ Note that, if you want to learn the right pronunciation rather than loose imitat
   expanded: false,
   disable-numbering: false,
 )[
-  Chinese has its own writing system, known as Hanzi or Chinese characters. So, what English speakers usually deal with are the _romanization_ of the names, that is, their pronunciation transcribed using Latin alphabet.
+  Chinese has its own writing system, known as Hanzi or Chinese characters. So, what English speakers usually deal with are the _romanization_ of the names, that is, their pronunciation transcribed using the Latin alphabet.
 
   While there used to be several romanization systems for Chinese, Pinyin is now the most popular one and is also the standard for Chinese transliteration in most Chinese-speaking regions. This post only talks about Pinyin. Other romanization systems, which may be used in historical names, are also easier to pronounce for English speakers.
 
-  Also, there are a lot of dialects of Chinese beside the Standard Chinese (Putonghua) and their pronunciation can be very different from the latter. This post only talks about the standard one.
+  Also, there are a lot of dialects of Chinese besides Standard Chinese (Putonghua) and their pronunciation can be very different from the latter. This post only talks about the standard one.
 ]
 
 #inline-tree(
@@ -32,6 +32,7 @@ Note that, if you want to learn the right pronunciation rather than loose imitat
   expanded: true,
   disable-numbering: false,
 )[
+  The more correct terms here is _initials_ and _finals_ in syllables, but to simplify, this post just says _consonants_ and _vowels_ in syllables, which is technically not correct (just like other parts of this post).
 
   #inline-tree(
     identifier: none,
@@ -51,7 +52,7 @@ Note that, if you want to learn the right pronunciation rather than loose imitat
     - pronounce `c` like "ts" as in "tsunami",
     - pronounce `zh` like "j" as in "june".
 
-    Most other consonants sounds close enough when pronounced following the English rules. An exception is `y`, which is explained in the following subsections.
+    Most other consonants sound recognizable when pronounced following the English rules. An exception is `y`, which is explained in the following subsections.
   ]
 
   #inline-tree(
@@ -72,13 +73,24 @@ Note that, if you want to learn the right pronunciation rather than loose imitat
 
     Among the other non-compound vowels, `a` can be simulated by one single sound no matter where it appears: pronounce `a` like in "father", not like in "bad". The rest each have their caveats.
 
-    `i` can be pronounced as "ee" like in "need" most of the time. The exceptions are when it follows `z`, `c`, `s`, `zh`, `ch`, `sh` and `r`: in those cases, quoting from Wikipedia, it is "a buzzed continuation of the consonant." That is, after you have pronounced the consonants, do not move your lips or tongue while keep buzzing your throat.
+    `i` can be pronounced as "ee" like in "need" most of the time. The exceptions are when it follows `z`, `c`, `s`, `zh`, `ch`, `sh` and `r`: in those cases, quoting from Wikipedia, it is "a buzzed continuation of the consonant." That is, after you have pronounced the consonants, do not move your lips or tongue while keeping your vocal cords vibrating.
 
-    `u` itself can also be almost always simulated by one single pronunciation: as "oo" in "food". One exception is in `iu`, where it is the abbreviation of the compound vowel `ou`, so `iu` is really `iou`. The bigger caveat is, when the letter `u` appears after `j`, `q`, `x` and `y`, it actually represents the vowel `ü` with the #link("https://en.wikipedia.org/wiki/Umlaut_(diacritic)")[umlaut] omitted. So, for example, `ju` is actually pronounced as `jü`, and `xuan` is actually pronounced as `xüan`.
+    #footnote[For `u`, the caveat is, when the letter `u` appears after `j`, `q`, `x` and `y`, it actually represents the vowel `ü` with the #link("https://en.wikipedia.org/wiki/Umlaut_(diacritic)")[umlaut] omitted. So, for example, `ju` is actually pronounced as `jü`, and `xuan` is actually pronounced as `xüan`.]`u` itself can also be almost always simulated by one single pronunciation: as "oo" in "food".
 
     For `e`, always pronouncing it as the schwa, i.e. like "a" in "ago" or the "uhh" sound you make when hesitating, is close enough, although not as close as the other vowels described as "close enough" above. If you want to sound a bit more correct, in `ie` and `üe` it should be pronounced as a sound that is in the middle of "e" in "bet" and "i" in "bid". For example, `ie` sounds like reversed "ey" in "hey".
 
-    `o` usually appears with other vowels, and can also be simulated by a single sound. For North American English speakers, pronounce it like "ough" in "thought". For British English speakers, pronounce it like "augh" in "caught" or "o" in "office". The exceptions are when it appears alone in `bo`, `po`, `mo`, `fo` and `wo`, and in these cases it is an abbreviation of the compound vowel `uo`.
+    #footnote[The exceptions for `o` are when it appears alone in `bo`, `po`, `mo`, `fo` and `wo`, and in these cases it is an abbreviation of the compound vowel `uo`.]`o` usually appears with other vowels, and can also be simulated by a single sound. For North American English speakers, pronounce it like "ough" in "thought". For British English speakers, pronounce it like "augh" in "caught" or "o" in "office".
+
+    #inline-tree(
+      identifier: none,
+      title: [Compound Vowels],
+      expanded: true,
+      disable-numbering: false,
+    )[
+      For the compound vowels like `ao`, `ou`, `ian` and so on, pronouncing their consisting non-compound vowels will make it likely recognizable.
+
+      Three exception are `iu`, `ui` and `un`. These are actually abbreviations: `iu` expands to `iou`, `ui` expands to `uei`, `un` expands to `uen`.
+    ]
 
     #inline-tree(
       identifier: none,
@@ -88,7 +100,7 @@ Note that, if you want to learn the right pronunciation rather than loose imitat
     )[
       The first is when it follows `y`. As stated above, the consonant `y` is not always pronounced like "y" in English, and the cases where it is not are `yu` combinations, which represents the semivowel corresponding to `ü` just like how the usual `y` corresponds to `i` and `w` corresponds to `u`.
 
-      The second it about the transliteration of `ü`. Since `ü` is not in the English alphabet, the vowel `ü` need to be represented differently when transliterating to English. Thanks to the rule mentioned above that `ü` is written as `u` in a lot of places, the only places where `ü` really appears are following `l` and `n`, such as `lü` or `nüe`. And among these places, the only two that requires particular treatment during the transliteration is `lü` and `nü`. In names, they are usually transliterated as `lv`/`nv` or `lyu`/`nyu`, and sometimes (unfortunately), the ambiguous `lu`/`nu`.
+      The second is about the transliteration of `ü`. Since `ü` is not in the English alphabet, the vowel `ü` needs to be represented differently when transliterating to English. Thanks to the rule mentioned above that `ü` is written as `u` in a lot of places, the only places where `ü` really appears are following `l` and `n`, such as `lü` or `nüe`. And among these places, the only two that require particular treatment during the transliteration is `lü` and `nü`. In names, they are usually transliterated as `lv`/`nv` casually (like in daily typing) or `lyu`/`nyu` officially (like on passports), and sometimes (unfortunately), the ambiguous `lu`/`nu`.
     ]
   ]
 ]
@@ -99,12 +111,12 @@ Note that, if you want to learn the right pronunciation rather than loose imitat
   expanded: true,
   disable-numbering: false,
 )[
-  It is time for practice now. For example, my name --- Hanwen Guo --- should be rather simple to pronounce then. To test yourself, find a Chinese friend and ask them whether your pronunciation of the following names sounds okay (these names are from Jin Yong's Wuxia novels):
-  - Xiao Feng
-  - Qiu Chuji
-  - Yelü Qi
-  - Xiaolongnü
-  - Zhang Junbao
-  - Zhou Zhiruo
-  - Yue Buqun
+  It is time for practice now. For example, my name --- Hanwen Guo --- should be rather simple to pronounce then. To test yourself, put the Chinese characters below into some TTS software and compare your pronunciation of the transliterated names with its (these names are from Jin Yong's Wuxia novels):
+  - Xiao Feng 萧峰
+  - Qiu Chuji 丘处机
+  - Yelü Qi 耶律齐
+  - Xiaolongnü 小龙女
+  - Zhang Junbao 张君宝
+  - Zhou Zhiruo 周芷若
+  - Yue Buqun 岳不群
 ]
