@@ -6,7 +6,7 @@
   identifier: "000V",
 )
 
-In section 3 of #ln("wb:sv-GradualTypingUnificationbased-2008")[Gradual Typing with Unification-based Inference], the authors discuss some examples where the naive "well-typed after substitution" approach fails. That implies some rules that gradual type inference should follow.
+In section 3 of #ln("wb:SV08")[Gradual Typing with Unification-based Inference], the authors discuss some examples where the naive "well-typed after substitution" approach fails. That implies some rules that gradual type inference should follow.
 
 In the following example codes, `α` is a type variable not in the parametric polymorphism sense, but in the unification-based type inference sense, that is, a variable to be substituted with a gradual type after type inference.
 

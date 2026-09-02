@@ -1,4 +1,4 @@
-@article{guo-IfTBenchmarkTypeNarrowing-2025,
+@article{GG25,
   title =        {If-{{T}}: {{A Benchmark}} for {{Type Narrowing}}},
   shorttitle =   {If-{{T}}},
   author =       {Guo, Hanwen and Greenman, Ben},
@@ -74,7 +74,7 @@
                   performance.}
 }
 
-@inproceedings{peng-StatisticalTypeInferenceIncompletePrograms-2023,
+@inproceedings{PXY-23,
   title =        {Statistical {{Type Inference}} for {{Incomplete Programs}}},
   booktitle =    {Proceedings of the 31st {{ACM Joint European Software
                   Engineering Conference}} and {{Symposium}} on the
@@ -107,7 +107,7 @@
   isbn =         {979-8-4007-0327-0}
 }
 
-@article{msi-Dynamictypeinference-2019,
+@article{MSI19,
   title =        {Dynamic Type Inference for Gradual {{Hindley}}–{{Milner}}
                   Typing},
   author =       {Miyazaki, Yusuke and Sekiyama, Taro and Igarashi, Atsushi},
@@ -150,7 +150,7 @@
   issue =        {POPL}
 }
 
-@inproceedings{sv-GradualTypingUnificationbased-2008,
+@inproceedings{SV08,
   title =        {Gradual {{Typing}} with {{Unification-based Inference}}},
   booktitle =    {Proceedings of the 2008 Symposium on {{Dynamic}} Languages},
   author =       {Siek, Jeremy G. and Vachharajani, Manish},
@@ -184,7 +184,7 @@
   langid =       {english}
 }
 
-@inproceedings{svcb-RefinedCriteriaGradual-2015,
+@inproceedings{SVCB15,
   title =        {Refined {{Criteria}} for {{Gradual Typing}}},
   booktitle =
                   {{{DROPS-IDN}}/v2/Document/10.4230/{{LIPIcs}}.{{SNAPL}}.2015.274},
@@ -222,7 +222,7 @@
   keywords =     {dynamic languages,gradual typing,semantics,type systems}
 }
 
-@incollection{c-Programmingunionintersectionnegation-2024,
+@incollection{Cas24,
   title =        {Programming with Union, Intersection, and Negation Types},
   author =       {Castagna, Giuseppe},
   editor =       {Meyer, Bertrand},
@@ -261,7 +261,7 @@
   keywords =     {Computer Science - Programming Languages}
 }
 
-@thesis{l-semanticfoundationgradualsettheoretic-2021,
+@thesis{Lan21,
   type = {Theses},
   title = {A Semantic Foundation for Gradual Set-Theoretic Types},
   author = {Lanvin, Victor},
@@ -336,7 +336,7 @@
   keywords = {Gradual typing,Programming languages,Semantic subtyping,Semantics,Sémantique,Set-Theoretic types,Typage,Type systems,Types ensemblistes,Types graduels}
 }
 
-@article{clnl-typecasesunioneliminationoccurrence-2022,
+@article{CLNL22,
   title = {On Type-Cases, Union Elimination, and Occurrence Typing},
   author = {Castagna, Giuseppe and Laurent, Mickaël and Nguyễn, Kim and Lutze, Matthew},
   date = {2022-01-12},
@@ -361,7 +361,7 @@
   issue = {POPL}
 }
 
-@article{clps-GradualTypingNew-2019,
+@article{CLPS19,
   title = {Gradual {{Typing}}: {{A New Perspective}}},
   shorttitle = {Gradual Typing},
   author = {Castagna, Giuseppe and Lanvin, Victor and Petrucciani, Tommaso and Siek, Jeremy G.},
@@ -386,4 +386,281 @@
                   existing techniques such as unification and tallying.},
   issue = {POPL},
   langid = {english}
+}
+
+@article{GCT16,
+  title = {Abstracting {{Gradual Typing}}},
+  author = {Garcia, Ronald and Clark, Alison M. and Tanter, Éric},
+  date = {2016-01-11},
+  journaltitle = {SIGPLAN Not.},
+  shortjournal = {SIGPLAN Not,},
+  volume = {51},
+  number = {1},
+  pages = {429--442},
+  issn = {0362-1340},
+  doi = {10.1145/2914770.2837670},
+  url = {https://doi.org/10.1145/2914770.2837670},
+  urldate = {2024-07-15},
+  abstract = {Language researchers and designers have extended a wide variety of type systems to support gradual typing, which enables languages to seamlessly combine dynamic and static checking. These efforts consistently demonstrate that designing a satisfactory gradual counterpart to a static type system is challenging, and this challenge only increases with the sophistication of the type system. Gradual type system designers need more formal tools to help them conceptualize, structure, and evaluate their designs. In this paper, we propose a new formal foundation for gradual typing, drawing on principles from abstract interpretation to give gradual types a semantics in terms of pre-existing static types. Abstracting Gradual Typing (AGT for short) yields a formal account of consistency---one of the cornerstones of the gradual typing approach---that subsumes existing notions of consistency, which were developed through intuition and ad hoc reasoning. Given a syntax-directed static typing judgment, the AGT approach induces a corresponding gradual typing judgment. Then the type safety proof for the underlying static discipline induces a dynamic semantics for gradual programs defined over source-language typing derivations. The AGT approach does not resort to an externally justified cast calculus: instead, run-time checks naturally arise by deducing evidence for consistent judgments during proof reduction. To illustrate the approach, we develop a novel gradually-typed counterpart for a language with record subtyping. Gradual languages designed with the AGT approach satisfy by construction the refined criteria for gradual typing set forth by Siek and colleagues.},
+  langid = {english}
+}
+
+@article{CLLN22a,
+  title = {Revisiting Occurrence Typing},
+  author = {Castagna, Giuseppe and Lanvin, Victor and Laurent, Mickaël and Nguyen, Kim},
+  date = {2022-05-01},
+  journaltitle = {Science of Computer Programming},
+  shortjournal = {Science of Computer Programming},
+  volume = {217},
+  pages = {102781},
+  issn = {0167-6423},
+  doi = {10.1016/j.scico.2022.102781},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167642322000144},
+  urldate = {2026-04-23},
+  abstract = {We revisit occurrence typing, a technique to refine the type of variables occurring in type-cases and, thus, capture some programming patterns used in untyped languages. Although occurrence typing was tied from its inception to set-theoretic types—union types, in particular—it never fully exploited the capabilities of these types. Here we show how, by using set-theoretic types, it is possible to develop a general typing framework that encompasses and generalizes several aspects of current occurrence typing proposals and that can be applied to tackle other problems such as the reconstruction of intersection types for unannotated or partially annotated functions and the optimization of the compilation of gradually typed languages.},
+  keywords = {Dynamic languages,Intersection types,Type inference,Type-cases,Union types}
+}
+
+@article{CKC24,
+  title = {Type-{{Based Gradual Typing Performance Optimization}}},
+  author = {Campora, John Peter and Khan, Mohammad Wahiduzzaman and Chen, Sheng},
+  date = {2024-01-05},
+  journaltitle = {Proceedings of the ACM on Programming Languages},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume = {8},
+  pages = {89:2667--89:2699},
+  doi = {10.1145/3632931},
+  url = {https://dl.acm.org/doi/10.1145/3632931},
+  urldate = {2026-07-12},
+  abstract = {Gradual typing has emerged as a popular design point in programming languages, attracting significant interests from both academia and industry. Programmers in gradually typed languages are free to utilize static and dynamic typing as needed. To make such languages sound, runtime checks mediate the boundary of typed and untyped code. Unfortunately, such checks can incur significant runtime overhead on programs that heavily mix static and dynamic typing. To combat this overhead without necessitating changes to the underlying implementations of languages, we present discriminative typing. Discriminative typing works by optimistically inferring types for functions and implementing an optimized version of the function based on this type. To preserve safety it also implements an un-optimized version of the function based purely on the provided annotations. With two versions of each function in hand, discriminative typing translates programs so that the optimized functions are called as frequently as possible while also preserving program behaviors.We have implemented discriminative typing in Reticulated Python and have evaluated its performance compared to guarded Reticulated Python. Our results show that discriminative typing improves the performance across 95\% of tested programs, when compared to Reticulated, and achieves more than 4× speedup in more than 56\% of these programs. We also compare its performance against a previous optimization approach and find that discriminative typing improved performance across 93\% of tested programs, with 30\% of these programs receiving speedups between 4 to 25 times. Finally, our evaluation shows that discriminative typing remarkably reduces the overhead of gradual typing on many mixed type configurations of programs.In addition, we have implemented discriminative typing in Grift and evaluated its performance. Our evaluation demonstrations that DT significantly improves performance of Grift.},
+  issue = {POPL}
+}
+
+@online{MNTH20,
+  title = {Corpse {{Reviver}}: {{Sound}} and {{Efficient Gradual Typing}} via {{Contract Verification}}},
+  shorttitle = {Corpse {{Reviver}}},
+  author = {Moy, Cameron and Nguyen, Phúc C. and Tobin-Hochstadt, Sam and Horn, David Van},
+  date = {2020-10-09},
+  eprint = {2007.12630},
+  eprinttype = {arXiv},
+  eprintclass = {cs.PL},
+  doi = {10.48550/arXiv.2007.12630},
+  url = {http://arxiv.org/abs/2007.12630},
+  urldate = {2026-07-13},
+  abstract = {Gradually-typed programming languages permit the incremental
+                  addition of static types to untyped programs. To remain sound,
+                  languages insert run-time checks at the boundaries between
+                  typed and untyped code. Unfortunately, performance studies
+                  have shown that the overhead of these checks can be
+                  disastrously high, calling into question the viability of
+                  sound gradual typing. In this paper, we show that by building
+                  on existing work on soft contract verification, we can reduce
+                  or eliminate this overhead. Our key insight is that while
+                  untyped code cannot be trusted by a gradual type system, there
+                  is no need to consider only the worst case when optimizing a
+                  gradually-typed program. Instead, we statically analyze the
+                  untyped portions of a gradually-typed program to prove that
+                  almost all of the dynamic checks implied by gradual type
+                  boundaries cannot fail, and can be eliminated at compile time.
+                  Our analysis is modular, and can be applied to any portion of
+                  a program. We evaluate this approach on a dozen existing
+                  gradually-typed programs previously shown to have prohibitive
+                  performance overhead---with a median overhead of 3.5 $times$
+                  and up to 73.6 $times$ in the worst case---and eliminate all
+                  overhead in most cases, suffering only 1.6 $times$ overhead in
+                  the worst case.},
+  pubstate = {prepublished},
+  version = {2},
+  keywords = {Computer Science - Programming Languages}
+}
+
+@inproceedings{ATT25,
+  title = {Gradual {{Sensitivity Typing}}},
+  booktitle = {2025 {{IEEE}} 38th {{Computer Security Foundations Symposium}} ({{CSF}})},
+  author = {Arquez, Damián and Toro, Matías and Tanter, Éric},
+  date = {2025-06},
+  pages = {553--568},
+  issn = {2374-8303},
+  doi = {10.1109/CSF64896.2025.00021},
+  url = {https://ieeexplore.ieee.org/abstract/document/11097850},
+  urldate = {2026-07-13},
+  abstract = {Reasoning about the sensitivity of functions with respect to their inputs has interesting applications in various areas, such as differential privacy. Sensitivity type systems support the modular checking and enforcement of sensitivity, but can be overly conservative for certain useful programming patterns. Hence, there is value in bringing the benefits of gradual typing to these disciplines in order to ease their adoption and applicability. In this work, we motivate, formalize, and prototype gradual sensitivity typing. The language GSoul supports both the unrestricted unknown sensitivity and bounded imprecision in the form of sensitivity intervals. Gradual sensitivity typing allows programmers to smoothly evolve typed programs without any static sensitivity information towards hardened programs with a mix of static and dynamic sensitivity checking. Additionally, gradual sensitivity typing seamlessly enables precise runtime sensitivity checks whenever fully static checking would be overly conservative. We formalize a core of the language GSoul and prove that it satisfies both the gradual guarantees and sensitivity type soundness, known as metric preservation. We establish that, in general, gradual metric preservation is termination insensitive, and that one can achieve termination-sensitive gradual metric preservation by hardening specifications to bounded imprecision. Furthermore, we show how the latter can be used to formally reason about the differential privacy guarantees of gradually-typed programs. We implement a prototype of GSoul, which provides an interactive test bed for further exploring the potential of gradual sensitivity typing.},
+  eventtitle = {2025 {{IEEE}} 38th {{Computer Security Foundations Symposium}} ({{CSF}})},
+  keywords = {differential privacy,Differential privacy,Dynamic programming,function sensitivity,Functional programming,gradual typing,Libraries,Privacy,Prototypes,Runtime,Semantics,Sensitivity,Systems support}
+}
+
+@article{TGT18,
+  title = {Type-{{Driven Gradual Security}} with {{References}}},
+  author = {Toro, Matías and Garcia, Ronald and Tanter, Éric},
+  date = {2018-12-13},
+  journaltitle = {ACM Transactions on Programming Languages and Systems (TOPLAS)},
+  shortjournal = {ACM Trans. Program. Lang. Syst.},
+  volume = {40},
+  number = {4},
+  pages = {16:1--16:55},
+  issn = {0164-0925},
+  doi = {10.1145/3229061},
+  url = {https://dl.acm.org/doi/10.1145/3229061},
+  urldate = {2026-07-13},
+  abstract = {In security-typed programming languages, types statically enforce noninterference between potentially conspiring values, such as the arguments and results of functions. But to adopt static security types, like other advanced type disciplines, programmers face a steep wholesale transition, often forcing them to refactor working code just to satisfy their type checker. To provide a gentler path to security typing that supports safe and stylish but hard-to-verify programming idioms, researchers have designed languages that blend static and dynamic checking of security types. Unfortunately, most of the resulting languages only support static, type-based reasoning about noninterference if a program is entirely statically secured. This limitation substantially weakens the benefits that dynamic enforcement brings to static security typing. Additionally, current proposals are focused on languages with explicit casts and therefore do not fulfill the vision of gradual typing, according to which the boundaries between static and dynamic checking only arise from the (im)precision of type annotations and are transparently mediated by implicit checks.In this article, we present GSLRef, a gradual security-typed higher-order language with references. As a gradual language, GSLRef supports the range of static-to-dynamic security checking exclusively driven by type annotations, without resorting to explicit casts. Additionally, GSLRef lets programmers use types to reason statically about termination-insensitive noninterference in all programs, even those that enforce security dynamically. We prove that GSLRef satisfies all but one of Siek et al.’s criteria for gradually-typed languages, which ensure that programs can seamlessly transition between simple typing and security typing. A notable exception regards the dynamic gradual guarantee, which some specific programs must violate if they are to satisfy noninterference; it remains an open question whether such a language could fully satisfy the dynamic gradual guarantee. To realize this design, we were led to draw a sharp distinction between syntactic type safety and semantic type soundness, each of which constrains the design of the gradual language.}
+}
+
+@article{CL17,
+  title = {Gradual {{Typing}} with {{Union}} and {{Intersection Types}}},
+  author = {Castagna, Giuseppe and Lanvin, Victor},
+  date = {2017-08-29},
+  journaltitle = {Proceedings of the ACM on Programming Languages},
+  shortjournal = {Proc. ACM Program. Lang.},
+  volume = {1},
+  pages = {41:1--41:28},
+  doi = {10.1145/3110285},
+  url = {https://dl.acm.org/doi/10.1145/3110285},
+  urldate = {2024-04-16},
+  abstract = {We propose a type system for functional languages with gradual types and set-theoretic type connectives and prove its soundness. In particular, we show how to lift the definition of the domain and result type of an application from non-gradual types to gradual ones and likewise for the subtyping relation. We also show that deciding subtyping for gradual types can be reduced in linear time to deciding subtyping on non-gradual types and that the same holds true for all subtyping-related decision problems that must be solved for type inference. More generally, this work not only enriches gradual type systems with unions and intersections and with the type precision that arise from their use, but also proposes and advocates a new style of gradual types programming where union and intersection types are used by programmers to instruct the system to perform fewer dynamic checks.},
+  issue = {ICFP},
+  langid = {english},
+  keywords = {Gradual typing,intersection types,negation types,set-theoretic types,union types}
+}
+
+@article{HTF10,
+  title = {Space-Efficient Gradual Typing},
+  author = {Herman, David and Tomb, Aaron and Flanagan, Cormac},
+  date = {2010-06-01},
+  journaltitle = {Higher-Order and Symbolic Computation},
+  shortjournal = {Higher-Order Symb Comput},
+  volume = {23},
+  number = {2},
+  pages = {167--189},
+  issn = {1573-0557},
+  doi = {10.1007/s10990-011-9066-z},
+  url = {https://doi.org/10.1007/s10990-011-9066-z},
+  urldate = {2026-07-13},
+  abstract = {Gradual type systems offer a smooth continuum between static and dynamic typing by permitting the free mixture of typed and untyped code. The runtime systems for these languages, and other languages with hybrid type checking, typically enforce function types by dynamically generating function proxies. This approach can result in unbounded growth in the number of proxies, however, which drastically impacts space efficiency and destroys tail recursion.},
+  langid = {english},
+  keywords = {Casts,Coercions,Gradual typing,Type dynamic}
+}
+
+@inproceedings{SW10,
+  title = {Threesomes, with and without Blame},
+  booktitle = {Proceedings of the 37th Annual {{ACM SIGPLAN-SIGACT}} Symposium on {{Principles}} of Programming Languages},
+  author = {Siek, Jeremy G. and Wadler, Philip},
+  date = {2010-01-17},
+  series = {{{POPL}} '10},
+  pages = {365--376},
+  publisher = {Association for Computing Machinery},
+  location = {New York, NY, USA},
+  doi = {10.1145/1706299.1706342},
+  url = {https://dl.acm.org/doi/10.1145/1706299.1706342},
+  urldate = {2026-07-13},
+  abstract = {How to integrate static and dynamic types? Recent work focuses on casts to mediate between the two. However, adding casts may degrade tail calls into a non-tail calls, increasing space consumption from constant to linear in the depth of calls.We present a new solution to this old problem, based on the notion of a threesome. A cast is specified by a source and a target type--a twosome. Any twosome factors into a downcast from the source to an intermediate type, followed by an upcast from the intermediate to the target---a threesome. Any chain of threesomes collapses to a single threesome, calculated by taking the greatest lower bound of the intermediate types. We augment this solution with blame labels to map any failure of a threesome back to the offending twosome in the source program.Herman, Tomb, and Flanagan (2007) solve the space problem by representing casts with the coercion calculus of Henglein (1994). While they provide a theoretical limit on the space overhead, there remains the practical question of how best to implement coercion reduction. The threesomes presented in this paper provide a streamlined data structure and algorithm for representing and normalizing coercions. Furthermore, threesomes provide a typed-based explanation of coercion reduction.},
+  isbn = {978-1-60558-479-9}
+}
+
+@article{AFGT14,
+  title = {Confined Gradual Typing},
+  author = {Allende, Esteban and Fabry, Johan and Garcia, Ronald and Tanter, Éric},
+  date = {2014-10-15},
+  journaltitle = {SIGPLAN Not.},
+  volume = {49},
+  number = {10},
+  pages = {251--270},
+  issn = {0362-1340},
+  doi = {10.1145/2714064.2660222},
+  url = {https://dl.acm.org/doi/10.1145/2714064.2660222},
+  urldate = {2026-03-24},
+  abstract = {Gradual typing combines static and dynamic typing flexibly and safely in a single programming language. To do so, gradually typed languages implicitly insert casts where needed, to ensure at runtime that typing assumptions are not violated by untyped code. However, the implicit nature of cast insertion, especially on higher-order values, can jeopardize reliability and efficiency: higher-order casts can fail at any time, and are costly to execute. We propose Confined Gradual Typing, which extends gradual typing with two new type qualifiers that let programmers control the flow of values between the typed and the untyped worlds, and thereby trade some flexibility for more reliability and performance. We formally develop two variants of Confined Gradual Typing that capture different flexibility/guarantee tradeoffs. We report on the implementation of Confined Gradual Typing in Gradualtalk, a gradually-typed Smalltalk, which confirms the performance advantage of avoiding unwanted higher-order casts and the low overhead of the approach.}
+}
+
+@inproceedings{II11,
+  title = {Gradual Typing for Generics},
+  booktitle = {Proceedings of the 2011 {{ACM}} International Conference on {{Object}} Oriented Programming Systems Languages and Applications},
+  author = {Ina, Lintaro and Igarashi, Atsushi},
+  date = {2011-10-22},
+  series = {{{OOPSLA}} '11},
+  pages = {609--624},
+  publisher = {Association for Computing Machinery},
+  location = {New York, NY, USA},
+  doi = {10.1145/2048066.2048114},
+  url = {https://dl.acm.org/doi/10.1145/2048066.2048114},
+  urldate = {2026-04-12},
+  abstract = {Gradual typing is a framework to combine static and dynamic typing
+                  in a single programming language. In this paper, we develop a
+                  gradual type system for class-based object-oriented languages
+                  with generics. We introduce a special type to denote
+                  dynamically typed parts of a program; unlike dynamic types
+                  introduced to C\textbackslash# 4.0, however, our type system allows for
+                  more seamless integration of dynamically and statically typed
+                  code.We formalize a gradual type system for Featherweight GJ
+                  with a semantics given by a translation that inserts explicit
+                  run-time checks. The type system guarantees that statically
+                  typed parts of a program do not go wrong, even if it includes
+                  dynamically typed parts. We also describe a basic
+                  implementation scheme for Java and report preliminary
+                  performance evaluation.},
+  isbn = {978-1-4503-0940-0}
+}
+
+@inproceedings{WNL-10,
+  title = {Integrating Typed and Untyped Code in a Scripting Language},
+  booktitle = {Proceedings of the 37th Annual {{ACM SIGPLAN-SIGACT}} Symposium on {{Principles}} of Programming Languages},
+  author = {Wrigstad, Tobias and Nardelli, Francesco Zappa and Lebresne, Sylvain and Östlund, Johan and Vitek, Jan},
+  date = {2010-01-17},
+  series = {{{POPL}} '10},
+  pages = {377--388},
+  publisher = {Association for Computing Machinery},
+  location = {New York, NY, USA},
+  doi = {10.1145/1706299.1706343},
+  url = {https://dl.acm.org/doi/10.1145/1706299.1706343},
+  urldate = {2026-07-13},
+  abstract = {Many large software systems originate from untyped scripting language code. While good for initial development, the lack of static type annotations can impact code-quality and performance in the long run. We present an approach for integrating untyped code and typed code in the same system to allow an initial prototype to smoothly evolve into an efficient and robust program. We introduce like types , a novel intermediate point between dynamic and static typing. Occurrences of like types variables are checked statically within their scope but, as they may be bound to dynamic values, their usage is checked dynamically. Thus like types provide some of the benefits of static typing without decreasing the expressiveness of the language. We provide a formal account of like types in a core object calculus and evaluate their applicability in the context of a new scripting language.},
+  isbn = {978-1-60558-479-9}
+}
+
+@article{JTTT25,
+  author = {Jacobs, Koen and Toro, Matías and Tabareau, Nicolas and Tanter, Éric},
+  title = {Robust Dynamic Embedding for Gradual Typing},
+  journaltitle = {Rocq Develpment: Robust Dynamic Embedding for Gradual Typing},
+  date = {2025-08-05},
+  issue = {ICFP},
+  pages = {238:66--238:92},
+  volume = {9},
+  doi = {10.1145/3747507},
+  url = {https://dl.acm.org/doi/10.1145/3747507},
+  urldate = {2025-08-18},
+  keywords = {Inbox},
+  file = {jttt-RobustDynamicEmbedding-2025.pdf:library.files/02e1d87f-c883-47ca-81dc-02a72af1ed02/8d525447-e34f-4762-8f63-18257ec35063-jttt-RobustDynamicEmbedding-2025.pdf:application/pdf},
+  abstract = {Gradual typing has long been advocated as a means to bridge the gap between static and dynamic typing disciplines, enabling a range of use cases such as the gradual migration of existing dynamically typed code to more statically typed code, as well as making advanced static typing disciplines more accessible. To assess whether a given gradual language can effectively support these use cases, several formal properties have been proposed, most notably the refined criteria set forth by Siek et al. One criterion asserts that the dynamic extreme of the spectrum should be expressible in the gradual language, formalized by the existence of an adequate embedding from the corresponding dynamic language. We observe that the existing dynamic embedding criterion does not capture the desirable property of being able to ascribe embedded code to a static type that it semantically satisfies, and ensure reliable interactions with other components within the gradual language. Specifically, we introduce the notion of robustness for gradual terms, meaning that when interacting with any gradual context, runtime failures that may occur ought to be caused by the context, not by the robust term itself. We then formulate the robust dynamic embedding criterion: if a dynamic component semantically satisfies a given static type, then its embedding subsequently ascribed to that static type should be a robust term. We demonstrate that robust dynamic embedding is not implied by any existing metatheoretical property from the literature, and is not upheld by various existing gradual languages. We show that robust dynamic embedding is achievable with a gradualized simply-typed language. All the results are formalized in the Rocq proof assistant. This novel criterion complements the set of criteria for gradual languages and opens several venues for further exploration, in particular for typing disciplines that enforce rich semantic properties.},
+  zotero-item-type = {journalArticle},
+  zotero-library-catalog = {ACM Digital Library},
+  lantaiid = {02e1d87f-c883-47ca-81dc-02a72af1ed02}
+}
+
+@online{CD24,
+  author = {Castagna, Giuseppe and Duboc, Guillaume},
+  title = {Guard Analysis and Safe Erasure Gradual Typing: a Type System for Elixir},
+  date = {2024-09-02},
+  issue = {arXiv:2408.14345},
+  publisher = {arXiv},
+  doi = {10.48550/arxiv.2408.14345},
+  url = {http://arxiv.org/abs/2408.14345},
+  urldate = {2024-10-14},
+  keywords = {Projects/TwoTypes, ResearchTopics/GradualTyping},
+  file = {cd-GuardAnalysisSafe-2024.pdf:library.files/522e1507-2eed-437e-bb6e-ef5191b85a18/c4a4862d-a569-4c7e-b2ee-8680f6e64a7c-cd-GuardAnalysisSafe-2024.pdf:application/pdf},
+  abstract = {We define several techniques to extend gradual typing with
+                  semantic subtyping, specifically targeting dynamic languages.
+                  Focusing on the Elixir programming language, we provide the
+                  theoretical foundations for its type system. Our approach
+                  demonstrates how to achieve type soundness for gradual typing
+                  in existing dynamic languages without modifying their
+                  compilation, while still maintaining high precision. This is
+                  accomplished through the static detection of "strong
+                  functions", which leverage runtime checks inserted by the
+                  programmer or performed by the virtual machine, and through a
+                  fine-grained type analysis of pattern-matching expressions
+                  with guards.},
+  shorttitle = {Guard Analysis and Safe Erasure Gradual Typing},
+  zotero-extra = {arXiv:2408.14345},
+  zotero-item-type = {preprint},
+  zotero-library-catalog = {arXiv.org},
+  lantaiid = {522e1507-2eed-437e-bb6e-ef5191b85a18}
 }

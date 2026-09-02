@@ -7,6 +7,7 @@
   show-metadata: false,
 )
 
+#tr("wb:2026-W33", expanded: false, disable-numbering: true)
 #tr("wb:2026-W24", expanded: false, disable-numbering: true)
 #tr("wb:2026-W23", expanded: false, disable-numbering: true)
 #tr("wb:2026-W21", expanded: false, disable-numbering: true)

@@ -11,7 +11,7 @@
 #inline-tree(
   title: "Notes on Gradual Type Inference"
 )[
-#tr("wb:msi-Dynamictypeinference-2019", show-metadata: true, expanded: false, disable-numbering: true)
+#tr("wb:MSI19", show-metadata: true, expanded: false, disable-numbering: true)
 
 My feeling is that the problems described in section 1.3 and section 1.4 of this paper are somehow not as severe as they might initially appear. The problem is basically that some programs left you so-called undecided type variables, which can be instantiated to any type; these undecided type variables are usually introduced due to the presence of the $?$ type, which hides useful information from other parts of the program. This brings two problems:
 

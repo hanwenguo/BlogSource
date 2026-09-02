@@ -48,7 +48,7 @@ class Dog():
 
   #tr("wb:000V", expanded: false, disable-numbering: true)
 
-  The first rule is more connected to the #ln("wb:svcb-RefinedCriteriaGradual-2015")[Refined Criteria for Gradual Typing]: it simply says that if there are no static types in $T$, then we should raise a type error. It implies that $T$ has some minimal element(s), i.e. elements that no other elements are smaller than them (different from the least element), and they are all static types since minimal elements that are not static types cannot be in $T$ according to rule 1.
+  The first rule is more connected to the #ln("wb:SVCB15")[Refined Criteria for Gradual Typing]: it simply says that if there are no static types in $T$, then we should raise a type error. It implies that $T$ has some minimal element(s), i.e. elements that no other elements are smaller than them (different from the least element), and they are all static types since minimal elements that are not static types cannot be in $T$ according to rule 1.
 
   #let t_top = $sigma_sans("glb")$
 

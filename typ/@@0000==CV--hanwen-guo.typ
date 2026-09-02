@@ -331,7 +331,7 @@ Or: How to reduce the friction and improve the ergonomics of adopting strong gua
   title: [Publications],
 )[
 #publication(
-  identifier: "guo-IfTBenchmarkTypeNarrowing-2025",
+  identifier: "GG25",
   name: "If-T: A Benchmark for Type Narrowing",
   place: "Programming 10.2",
   authors: [Hanwen Guo, Ben Greenman],
@@ -339,7 +339,7 @@ Or: How to reduce the friction and improve the ergonomics of adopting strong gua
 )[Editors' Choice Award]
 
 #publication(
-  identifier: "peng-StatisticalTypeInferenceIncompletePrograms-2023",
+  identifier: "PXY-23",
   name: "Statistical Type Inference for Incomplete Programs",
   place: "ESEC/FSE 2023",
   authors: text(tracking: -0.1pt)[Yaohui Peng, Jing Xie, Qiongling Yang, Hanwen Guo, Qingan Li, Jingling Xue, Mengting Yuan],
