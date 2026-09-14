@@ -1,6 +1,6 @@
 #import "@preview/sicons:15.13.0": sicon
 
-#import "/_template/template.typ": template, tr, ln, ct, inline-tree
+#import "/_template/template.typ": ct, inline-tree, ln, template, tr
 
 #let pesha(
   name: "",
@@ -41,7 +41,7 @@
       paper: paper-size,
       margin: (
         x: 14%,
-        top: if profile-picture == none {13%} else {8.6%},
+        top: if profile-picture == none { 13% } else { 8.6% },
         bottom: 10%,
       ),
       // Display page number in footer only if there is more than one page.
@@ -55,7 +55,7 @@
         } else {
           upper[#footer-text]
         }
-      }
+      },
     )
 
     show link: set text(fill: rgb("#004C81"))
@@ -83,7 +83,7 @@
             radius: 2.5cm,
             profile-picture,
           ),
-          align(right + horizon, header-info)
+          align(right + horizon, header-info),
         )
       } else {
         align(center, header-info)
@@ -119,7 +119,7 @@
     template(
       title: name,
       taxon: "CV",
-      identifier: "0000",
+      identifier: "CV",
       contacts: contacts,
       address: address,
       export-pdf: true,
@@ -229,7 +229,7 @@
     top-right: time,
     bottom-left: title,
     bottom-right: location,
-    body
+    body,
   )
 }
 
@@ -252,7 +252,7 @@
       top-right: place,
       bottom-left: authors,
       bottom-right: metadata-span,
-      body
+      body,
     )
   } else {
     tr("wb:" + identifier, show-metadata: true, expanded: false, disable-numbering: true)
@@ -277,7 +277,7 @@
       expanded: expanded,
       disable-numbering: disable-numbering,
       ..attrs,
-      body
+      body,
     )
   }
 }
@@ -293,7 +293,9 @@
       #context if target() == "paged" { sicon(slug: "github") } else { text("GitHub") }
     ]],
     [#link("https://scholar.google.com/citations?user=H-96dO8AAAAJ")[
-      #context if target() == "paged" { sicon(slug: "googlescholar") } else { text("Google Scholar") }
+      #context if target() == "paged" { sicon(slug: "googlescholar") } else {
+        text("Google Scholar")
+      }
     ]],
     [#link("https://orcid.org/0009-0000-7118-2145")[
       #context if target() == "paged" { sicon(slug: "orcid") } else { text("ORCID") }
@@ -306,84 +308,86 @@
 #ilt(
   title: [Research Interests],
 )[
-Programming Languages, Type Systems, Gradual Typing
+  Programming Languages, Type Systems, Gradual Typing
 
-Or: How to reduce the friction and improve the ergonomics of adopting strong guarantees?
+  Or: How to reduce the friction and improve the ergonomics of adopting strong guarantees?
 ]
 
 #ilt(
   title: [Education],
 )[
-#experience(
-  place: "University of Utah",
-  time: [Fall 2024 -- present],
-  title: [Ph.D. Student in Computer Science\ Advisor: #link("https://www.cs.utah.edu/~blg/", "Ben Greenman")],
-)[]
+  #experience(
+    place: "University of Utah",
+    time: [Fall 2024 -- present],
+    title: [Ph.D. Student in Computer Science\ Advisor: #link("https://www.cs.utah.edu/~blg/", "Ben Greenman")],
+  )[]
 
-#experience(
-  place: "Wuhan University",
-  time: [Fall 2020 -- Spring 2024],
-  title: [B.Eng. in Computer Science],
-)[]
+  #experience(
+    place: "Wuhan University",
+    time: [Fall 2020 -- Spring 2024],
+    title: [B.Eng. in Computer Science],
+  )[]
 ]
 
 #ilt(
   title: [Publications],
 )[
-#publication(
-  identifier: "GG25",
-  name: "If-T: A Benchmark for Type Narrowing",
-  place: "Programming 10.2",
-  authors: [Hanwen Guo, Ben Greenman],
-  doi: "https://doi.org/10.22152/programming-journal.org/2025/10/17",
-)[Editors' Choice Award]
+  #publication(
+    identifier: "GG25",
+    name: "If-T: A Benchmark for Type Narrowing",
+    place: "Programming 10.2",
+    authors: [Hanwen Guo, Ben Greenman],
+    doi: "https://doi.org/10.22152/programming-journal.org/2025/10/17",
+  )[Editors' Choice Award]
 
-#publication(
-  identifier: "PXY-23",
-  name: "Statistical Type Inference for Incomplete Programs",
-  place: "ESEC/FSE 2023",
-  authors: text(tracking: -0.1pt)[Yaohui Peng, Jing Xie, Qiongling Yang, Hanwen Guo, Qingan Li, Jingling Xue, Mengting Yuan],
-  doi: "https://doi.org/10.1145/3611643.3616283",
-)[Best Artifact Award]
+  #publication(
+    identifier: "PXY-23",
+    name: "Statistical Type Inference for Incomplete Programs",
+    place: "ESEC/FSE 2023",
+    authors: text(
+      tracking: -0.1pt,
+    )[Yaohui Peng, Jing Xie, Qiongling Yang, Hanwen Guo, Qingan Li, Jingling Xue, Mengting Yuan],
+    doi: "https://doi.org/10.1145/3611643.3616283",
+  )[Best Artifact Award]
 ]
 
 #ilt(
   title: [Honors & Awards],
 )[
-#experience(
-  place: "Editors' Choice Award",
-  time: [Programming 10.2 (2025)],
-)[]
+  #experience(
+    place: "Editors' Choice Award",
+    time: [Programming 10.2 (2025)],
+  )[]
 
-#experience(
-  place: "Best Artifact Award",
-  time: [ESEC/FSE 2023],
-)[]
+  #experience(
+    place: "Best Artifact Award",
+    time: [ESEC/FSE 2023],
+  )[]
 ]
 
 #ilt(
   title: [Service],
 )[
-#experience(
-  place: [Artifact Evaluation Committee],
-  time: [Programming 11.1],
-)[]
+  #experience(
+    place: [Artifact Evaluation Committee],
+    time: [Programming 11.1],
+  )[]
 ]
 
 #ilt(
   title: [Teaching],
 )[
-#experience(
-  place: "Programming Language",
-  title: "Teaching Assistant",
-  time: [Fall 2025],
-  location: "University of Utah",
-)[]
+  #experience(
+    place: "Programming Language",
+    title: "Teaching Assistant",
+    time: [Fall 2025],
+    location: "University of Utah",
+  )[]
 
-#experience(
-  place: "Operating Systems",
-  title: "Teaching Assistant",
-  time: [Spring 2026],
-  location: "University of Utah",
-)[]
+  #experience(
+    place: "Operating Systems",
+    title: "Teaching Assistant",
+    time: [Spring 2026],
+    location: "University of Utah",
+  )[]
 ]
