@@ -380,7 +380,7 @@
   #experience(
     place: "Programming Language",
     title: "Teaching Assistant",
-    time: [Fall 2025],
+    time: [Fall 2025 & Fall 2026],
     location: "University of Utah",
   )[]
 
