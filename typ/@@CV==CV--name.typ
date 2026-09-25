@@ -359,7 +359,7 @@
     top-right: [Spring 2025 -- Present],
   )[
     - Designed PPG, a hybrid static-analysis and property-based testing approach for auditing the semantic validity of Python `TypeGuard` predicates by extracting `True`-returning path constraints and synthesizing acceptance-directed Hypothesis tests.
-    - Audited 178 TypeGuard predicates across 30 open-source projects (>5M lines of Python), finding 29 reproducible counterexamples across 14 projects and characterizing recurring sources of unsoundness and barriers to automated validation.
+    - Audited 308 TypeGuard predicates across 60 open-source projects (>5M lines of Python), finding 50 reproducible counterexamples across 23 projects and characterizing recurring sources of unsoundness and barriers to automated validation.
   ]
   #tile(
     top-left: [If-T: A Benchmark for Type Narrowing],
