@@ -1,9 +1,9 @@
-#import "/_template/template.typ": ln, template, tr, inline-tree
+#import "/_template/template.typ": inline-tree, ln, template, tr
 #show: template(
   title: [Hanwen Guo],
   tags: (),
   identifier: "index",
-  toc: false
+  toc: false,
 )
 
 #html.aside[
@@ -20,26 +20,26 @@ I am a Ph.D. student at the #link("https://www-old.cs.utah.edu/plt/")[University
 
 I study programming languages and type systems, with a focus on gradual typing and similar theories that help reduce the friction and improve the ergonomics of adopting strong guarantees.
 
-Also see my #ln("wb:0000")[CV] for more details about my research and work experience.
+Also see my #ln("wb:CV")[CV] for more details about my research and work experience.
 
 #inline-tree(
   title: [Contact Me],
   disable-numbering: true,
 )[
-- `guo AT hanwen DOT io` (personal email)
-- `hanwen DOT guo AT utah DOT edu` (university email for professional purposes)
-- #link("https://github.com/hanwenguo")[GitHub]
-- #html.span(
-    class: "link external",
-    html.elem(
-      "a",
-      attrs: (
-        href: "https://types.pl/@hanwen",
-        rel: "me",
+  - `guo AT hanwen DOT io` (personal email)
+  - `hanwen DOT guo AT utah DOT edu` (university email for professional purposes)
+  - #link("https://github.com/hanwenguo")[GitHub]
+  - #html.span(
+      class: "link external",
+      html.elem(
+        "a",
+        attrs: (
+          href: "https://types.pl/@hanwen",
+          rel: "me",
+        ),
+        "Mastodon",
       ),
-      "Mastodon"
     )
-  )
 ]
 
 #tr("wb:0005", disable-numbering: true, expanded: false)
