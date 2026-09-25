@@ -1,6 +1,7 @@
 #import "/_template/site.typ"
 #import "/_template/lib.typ": (
-  _guard-and-render-metadata, _meta-item-html as _meta-item, domain, plain-text, root-dir, trailing-slash,
+  _guard-and-render-metadata, _meta-item-html as _meta-item, domain, plain-text, root-dir,
+  trailing-slash,
 )
 
 #let all-posts = state("all-posts", ())
@@ -81,7 +82,7 @@
     _meta-item(it)
   })(fields)
   _guard-and-render-metadata("doi", it => {
-    _meta-item(html.a(class: "link external", href: "https://doi.org/" + it)[#it])
+    _meta-item(html.a(class: "link external", href: "https://doi.org/" + it)[DOI])
   })(fields)
 }
 
@@ -110,6 +111,15 @@
         _meta-item(it)
       })(fields)
       _common-metadata-for-bibliography-entry(..attrs)
+      _guard-and-render-metadata("_code", it => {
+        _meta-item(html.a(class: "link external", href: it)[Code])
+      })(fields)
+      _guard-and-render-metadata("_pdf", it => {
+        _meta-item(html.a(class: "link external", href: it)[PDF])
+      })(fields)
+      _guard-and-render-metadata("_poster", it => {
+        _meta-item(html.a(class: "link external", href: it)[Poster])
+      })(fields)
     },
     "Article": (..attrs) => {
       let fields = attrs.at("fields")
@@ -128,6 +138,15 @@
         _meta-item(it)
       })(fields)
       _common-metadata-for-bibliography-entry(..attrs)
+      _guard-and-render-metadata("_code", it => {
+        _meta-item(html.a(class: "link external", href: it)[Code])
+      })(fields)
+      _guard-and-render-metadata("_pdf", it => {
+        _meta-item(html.a(class: "link external", href: it)[PDF])
+      })(fields)
+      _guard-and-render-metadata("_poster", it => {
+        _meta-item(html.a(class: "link external", href: it)[Poster])
+      })(fields)
     },
     "Incollection": (..attrs) => {
       let fields = attrs.at("fields")
@@ -148,7 +167,7 @@
       _guard-and-render-metadata("url", it => {
         _meta-item(link(it)[URL])
       })(fields)
-    }
+    },
   )
     + site.metadata-taxon-map-html
 )
@@ -556,7 +575,9 @@
               let this-toc-stack = state(identifier + "-toc-stack", ())
               let this-toc-result = state(identifier + "-toc-result", ())
 
-              all-posts.update(arr => if arr.contains(identifier) { arr } else { arr + (identifier,) })
+              all-posts.update(arr => if arr.contains(identifier) { arr } else {
+                arr + (identifier,)
+              })
               current-id-stack.update((identifier,))
               in-main-content.update(true)
               main-part
